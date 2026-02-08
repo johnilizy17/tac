@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { clsx } from "clsx";
 import CustomCursor from "./components/CustomCursor";
+import SmoothScroll from "./components/SmoothScroll";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -19,8 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={clsx(inter.variable, "font-sans bg-tac-dark text-white min-h-screen cursor-none")}>
-        <CustomCursor />
-        {children}
+        <SmoothScroll>
+          <CustomCursor />
+          {children}
+        </SmoothScroll>
       </body>
     </html>
   );
