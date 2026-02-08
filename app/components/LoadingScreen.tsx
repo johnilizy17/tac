@@ -4,11 +4,11 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const loadingTexts = [
-    "Pioneering Excellence",
-    "Strategizing Growth",
-    "Ensuring Integrity",
-    "Optimizing Performance",
-    "TAC Group Revamp"
+    "GLOBAL INSIGHT",
+    "STRATEGIC PRECISION",
+    "UNWAVERING INTEGRITY",
+    "ELITE CONSULTING",
+    "TAC GROUP"
 ];
 
 export default function LoadingScreen() {
@@ -17,22 +17,20 @@ export default function LoadingScreen() {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        // Progress counter
         const interval = setInterval(() => {
             setProgress((prev) => {
                 if (prev >= 100) {
                     clearInterval(interval);
-                    setTimeout(() => setIsLoading(false), 500); // Small buffer
+                    setTimeout(() => setIsLoading(false), 800);
                     return 100;
                 }
                 return prev + 1;
             });
-        }, 30);
+        }, 20);
 
-        // Text cycling
         const textInterval = setInterval(() => {
             setTextIndex((prev) => (prev + 1) % loadingTexts.length);
-        }, 800);
+        }, 600);
 
         return () => {
             clearInterval(interval);
@@ -45,67 +43,57 @@ export default function LoadingScreen() {
             {isLoading && (
                 <motion.div
                     initial={{ opacity: 1 }}
-                    exit={{ opacity: 0, scale: 1.1 }}
-                    transition={{ duration: 0.8, ease: "easeInOut" }}
-                    className="fixed inset-0 z-[100] bg-tac-dark flex flex-col items-center justify-center pointer-events-auto"
+                    exit={{
+                        clipPath: "inset(0 0 100% 0)",
+                        transition: { duration: 1, ease: [0.76, 0, 0.24, 1] }
+                    }}
+                    className="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center pointer-events-auto"
                 >
-                    {/* Background Glow */}
-                    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-tac-brand/20 rounded-full blur-[120px] animate-pulse" />
-                    </div>
+                    <div className="relative z-10 w-full max-w-7xl px-4 flex flex-col items-center">
+                        {/* Serial Number / Counter Style */}
+                        <div className="flex items-center gap-4 mb-12">
+                            <span className="text-tac-dark font-black text-sm tracking-widest">TAC</span>
+                            <div className="w-12 h-[1px] bg-tac-brand" />
+                            <span className="text-tac-brand font-mono text-sm uppercase">Loading...</span>
+                        </div>
 
-                    <div className="relative z-10 text-center">
-                        {/* Logo Animation */}
+                        {/* Large Percentage */}
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            className="text-4xl md:text-6xl font-black tracking-tighter text-white mb-2"
+                            className="text-[15vw] font-black text-tac-dark tracking-tighter leading-none mb-12"
                         >
-                            TAC<span className="text-tac-brand">GROUP</span>
+                            {progress}<span className="text-tac-brand opacity-20">%</span>
                         </motion.div>
 
-                        {/* Cycling Text */}
-                        <div className="h-8 overflow-hidden mb-12">
+                        {/* Cycling Text - Magazine Style */}
+                        <div className="h-10 overflow-hidden flex items-center justify-center w-full">
                             <AnimatePresence mode="wait">
                                 <motion.p
                                     key={textIndex}
-                                    initial={{ opacity: 0, y: 10 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    exit={{ opacity: 0, y: -10 }}
-                                    className="text-gray-500 uppercase tracking-[0.3em] text-[10px] md:text-xs font-semibold"
+                                    initial={{ opacity: 0, scale: 1.1 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    exit={{ opacity: 0, scale: 0.9 }}
+                                    className="text-tac-slate text-sm font-black tracking-[0.5em] text-center"
                                 >
                                     {loadingTexts[textIndex]}
                                 </motion.p>
                             </AnimatePresence>
                         </div>
 
-                        {/* Percentage and Bar */}
-                        <div className="relative w-64 md:w-80">
-                            <div className="flex justify-between items-end mb-2">
-                                <span className="text-gray-600 text-[10px] uppercase font-bold tracking-widest leading-none">Loading System</span>
-                                <span className="text-tac-brand font-mono text-2xl font-light leading-none">
-                                    {progress}%
-                                </span>
-                            </div>
-                            <div className="w-full h-[1px] bg-white/5 relative">
-                                <motion.div
-                                    className="absolute top-0 left-0 h-full bg-tac-brand shadow-[0_0_15px_#66B929]"
-                                    initial={{ width: 0 }}
-                                    animate={{ width: `${progress}%` }}
-                                    transition={{ ease: "linear" }}
-                                />
-                            </div>
+                        {/* Minimalist Bar */}
+                        <div className="mt-20 w-64 h-[2px] bg-gray-100 relative">
+                            <motion.div
+                                className="absolute top-0 left-0 h-full bg-tac-brand"
+                                initial={{ width: 0 }}
+                                animate={{ width: `${progress}%` }}
+                                transition={{ ease: "linear" }}
+                            />
                         </div>
                     </div>
 
-                    {/* Footer Style Decoration */}
-                    <motion.p
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 0.3 }}
-                        className="absolute bottom-10 text-[10px] text-gray-400 tracking-widest font-mono uppercase"
-                    >
-                        © 2026 Professional Business Consulting
-                    </motion.p>
+                    {/* Side Accents */}
+                    <div className="absolute top-1/2 left-10 -translate-y-1/2 hidden md:block">
+                        <span className="text-gray-300 font-black text-[10px] [writing-mode:vertical-lr] tracking-[1em] opacity-30">GLOBAL_PRECISION_V3</span>
+                    </div>
                 </motion.div>
             )}
         </AnimatePresence>

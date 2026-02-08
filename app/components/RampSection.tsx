@@ -36,96 +36,59 @@ const rampSteps = [
 
 export default function RampSection() {
     return (
-        <section id="ramp" className="py-24 relative overflow-hidden bg-tac-dark">
-            {/* Background decorative elements */}
-            <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-tac-brand/5 to-transparent pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-1/3 h-full bg-gradient-to-r from-tac-brand/5 to-transparent pointer-events-none" />
-
-            <div className="max-w-7xl mx-auto px-4 relative z-10">
-                <div className="text-center mb-16">
-                    <motion.span
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-tac-brand font-semibold tracking-widest uppercase text-sm"
-                    >
-                        Our Methodology
-                    </motion.span>
-                    <motion.h2
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.1 }}
-                        className="text-4xl md:text-5xl font-bold mt-4 mb-6"
-                    >
-                        The <span className="text-gradient">R.A.M.P</span> Framework
-                    </motion.h2>
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.2 }}
-                        className="text-gray-400 max-w-2xl mx-auto text-lg"
-                    >
-                        A systematic approach designed to provide clarity, security, and growth for your business through every stage of the professional cycle.
-                    </motion.p>
+        <section id="ramp" className="py-32 relative bg-white overflow-hidden">
+            <div className="max-w-7xl mx-auto px-4">
+                <div className="magazine-grid mb-24">
+                    <div className="col-span-12 lg:col-span-5">
+                        <span className="text-tac-brand uppercase tracking-widest text-xs font-bold block mb-4">Methodology</span>
+                        <h2 className="text-6xl font-black text-tac-dark tracking-tighter leading-none mb-8">
+                            THE<br />R.A.M.P<br />FRAMEWORK.
+                        </h2>
+                        <p className="text-gray-500 text-xl font-light leading-relaxed">
+                            A high-precision systematic approach designed for the complexities of modern business operations.
+                        </p>
+                    </div>
                 </div>
 
-                <motion.div
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true, margin: "-50px" }}
-                    variants={{
-                        hidden: {},
-                        show: {
-                            transition: {
-                                staggerChildren: 0.15
-                            }
-                        }
-                    }}
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-                >
-                    {rampSteps.map((step) => (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1">
+                    {rampSteps.map((step, i) => (
                         <motion.div
                             key={step.id}
-                            variants={{
-                                hidden: { opacity: 0, y: 30, scale: 0.95 },
-                                show: { opacity: 1, y: 0, scale: 1 }
-                            }}
-                            className="glass-card p-8 rounded-3xl group hover:border-tac-brand/30 transition-all duration-500"
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: i * 0.1 }}
+                            className="bg-tac-dark p-12 text-white border border-white/5 group hover:bg-tac-brand transition-all duration-700"
                         >
-                            <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${step.color} p-3 mb-6 shadow-lg shadow-black/20 group-hover:scale-110 transition-transform duration-500`}>
-                                <step.icon className="w-full h-full text-white" />
+                            <div className="text-7xl font-black text-white/5 group-hover:text-white/20 transition-colors mb-8 font-mono">
+                                {step.id}
                             </div>
-                            <div className="flex items-center gap-3 mb-4">
-                                <span className="text-4xl font-bold text-white/10 group-hover:text-tac-brand/30 transition-colors duration-500">
-                                    {step.id}
-                                </span>
-                                <h3 className="text-xl font-bold text-white">{step.title}</h3>
-                            </div>
-                            <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-500 leading-relaxed text-sm">
+                            <div className="w-8 h-[2px] bg-tac-brand group-hover:bg-white mb-6 group-hover:w-full transition-all duration-700" />
+                            <h3 className="text-2xl font-black mb-4 tracking-tighter">{step.title.toUpperCase()}</h3>
+                            <p className="text-gray-500 group-hover:text-white/80 transition-colors font-light text-sm leading-relaxed">
                                 {step.description}
                             </p>
                         </motion.div>
                     ))}
-                </motion.div>
+                </div>
 
-                {/* Integration with Aviation (Subtle Hint) */}
                 <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.8 }}
-                    className="mt-20 p-8 rounded-3xl bg-white/5 border border-white/10 flex flex-col md:flex-row items-center justify-between gap-8 backdrop-blur-md"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    className="mt-20 p-12 bg-tac-dark text-white flex flex-col md:flex-row items-center justify-between gap-12 group"
                 >
-                    <div className="flex-1">
-                        <h4 className="text-xl font-bold mb-2">Aerospace & Aviation Applications</h4>
-                        <p className="text-gray-400 text-sm">
-                            Our R.A.M.P methodology is extensively applied in high-stakes industries like Aviation, ensuring airworthiness compliance and operational excellence through technical and commercial audits.
+                    <div className="max-w-2xl">
+                        <div className="flex items-center gap-3 mb-4">
+                            <div className="w-2 h-2 bg-tac-brand animate-pulse" />
+                            <span className="text-tac-brand font-bold text-xs uppercase tracking-widest">Specialized Application</span>
+                        </div>
+                        <h4 className="text-2xl font-black tracking-tighter mb-4">AEROSPACE & AVIATION INTEGRATION</h4>
+                        <p className="text-gray-500 group-hover:text-white/70 transition-colors font-light">
+                            Our methodology is rigor-tested in the aviation sector, ensuring compliance with global airworthiness standards through deep technical and commercial audits.
                         </p>
                     </div>
-                    <button className="px-6 py-3 bg-tac-brand/20 hover:bg-tac-brand/30 text-tac-brand font-medium rounded-full transition-all border border-tac-brand/30 whitespace-nowrap">
-                        Aviation Services
+                    <button className="px-12 py-5 bg-white text-tac-dark font-black tracking-widest text-xs hover:bg-tac-brand hover:text-white transition-all duration-500 whitespace-nowrap">
+                        AVIATION EXPERTISE
                     </button>
                 </motion.div>
             </div>

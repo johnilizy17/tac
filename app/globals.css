@@ -1,81 +1,73 @@
 @import "tailwindcss";
 
 @theme {
-  --color-tac-dark: #1E1A28;
-  --color-tac-purple: #9F69C5;
-  --color-tac-pink: #CCB6B8;
-  --color-tac-gold: #D7C1BD;
+  --color-tac-dark: #0A0A0A;
   --color-tac-brand: #66B929;
-  --color-tac-glass: rgba(30, 26, 40, 0.7);
-
-  --font-sans: var(--font-inter), sans-serif;
-
-  --animate-float: float 6s ease-in-out infinite;
-  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-
-  @keyframes float {
-
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-
-    50% {
-      transform: translateY(-20px);
-    }
-  }
-}
-
-:root {
-  --background: #1E1A28;
-  --foreground: #ffffff;
-  --font-inter: 'Inter', sans-serif;
+  --color-tac-purple: #4F46E5;
+  --color-tac-slate: #1F2937;
+  --color-tac-silver: #F9FAFB;
 }
 
 @layer base {
   body {
-    background-color: var(--color-tac-dark);
-    color: white;
-    font-family: var(--font-sans);
-    font-feature-settings: "rlig" 1, "calt" 1;
-  }
-
-  /* Custom Scrollbar */
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: #1a1622;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: var(--color-tac-brand);
-    border-radius: 10px;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: var(--color-tac-purple);
+    @apply antialiased selection:bg-tac-brand selection:text-white bg-tac-dark text-white;
   }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@layer components {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-tac-brand to-white bg-[length:200%_auto] animate-text-shine;
   }
 
   .glass-card {
-    background-color: var(--color-tac-glass);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    @apply bg-white/[0.02] border border-white/[0.05] backdrop-blur-xl;
   }
 
-  .text-gradient {
-    background-clip: text;
-    color: transparent;
-    background-image: linear-gradient(to right, var(--color-tac-brand), var(--color-tac-purple), var(--color-tac-gold));
+  .magazine-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
   }
+
+  .image-mask {
+    mask-image: linear-gradient(to bottom, black 80%, transparent);
+  }
+
+  .btn-premium {
+    @apply relative px-8 py-4 bg-tac-brand text-white font-bold rounded-none overflow-hidden transition-all duration-500 hover:shadow-[0_0_30px_rgba(102, 185, 41, 0.4)] before:content-[''] before:absolute before:inset-0 before:bg-white/20 before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700;
+  }
+}
+
+@keyframes text-shine {
+  from {
+    background-position: 200% center;
+  }
+
+  to {
+    background-position: 0% center;
+  }
+}
+
+.animate-text-shine {
+  animation: text-shine 4s linear infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  transition: background 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #66B929;
 }
 
 html {

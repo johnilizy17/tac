@@ -4,64 +4,71 @@ import { motion } from "framer-motion";
 
 export default function AboutSection() {
     return (
-        <section id="about" className="py-24 relative bg-tac-dark/50 overflow-hidden">
-            <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <motion.div
-                    initial={{ opacity: 0, x: -50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
-                >
-                    <span className="text-tac-brand font-semibold tracking-widest uppercase text-sm">Who We Are</span>
-                    <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-8">
-                        Pioneering <span className="text-gradient">Professional Excellence</span> Since 2001
-                    </h2>
-                    <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                        TAC Professional Services is one of the leading indigenous Professional and Business Consulting firms in Nigeria.
-                        We are a composite one-stop professional & consulting firm providing Professional Services, Business Consulting & Financial Advisory Services to clients in various sectors of the economy.
-                    </p>
-                    <p className="text-gray-400 leading-relaxed mb-8">
-                        Founded in 2001, we have evolved in the past two decades to become one of the most visible Professional Practice & Business Consulting Firms in Nigeria.
-                        As a member firm of Integra International, we connect our clients to a global network of independent professional firms in almost every major business center of the world.
-                    </p>
-                    <div className="flex flex-wrap gap-8">
-                        <div className="flex flex-col">
-                            <span className="text-3xl font-bold text-white">20+</span>
-                            <span className="text-gray-500 text-sm">Years of Experience</span>
-                        </div>
-                        <div className="flex flex-col">
-                            <span className="text-3xl font-bold text-white">150+</span>
-                            <span className="text-gray-500 text-sm">Integra Members</span>
-                        </div>
-                        <div className="flex flex-col">
-                            <span className="text-3xl font-bold text-white">90+</span>
-                            <span className="text-gray-500 text-sm">Countries Reached</span>
-                        </div>
-                    </div>
-                </motion.div>
+        <section id="about" className="py-32 relative bg-white overflow-hidden">
+            <div className="max-w-7xl mx-auto px-4">
+                <div className="magazine-grid">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="col-span-12 lg:col-span-1 border-l-2 border-tac-brand pl-6 mb-12 lg:mb-0"
+                    >
+                        <span className="text-tac-dark font-black text-sm tracking-tighter uppercase [writing-mode:vertical-lr] rotate-180">EST. 2001</span>
+                    </motion.div>
 
-                <motion.div
-                    initial={{ opacity: 0, x: 50, rotate: 5 }}
-                    whileInView={{ opacity: 1, x: 0, rotate: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1, type: "spring", bounce: 0.3 }}
-                    className="relative"
-                >
-                    <div className="aspect-square glass-card rounded-full flex items-center justify-center p-12 relative shadow-[0_0_50px_rgba(102,185,41,0.1)]">
-                        <div className="absolute inset-0 border-2 border-dashed border-tac-brand/20 rounded-full animate-[spin_30s_linear_infinite]" />
-                        <div className="relative z-10 text-center">
-                            <motion.div
-                                initial={{ scale: 0.8 }}
-                                whileInView={{ scale: 1 }}
-                                transition={{ delay: 0.5, duration: 0.8 }}
-                                className="text-6xl font-bold text-tac-brand mb-4"
-                            >
-                                TAC
-                            </motion.div>
-                            <div className="text-gray-300 font-medium tracking-widest uppercase text-sm">Professional Services</div>
+                    <motion.div
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2 }}
+                        className="col-span-12 lg:col-span-6"
+                    >
+                        <span className="text-tac-brand uppercase tracking-widest text-xs font-bold mb-4 block">Our Legacy</span>
+                        <h2 className="text-5xl md:text-7xl font-black text-tac-dark mt-4 tracking-tighter leading-none mb-12">
+                            DRIVING<br />
+                            THE CORE<br />
+                            OF BUSINESS.
+                        </h2>
+                        <div className="max-w-md">
+                            <p className="text-tac-slate text-xl leading-relaxed font-light mb-8">
+                                TAC Professional Services is a premier indigenous consulting firm, bridging the gap between local insight and international excellence.
+                            </p>
+                            <p className="text-gray-500 leading-relaxed mb-12">
+                                Since 2001, we have built a reputation for integrity and unparalleled expertise. As an Integra International member, we provide our clients with a direct gateway to a global network of independent professional firms.
+                            </p>
+
+                            <div className="flex gap-12">
+                                <div>
+                                    <div className="text-4xl font-black text-tac-dark tracking-tighter">20+</div>
+                                    <div className="text-xs font-bold text-tac-brand uppercase tracking-widest">Years Active</div>
+                                </div>
+                                <div>
+                                    <div className="text-4xl font-black text-tac-dark tracking-tighter">150+</div>
+                                    <div className="text-xs font-bold text-tac-brand uppercase tracking-widest">Global Peers</div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </motion.div>
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.4 }}
+                        className="col-span-12 lg:col-span-5 relative mt-12 lg:mt-0"
+                    >
+                        <div className="aspect-[4/5] bg-tac-dark p-1 overflow-hidden">
+                            <img
+                                src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80"
+                                alt="Management"
+                                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
+                            />
+                        </div>
+                        <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-tac-brand flex items-center justify-center p-8 hidden md:flex">
+                            <div className="text-white font-black text-xl italic tracking-tighter leading-none">THE TAC STANDARD</div>
+                        </div>
+                    </motion.div>
+                </div>
             </div>
         </section>
     );

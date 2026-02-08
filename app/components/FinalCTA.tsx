@@ -1,94 +1,56 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, ArrowRight } from "lucide-react";
 
 export default function FinalCTA() {
     return (
-        <section id="contact" className="py-24 relative bg-tac-dark overflow-hidden">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-tac-purple/10 rounded-full blur-[120px] pointer-events-none" />
+        <section id="contact" className="py-40 relative bg-tac-dark border-t border-white/5">
+            <div className="max-w-7xl mx-auto px-4">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-20">
+                    <div className="lg:col-span-8">
+                        <span className="text-tac-brand uppercase tracking-widest text-xs font-bold block mb-4">Immediate Engagement</span>
+                        <h2 className="text-6xl md:text-9xl font-black text-white tracking-tighter leading-none mb-12">
+                            LET&apos;S SCALE<br />
+                            TOGETHER.
+                        </h2>
 
-            <div className="max-w-7xl mx-auto px-4 relative z-10">
-                <div className="glass-card rounded-[3rem] p-12 md:p-20 overflow-hidden relative">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                        <div>
-                            <motion.h2
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                className="text-4xl md:text-6xl font-bold mb-8 leading-tight"
-                            >
-                                Ready to <span className="text-gradient">Get Started?</span>
-                            </motion.h2>
-                            <motion.p
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.1 }}
-                                className="text-gray-400 text-lg mb-12"
-                            >
-                                Contact us today to learn how our solution-driven approach can empower your business decisions.
-                            </motion.p>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-12 border-t border-white/10">
+                            <div>
+                                <h4 className="text-white font-black text-sm uppercase tracking-widest mb-4">Lekki HQ</h4>
+                                <p className="text-gray-500 leading-relaxed font-light">
+                                    Block 113, Plot 22, Adebisi Ogunniyi Crescent,<br />
+                                    Lekki Phase 1, Lagos, Nigeria.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 className="text-white font-black text-sm uppercase tracking-widest mb-4">Abuja Office</h4>
+                                <p className="text-gray-500 leading-relaxed font-light">
+                                    Suite 30, Block B, Landmark Plaza,<br />
+                                    Maitama, Abuja, Nigeria.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
 
-                            <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.2 }}
-                                className="space-y-6"
-                            >
-                                <div className="flex items-start gap-4 group">
-                                    <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center group-hover:bg-tac-brand/20 transition-colors">
-                                        <MapPin className="text-tac-brand" />
-                                    </div>
-                                    <div>
-                                        <h4 className="text-white font-bold">Lekki Office (Head Office)</h4>
-                                        <p className="text-gray-400 text-sm">Block 113, Plot 22, Adebisi Ogunniyi Crescent, Lekki Phase 1, Lagos.</p>
-                                    </div>
-                                </div>
-                                <div className="flex items-start gap-4 group">
-                                    <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center group-hover:bg-tac-pink/20 transition-colors">
-                                        <MapPin className="text-tac-pink" />
-                                    </div>
-                                    <div>
-                                        <h4 className="text-white font-bold">Abuja Office</h4>
-                                        <p className="text-gray-400 text-sm">Suite 30, Block B, Landmark Plaza, Maitama, Abuja.</p>
-                                    </div>
-                                </div>
-                            </motion.div>
+                    <div className="lg:col-span-4 flex flex-col justify-end">
+                        <div className="space-y-8 pb-4">
+                            <a href="mailto:info@tacgroupng.com" className="group block">
+                                <span className="text-gray-500 text-xs uppercase tracking-widest font-bold block mb-2 group-hover:text-tac-brand transition-colors">Project Inquiry</span>
+                                <span className="text-2xl md:text-3xl font-black text-white tracking-tighter group-hover:pb-2 border-b-2 border-transparent group-hover:border-tac-brand transition-all">info@tacgroupng.com</span>
+                            </a>
+                            <a href="tel:+2349062840810" className="group block">
+                                <span className="text-gray-500 text-xs uppercase tracking-widest font-bold block mb-2 group-hover:text-tac-brand transition-colors">Direct Line</span>
+                                <span className="text-2xl md:text-3xl font-black text-white tracking-tighter group-hover:pb-2 border-b-2 border-transparent group-hover:border-tac-brand transition-all">+234 906 284 0810</span>
+                            </a>
                         </div>
 
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.3 }}
-                            className="bg-white/5 rounded-3xl p-10 backdrop-blur-md border border-white/10"
+                        <motion.button
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                            className="mt-12 w-full py-8 bg-tac-brand text-tac-dark font-black text-xl tracking-tighter hover:bg-white transition-all duration-500"
                         >
-                            <div className="space-y-8">
-                                <a href="tel:+2349062840810" className="flex items-center gap-6 group cursor-pointer">
-                                    <div className="w-14 h-14 rounded-full bg-tac-purple/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                                        <Phone className="text-tac-purple" />
-                                    </div>
-                                    <div>
-                                        <p className="text-gray-500 text-xs uppercase tracking-widest font-bold">Call Us</p>
-                                        <p className="text-xl font-bold text-white">+234 906 284 0810</p>
-                                    </div>
-                                </a>
-                                <a href="mailto:info@tacgroupng.com" className="flex items-center gap-6 group cursor-pointer">
-                                    <div className="w-14 h-14 rounded-full bg-tac-gold/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                                        <Mail className="text-tac-gold" />
-                                    </div>
-                                    <div>
-                                        <p className="text-gray-500 text-xs uppercase tracking-widest font-bold">Email Us</p>
-                                        <p className="text-xl font-bold text-white">info@tacgroupng.com</p>
-                                    </div>
-                                </a>
-                                <button className="w-full py-4 bg-white text-tac-dark font-bold rounded-2xl hover:bg-gray-100 transition-colors flex items-center justify-center gap-3 shadow-xl shadow-white/5 group">
-                                    Contact Support <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                                </button>
-                            </div>
-                        </motion.div>
+                            SECURE A CONSULTATION
+                        </motion.button>
                     </div>
                 </div>
             </div>
