@@ -10,17 +10,28 @@
 
 @layer base {
   body {
-    @apply antialiased selection:bg-tac-brand selection:text-white bg-tac-dark text-white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--color-tac-dark);
+    color: white;
   }
 }
 
 @layer components {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-tac-brand to-white bg-[length:200%_auto] animate-text-shine;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, white, var(--color-tac-brand), white);
+    background-size: 200% auto;
+    animation: text-shine 4s linear infinite;
   }
 
   .glass-card {
-    @apply bg-white/[0.02] border border-white/[0.05] backdrop-blur-xl;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
   }
 
   .magazine-grid {
@@ -31,10 +42,35 @@
 
   .image-mask {
     mask-image: linear-gradient(to bottom, black 80%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent);
   }
 
   .btn-premium {
-    @apply relative px-8 py-4 bg-tac-brand text-white font-bold rounded-none overflow-hidden transition-all duration-500 hover:shadow-[0_0_30px_rgba(102, 185, 41, 0.4)] before:content-[''] before:absolute before:inset-0 before:bg-white/20 before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700;
+    position: relative;
+    padding: 1rem 2rem;
+    background-color: var(--color-tac-brand);
+    color: white;
+    font-weight: 700;
+    border-radius: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+  }
+
+  .btn-premium:hover {
+    box-shadow: 0 0 30px rgba(102, 185, 41, 0.4);
+  }
+
+  .btn-premium::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateX(-100%);
+    transition: transform 0.7s;
+  }
+
+  .btn-premium:hover::before {
+    transform: translateX(100%);
   }
 }
 
@@ -46,10 +82,6 @@
   to {
     background-position: 0% center;
   }
-}
-
-.animate-text-shine {
-  animation: text-shine 4s linear infinite;
 }
 
 /* Custom Scrollbar */
@@ -67,9 +99,19 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #66B929;
+  background: var(--color-tac-brand);
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+selection {
+  background-color: var(--color-tac-brand);
+  color: white;
+}
+
+::selection {
+  background-color: var(--color-tac-brand);
+  color: white;
 }
