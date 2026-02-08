@@ -9,6 +9,7 @@ import TeamSection from "./components/TeamSection";
 import FinalCTA from "./components/FinalCTA";
 import Footer from "./components/Footer";
 import LoadingScreen from "./components/LoadingScreen";
+import AvatarMarquee from "./components/AvatarMarquee";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <LoadingScreen />
       <Navbar />
       <HeroBanner />
+      <AvatarMarquee />
       <div className="relative z-10">
         <AboutSection />
         <Philosophy />

@@ -1,7 +1,8 @@
 "use client";
 
+import { motion } from "framer-motion";
+import { ArrowUp, Instagram, Twitter, Linkedin, Facebook, Sparkles } from "lucide-react";
 import Link from "next/link";
-import { Facebook, Twitter, Linkedin, Instagram, ArrowUp } from "lucide-react";
 
 export default function Footer() {
     const scrollToTop = () => {
@@ -9,87 +10,95 @@ export default function Footer() {
     };
 
     return (
-        <footer className="bg-white pt-32 pb-12 relative overflow-hidden border-t border-gray-100">
-            <div className="max-w-7xl mx-auto px-6">
-                <div className="magazine-grid mb-24">
-                    {/* Brand Column */}
-                    <div className="col-span-12 lg:col-span-6">
-                        <Link href="/" className="text-6xl font-black tracking-tighter text-tac-dark block mb-8">
-                            TAC<span className="text-tac-brand">GROUP.</span>
+        <footer className="relative pt-40 pb-16 overflow-hidden bg-transparent">
+            {/* Vibrant Rainbow Bar */}
+            <div className="absolute top-0 left-0 w-full h-[4px] bg-vibrant-gradient shadow-[0_0_20px_rgba(102,185,41,0.5)]" />
+
+            <div className="max-w-7xl mx-auto px-6 relative z-10">
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-16 mb-24">
+                    {/* Brand Area */}
+                    <div className="col-span-12 lg:col-span-5">
+                        <Link href="/" className="flex items-center gap-4 mb-10 group">
+                            <div className="w-16 h-16 bg-tac-brand rounded-none flex items-center justify-center font-black text-3xl text-tac-dark shadow-[0_0_30px_rgba(102,185,41,0.4)]">
+                                T
+                            </div>
+                            <div className="flex flex-col">
+                                <span className="text-4xl font-black tracking-tighter text-white group-hover:text-vibrant-gradient transition-colors">TAC GROUP</span>
+                                <span className="text-[10px] font-black text-tac-brand tracking-[0.5em] uppercase">Vibrant Precision</span>
+                            </div>
                         </Link>
-                        <p className="text-gray-500 text-xl font-light leading-relaxed max-w-md">
-                            A leading composite professional firm, redefining excellence across audit, tax, and strategic advisory.
+                        <p className="text-gray-400 text-xl font-medium leading-relaxed max-w-md mb-12">
+                            A world-class indigenous multi-disciplinary professional service firm based in Nigeria, providing <span className="text-white italic">vibrant strategic solutions</span> since 2014.
                         </p>
-                        <div className="flex gap-6 mt-12">
-                            {[Linkedin, Twitter, Facebook, Instagram].map((Icon, i) => (
-                                <a
+
+                        <div className="flex gap-6">
+                            {[Linkedin, Twitter, Instagram, Facebook].map((Icon, i) => (
+                                <motion.a
                                     key={i}
                                     href="#"
-                                    className="text-tac-dark hover:text-tac-brand transition-all duration-300 transform hover:scale-110"
+                                    whileHover={{ scale: 1.2, y: -5 }}
+                                    className="w-14 h-14 rounded-full glass-vibrant flex items-center justify-center text-white hover:text-tac-brand transition-all duration-500 border border-white/10 card-glow"
                                 >
-                                    <Icon size={20} strokeWidth={2.5} />
-                                </a>
+                                    <Icon size={22} />
+                                </motion.a>
                             ))}
                         </div>
                     </div>
 
                     {/* Navigation Columns */}
-                    <div className="col-span-12 md:col-span-6 lg:col-span-3">
-                        <span className="text-tac-brand font-black text-xs tracking-[0.3em] uppercase block mb-8">DIRECTORY</span>
-                        <ul className="space-y-4">
-                            {["ABOUT", "METHOD", "SERVICES", "INDUSTRIES", "TEAM", "GALLERY"].map((link) => (
+                    <div className="col-span-12 md:col-span-4 lg:col-span-3">
+                        <h4 className="text-white font-black text-sm tracking-[0.4em] mb-10 uppercase drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]">Quick Access</h4>
+                        <ul className="space-y-6">
+                            {["Our Strategy", "Core Services", "Global Network", "Elite Careers", "Insights"].map((link) => (
                                 <li key={link}>
-                                    <Link
-                                        href={link === "GALLERY" ? "/gallery" : `/#${link.toLowerCase()}`}
-                                        className="text-tac-dark font-black text-xs tracking-widest hover:text-tac-brand hover:pl-2 transition-all duration-300"
-                                    >
-                                        {link}
+                                    <Link href="#" className="text-gray-400 font-bold text-sm tracking-widest hover:text-tac-cyan transition-all duration-300 flex items-center gap-3 group">
+                                        <div className="w-1.5 h-1.5 rounded-full bg-tac-brand opacity-0 group-hover:opacity-100 transition-opacity" />
+                                        {link.toUpperCase()}
                                     </Link>
                                 </li>
                             ))}
                         </ul>
                     </div>
 
-                    <div className="col-span-12 md:col-span-6 lg:col-span-3">
-                        <span className="text-tac-brand font-black text-xs tracking-[0.3em] uppercase block mb-8">CONTACT UNIT</span>
-                        <div className="space-y-6">
-                            <div>
-                                <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Electronic Mail</p>
-                                <a href="mailto:info@tacgroupng.com" className="text-tac-dark font-black tracking-tighter text-lg hover:text-tac-brand transition-colors">info@tacgroupng.com</a>
-                            </div>
-                            <div>
-                                <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Direct Communication</p>
-                                <a href="tel:+2349062840810" className="text-tac-dark font-black tracking-tighter text-lg hover:text-tac-brand transition-colors">+234 906 284 0810</a>
-                            </div>
+                    {/* Contact & CTA */}
+                    <div className="col-span-12 md:col-span-8 lg:col-span-4">
+                        <h4 className="text-white font-black text-sm tracking-[0.4em] mb-10 uppercase">Secure Engagement</h4>
+                        <div className="glass-vibrant p-10 rounded-none border border-white/5 relative group card-glow">
+                            <div className="absolute top-0 right-0 p-4 text-tac-brand opacity-20"><Sparkles /></div>
+                            <p className="text-gray-400 text-sm mb-8 leading-relaxed font-bold tracking-tight">Ready to synchronize your business with vibrant professional excellence?</p>
+                            <button className="w-full bg-tac-brand text-tac-dark py-5 font-black text-sm tracking-widest hover:bg-white transition-all duration-700 shadow-[0_0_20px_rgba(102,185,41,0.3)]">
+                                INITIATE DIALOGUE
+                            </button>
+                        </div>
+                        <div className="mt-10 flex flex-col gap-3">
+                            <span className="text-xs font-black text-gray-500 tracking-widest uppercase">Global Headquarters</span>
+                            <span className="text-white font-bold text-sm">Lagos, Nigeria — Operational 24/7/365</span>
                         </div>
                     </div>
                 </div>
 
-                {/* Industrial Bottom Bar */}
-                <div className="pt-12 border-t border-gray-100 flex flex-col md:flex-row items-center justify-between gap-8">
-                    <div className="flex items-center gap-6">
-                        <div className="flex flex-col">
-                            <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Legal Identity</span>
-                            <span className="text-[11px] font-black text-tac-dark">TAC PROFESSIONAL SERVICES © {new Date().getFullYear()}</span>
-                        </div>
-                        <div className="w-[1px] h-6 bg-gray-200" />
-                        <div className="flex flex-col">
-                            <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Digital Standards</span>
-                            <span className="text-[11px] font-black text-tac-dark uppercase">High Precision_V3</span>
-                        </div>
-                    </div>
+                {/* Bottom Bar */}
+                <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+                    <span className="text-[10px] font-black text-gray-500 tracking-[0.4em] uppercase">
+                        © 2026 TAC GROUP • PRECISION IN VIBRANCY
+                    </span>
 
-                    <button
+                    <motion.button
                         onClick={scrollToTop}
-                        className="group flex items-center gap-4 text-tac-dark hover:text-tac-brand transition-all"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        className="flex items-center gap-4 group"
                     >
-                        <span className="text-[10px] font-black uppercase tracking-[0.4em]">Back to Summit</span>
-                        <div className="w-12 h-12 rounded-none bg-tac-dark flex items-center justify-center text-white group-hover:bg-tac-brand transition-all duration-500">
-                            <ArrowUp size={20} strokeWidth={3} className="group-hover:-translate-y-1 transition-transform" />
+                        <span className="text-[10px] font-black text-white/40 tracking-[0.3em] uppercase group-hover:text-tac-brand transition-colors">Elevate to Summit</span>
+                        <div className="w-14 h-14 rounded-full bg-tac-brand flex items-center justify-center text-tac-dark shadow-[0_0_20px_rgba(102,185,41,0.4)] transition-all">
+                            <ArrowUp size={20} />
                         </div>
-                    </button>
+                    </motion.button>
                 </div>
             </div>
+
+            {/* Radiant Bottom Glow */}
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[400px] bg-tac-brand/10 rounded-full blur-[150px] pointer-events-none" />
         </footer>
     );
 }

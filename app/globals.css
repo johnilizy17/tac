@@ -1,11 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-  --color-tac-dark: #0A0A0A;
+  --color-tac-dark: #020202;
   --color-tac-brand: #66B929;
-  --color-tac-purple: #4F46E5;
-  --color-tac-slate: #1F2937;
-  --color-tac-silver: #F9FAFB;
+  --color-tac-neon-green: #39FF14;
+  --color-tac-electric-purple: #9D00FF;
+  --color-tac-cyan: #00F3FF;
+  --color-tac-deep-blue: #0A00FF;
 }
 
 @layer base {
@@ -14,79 +15,112 @@
     -moz-osx-font-smoothing: grayscale;
     background-color: var(--color-tac-dark);
     color: white;
+    overflow-x: hidden;
   }
 }
 
 @layer components {
-  .text-gradient {
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    background-image: linear-gradient(to right, white, var(--color-tac-brand), white);
-    background-size: 200% auto;
-    animation: text-shine 4s linear infinite;
+  .vibrant-mesh {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background:
+      radial-gradient(circle at 10% 10%, rgba(102, 185, 41, 0.15) 0%, transparent 40%),
+      radial-gradient(circle at 90% 10%, rgba(157, 0, 255, 0.15) 0%, transparent 40%),
+      radial-gradient(circle at 50% 90%, rgba(0, 243, 255, 0.1) 0%, transparent 50%);
+    filter: blur(100px);
+    animation: mesh-rotate 30s linear infinite;
   }
 
-  .glass-card {
-    background-color: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+  .glass-vibrant {
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(102, 185, 41, 0.05);
   }
 
-  .magazine-grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 2rem;
+  .text-glow-green {
+    text-shadow: 0 0 20px rgba(102, 185, 41, 0.5);
   }
 
-  .image-mask {
-    mask-image: linear-gradient(to bottom, black 80%, transparent);
-    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent);
+  .text-vibrant-gradient {
+    background: linear-gradient(to right, #66B929, #00F3FF, #9D00FF, #66B929);
+    background-size: 300% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradient-flow 6s linear infinite;
   }
 
-  .btn-premium {
+  .vibrant-glow-btn {
     position: relative;
-    padding: 1rem 2rem;
-    background-color: var(--color-tac-brand);
-    color: white;
-    font-weight: 700;
-    border-radius: 0;
     overflow: hidden;
-    transition: all 0.5s;
+    background: var(--color-tac-brand);
+    color: white;
+    box-shadow: 0 0 20px rgba(102, 185, 41, 0.3);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   }
 
-  .btn-premium:hover {
-    box-shadow: 0 0 30px rgba(102, 185, 41, 0.4);
+  .vibrant-glow-btn:hover {
+    box-shadow: 0 0 40px rgba(102, 185, 41, 0.6);
+    transform: translateY(-2px);
   }
 
-  .btn-premium::before {
+  .card-glow {
+    position: relative;
+  }
+
+  .card-glow::before {
     content: '';
     position: absolute;
-    inset: 0;
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: translateX(-100%);
-    transition: transform 0.7s;
+    inset: -1px;
+    background: linear-gradient(45deg, #66B929, transparent, #00F3FF, transparent, #9D00FF);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: xor;
+    -webkit-mask-composite: destination-out;
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0.3;
+    transition: opacity 0.5s;
   }
 
-  .btn-premium:hover::before {
-    transform: translateX(100%);
+  .card-glow:hover::before {
+    opacity: 1;
   }
 }
 
-@keyframes text-shine {
-  from {
-    background-position: 200% center;
+@keyframes mesh-rotate {
+  0% {
+    transform: scale(1) rotate(0deg);
   }
 
-  to {
+  50% {
+    transform: scale(1.2) rotate(180deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+@keyframes gradient-flow {
+  0% {
     background-position: 0% center;
+  }
+
+  100% {
+    background-position: 300% center;
   }
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -94,21 +128,8 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333;
-  transition: background 0.3s;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-tac-brand);
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-selection {
-  background-color: var(--color-tac-brand);
-  color: white;
+  background: linear-gradient(to bottom, #66B929, #00F3FF);
+  border-radius: 10px;
 }
 
 ::selection {

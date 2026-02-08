@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const loadingTexts = [
-    "GLOBAL INSIGHT",
-    "STRATEGIC PRECISION",
-    "UNWAVERING INTEGRITY",
-    "ELITE CONSULTING",
+    "VIBRANT STRATEGY",
+    "ELECTRIC PRECISION",
+    "NEON INTEGRITY",
+    "CYAN ANALYTICS",
     "TAC GROUP"
 ];
 
@@ -26,11 +26,11 @@ export default function LoadingScreen() {
                 }
                 return prev + 1;
             });
-        }, 20);
+        }, 25);
 
         const textInterval = setInterval(() => {
             setTextIndex((prev) => (prev + 1) % loadingTexts.length);
-        }, 600);
+        }, 500);
 
         return () => {
             clearInterval(interval);
@@ -44,45 +44,65 @@ export default function LoadingScreen() {
                 <motion.div
                     initial={{ opacity: 1 }}
                     exit={{
-                        clipPath: "inset(0 0 100% 0)",
-                        transition: { duration: 1, ease: [0.76, 0, 0.24, 1] }
+                        clipPath: "circle(0% at 50% 50%)",
+                        transition: { duration: 1.2, ease: [0.76, 0, 0.24, 1] }
                     }}
-                    className="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center pointer-events-auto"
+                    className="fixed inset-0 z-[1000] bg-tac-dark flex flex-col items-center justify-center pointer-events-auto overflow-hidden"
                 >
+                    {/* Vibrant Background Pulses */}
+                    <div className="absolute inset-0 overflow-hidden">
+                        <motion.div
+                            animate={{
+                                scale: [1, 1.5, 1],
+                                opacity: [0.1, 0.2, 0.1]
+                            }}
+                            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] bg-tac-brand rounded-full blur-[150px]"
+                        />
+                        <motion.div
+                            animate={{
+                                scale: [1.2, 0.8, 1.2],
+                                opacity: [0.05, 0.15, 0.05]
+                            }}
+                            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                            className="absolute top-0 right-0 w-[50vw] h-[50vw] bg-tac-electric-purple rounded-full blur-[120px]"
+                        />
+                    </div>
+
                     <div className="relative z-10 w-full max-w-7xl px-4 flex flex-col items-center">
                         {/* Serial Number / Counter Style */}
-                        <div className="flex items-center gap-4 mb-12">
-                            <span className="text-tac-dark font-black text-sm tracking-widest">TAC</span>
-                            <div className="w-12 h-[1px] bg-tac-brand" />
-                            <span className="text-tac-brand font-mono text-sm uppercase">Loading...</span>
+                        <div className="flex items-center gap-6 mb-16">
+                            <span className="text-white font-black text-[12px] tracking-[0.8em]">TAC_CORE</span>
+                            <div className="w-16 h-[2px] bg-vibrant-gradient" />
+                            <span className="text-tac-brand font-black text-[12px] uppercase animate-pulse">SYNCHRONIZING...</span>
                         </div>
 
                         {/* Large Percentage */}
                         <motion.div
-                            className="text-[15vw] font-black text-tac-dark tracking-tighter leading-none mb-12"
+                            className="text-[18vw] font-black text-white tracking-tighter leading-none mb-12 drop-shadow-[0_0_30px_rgba(255,255,255,0.1)]"
                         >
-                            {progress}<span className="text-tac-brand opacity-20">%</span>
+                            {progress}<span className="text-vibrant-gradient opacity-40">%</span>
                         </motion.div>
 
-                        {/* Cycling Text - Magazine Style */}
-                        <div className="h-10 overflow-hidden flex items-center justify-center w-full">
+                        {/* Cycling Text - Vibrant Mode */}
+                        <div className="h-14 overflow-hidden flex items-center justify-center w-full">
                             <AnimatePresence mode="wait">
                                 <motion.p
                                     key={textIndex}
-                                    initial={{ opacity: 0, scale: 1.1 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    exit={{ opacity: 0, scale: 0.9 }}
-                                    className="text-tac-slate text-sm font-black tracking-[0.5em] text-center"
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -20 }}
+                                    className="text-vibrant-gradient text-xl font-black tracking-[0.6em] text-center"
                                 >
                                     {loadingTexts[textIndex]}
                                 </motion.p>
                             </AnimatePresence>
                         </div>
 
-                        {/* Minimalist Bar */}
-                        <div className="mt-20 w-64 h-[2px] bg-gray-100 relative">
+                        {/* Vibrant Progress Bar */}
+                        <div className="mt-24 w-80 h-[4px] bg-white/5 relative overflow-hidden rounded-full">
                             <motion.div
-                                className="absolute top-0 left-0 h-full bg-tac-brand"
+                                className="absolute top-0 left-0 h-full bg-vibrant-gradient"
                                 initial={{ width: 0 }}
                                 animate={{ width: `${progress}%` }}
                                 transition={{ ease: "linear" }}
@@ -91,8 +111,11 @@ export default function LoadingScreen() {
                     </div>
 
                     {/* Side Accents */}
-                    <div className="absolute top-1/2 left-10 -translate-y-1/2 hidden md:block">
-                        <span className="text-gray-300 font-black text-[10px] [writing-mode:vertical-lr] tracking-[1em] opacity-30">GLOBAL_PRECISION_V3</span>
+                    <div className="absolute bottom-10 left-10 hidden md:block">
+                        <span className="text-tac-cyan font-black text-[10px] [writing-mode:vertical-lr] tracking-[1.5em] opacity-40 uppercase">Initiating_Vibrant_Protocol</span>
+                    </div>
+                    <div className="absolute top-10 right-10 hidden md:block">
+                        <span className="text-tac-electric-purple font-black text-[10px] [writing-mode:vertical-lr] tracking-[1.5em] opacity-40 uppercase">v3.5_Vibrant_Fluidity</span>
                     </div>
                 </motion.div>
             )}
