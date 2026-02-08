@@ -9,42 +9,39 @@ export default function Footer() {
     };
 
     return (
-        <footer className="bg-tac-dark border-t border-white/5 pt-20 pb-10 relative overflow-hidden">
-            {/* Subtle background glow */}
-            <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-tac-brand/5 rounded-full blur-[100px] pointer-events-none" />
-
-            <div className="max-w-7xl mx-auto px-4 relative z-10">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <footer className="bg-white pt-32 pb-12 relative overflow-hidden border-t border-gray-100">
+            <div className="max-w-7xl mx-auto px-6">
+                <div className="magazine-grid mb-24">
                     {/* Brand Column */}
-                    <div className="space-y-6">
-                        <Link href="/" className="text-2xl font-bold tracking-tighter text-white">
-                            TAC<span className="text-tac-brand">GROUP</span>
+                    <div className="col-span-12 lg:col-span-6">
+                        <Link href="/" className="text-6xl font-black tracking-tighter text-tac-dark block mb-8">
+                            TAC<span className="text-tac-brand">GROUP.</span>
                         </Link>
-                        <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-                            A composite one-stop professional & consulting firm providing excellence in audit, tax, and advisory services.
+                        <p className="text-gray-500 text-xl font-light leading-relaxed max-w-md">
+                            A leading composite professional firm, redefining excellence across audit, tax, and strategic advisory.
                         </p>
-                        <div className="flex gap-4">
-                            {[Facebook, Twitter, Linkedin, Instagram].map((Icon, i) => (
+                        <div className="flex gap-6 mt-12">
+                            {[Linkedin, Twitter, Facebook, Instagram].map((Icon, i) => (
                                 <a
                                     key={i}
                                     href="#"
-                                    className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-tac-brand hover:border-tac-brand/50 transition-all duration-300"
+                                    className="text-tac-dark hover:text-tac-brand transition-all duration-300 transform hover:scale-110"
                                 >
-                                    <Icon size={18} />
+                                    <Icon size={20} strokeWidth={2.5} />
                                 </a>
                             ))}
                         </div>
                     </div>
 
-                    {/* Quick Links */}
-                    <div>
-                        <h4 className="text-white font-bold mb-6">Quick Links</h4>
-                        <ul className="space-y-4 text-sm">
-                            {["Home", "About", "Method", "Services", "Gallery", "Careers"].map((link) => (
+                    {/* Navigation Columns */}
+                    <div className="col-span-12 md:col-span-6 lg:col-span-3">
+                        <span className="text-tac-brand font-black text-xs tracking-[0.3em] uppercase block mb-8">DIRECTORY</span>
+                        <ul className="space-y-4">
+                            {["ABOUT", "METHOD", "SERVICES", "INDUSTRIES", "TEAM", "GALLERY"].map((link) => (
                                 <li key={link}>
                                     <Link
-                                        href={link === "Home" ? "/" : link === "Gallery" ? "/gallery" : `/#${link.toLowerCase()}`}
-                                        className="text-gray-400 hover:text-tac-brand transition-colors"
+                                        href={link === "GALLERY" ? "/gallery" : `/#${link.toLowerCase()}`}
+                                        className="text-tac-dark font-black text-xs tracking-widest hover:text-tac-brand hover:pl-2 transition-all duration-300"
                                     >
                                         {link}
                                     </Link>
@@ -53,48 +50,43 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Services */}
-                    <div>
-                        <h4 className="text-white font-bold mb-6">Services</h4>
-                        <ul className="space-y-4 text-sm">
-                            {[
-                                "Audit & Assurance",
-                                "Taxation Management",
-                                "Accounting Services",
-                                "Forensic Investigation",
-                                "Business Consulting",
-                                "Receivership & Liquidation"
-                            ].map((service) => (
-                                <li key={service}>
-                                    <a href="#" className="text-gray-400 hover:text-tac-brand transition-colors">
-                                        {service}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    {/* Contact Info */}
-                    <div>
-                        <h4 className="text-white font-bold mb-6">Contact</h4>
-                        <div className="space-y-4 text-sm text-gray-400">
-                            <p>Block 113, Plot 22, Adebisi Ogunniyi Crescent, Lekki Phase 1, Lagos.</p>
-                            <p>+234 906 284 0810</p>
-                            <p>info@tacgroupng.com</p>
+                    <div className="col-span-12 md:col-span-6 lg:col-span-3">
+                        <span className="text-tac-brand font-black text-xs tracking-[0.3em] uppercase block mb-8">CONTACT UNIT</span>
+                        <div className="space-y-6">
+                            <div>
+                                <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Electronic Mail</p>
+                                <a href="mailto:info@tacgroupng.com" className="text-tac-dark font-black tracking-tighter text-lg hover:text-tac-brand transition-colors">info@tacgroupng.com</a>
+                            </div>
+                            <div>
+                                <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Direct Communication</p>
+                                <a href="tel:+2349062840810" className="text-tac-dark font-black tracking-tighter text-lg hover:text-tac-brand transition-colors">+234 906 284 0810</a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                {/* Bottom Bar */}
-                <div className="pt-8 border-t border-white/5 flex flex-col md:row items-center justify-between gap-6">
-                    <p className="text-gray-500 text-xs">
-                        Copyright © {new Date().getFullYear()} TAC Group. All Rights Reserved.
-                    </p>
+                {/* Industrial Bottom Bar */}
+                <div className="pt-12 border-t border-gray-100 flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div className="flex items-center gap-6">
+                        <div className="flex flex-col">
+                            <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Legal Identity</span>
+                            <span className="text-[11px] font-black text-tac-dark">TAC PROFESSIONAL SERVICES © {new Date().getFullYear()}</span>
+                        </div>
+                        <div className="w-[1px] h-6 bg-gray-200" />
+                        <div className="flex flex-col">
+                            <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Digital Standards</span>
+                            <span className="text-[11px] font-black text-tac-dark uppercase">High Precision_V3</span>
+                        </div>
+                    </div>
+
                     <button
                         onClick={scrollToTop}
-                        className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-white hover:bg-tac-brand hover:text-white transition-all duration-500 border border-white/10 group"
+                        className="group flex items-center gap-4 text-tac-dark hover:text-tac-brand transition-all"
                     >
-                        <ArrowUp className="group-hover:-translate-y-1 transition-transform" size={20} />
+                        <span className="text-[10px] font-black uppercase tracking-[0.4em]">Back to Summit</span>
+                        <div className="w-12 h-12 rounded-none bg-tac-dark flex items-center justify-center text-white group-hover:bg-tac-brand transition-all duration-500">
+                            <ArrowUp size={20} strokeWidth={3} className="group-hover:-translate-y-1 transition-transform" />
+                        </div>
                     </button>
                 </div>
             </div>
