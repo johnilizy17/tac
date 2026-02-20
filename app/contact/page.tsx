@@ -36,11 +36,10 @@ export default function ContactPage() {
             {/* Hero Section */}
             <section className="pt-40 pb-20 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-1/2 h-full bg-tac-brand/5 blur-[120px] -z-10" />
-                <div className="max-w-7xl mx-auto px-4 relative">
+                <div className="max-w-7xl mx-auto px-4 relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="max-w-3xl"
                     >
                         <span className="text-tac-brand font-bold tracking-widest uppercase text-sm mb-6 block">Contact Us</span>
                         <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
@@ -49,6 +48,26 @@ export default function ContactPage() {
                         <p className="text-xl text-gray-400 leading-relaxed max-w-2xl">
                             Have a project in mind or need professional advisory? Our team of experts is ready to provide solution-driven consulting for your organization.
                         </p>
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 0.2 }}
+                        className="hidden lg:block relative"
+                    >
+                        <div className="aspect-[4/3] rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl relative group">
+                            <img
+                                src="/asset/2.png"
+                                alt="Modern Architecture"
+                                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-tac-dark via-transparent to-transparent opacity-60" />
+                        </div>
+                        {/* Floating elements */}
+                        <div className="absolute -bottom-6 -left-6 glass-card p-6 rounded-2xl border-tac-brand/20 animate-bounce-slow">
+                            <Globe className="text-tac-brand w-8 h-8" />
+                        </div>
                     </motion.div>
                 </div>
             </section>
