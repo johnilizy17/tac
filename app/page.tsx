@@ -13,7 +13,7 @@ import LoadingScreen from "./components/LoadingScreen";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-tac-dark selection:bg-tac-purple selection:text-white">
+    <main className="min-h-screen bg-background selection:bg-tac-purple selection:text-foreground">
       <LoadingScreen />
       <Navbar />
       <HeroCarousel />

@@ -62,7 +62,7 @@ const itemVariants = {
 
 export default function ServicesPage() {
     return (
-        <main className="min-h-screen bg-tac-dark selection:bg-tac-purple selection:text-white">
+        <main className="min-h-screen bg-background text-foreground selection:bg-tac-purple selection:text-white">
             <Navbar />
 
             {/* Hero Section */}
@@ -75,10 +75,10 @@ export default function ServicesPage() {
                         className="max-w-4xl"
                     >
                         <span className="text-tac-brand font-bold tracking-widest uppercase text-sm mb-6 block">Our Impact & Reach</span>
-                        <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+                        <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-8 leading-tight">
                             Over Two Decades of <span className="text-gradient">Professional Excellence</span>
                         </h1>
-                        <p className="text-xl text-gray-400 leading-relaxed italic">
+                        <p className="text-xl text-muted-foreground leading-relaxed italic">
                             "TAC has established a solid footprint across both the public and private sectors, consistently delivering superior, value-driven solutions across key segments of the economy."
                         </p>
                     </motion.div>
@@ -86,12 +86,12 @@ export default function ServicesPage() {
             </section>
 
             {/* Industrial Clientele Grid */}
-            <section className="py-24 relative bg-tac-dark">
+            <section className="py-24 relative bg-background">
                 <div className="max-w-7xl mx-auto px-4">
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
                         <div className="max-w-2xl">
-                            <h2 className="text-4xl font-bold text-white mb-6">Wide Spectrum <span className="text-gradient">Clientele</span></h2>
-                            <p className="text-gray-400">Our expertise spans diverse sectors, helping organizations thrive through strategic insight and rigorous compliance.</p>
+                            <h2 className="text-4xl font-bold text-foreground mb-6">Wide Spectrum <span className="text-gradient">Clientele</span></h2>
+                            <p className="text-muted-foreground">Our expertise spans diverse sectors, helping organizations thrive through strategic insight and rigorous compliance.</p>
                         </div>
                     </div>
 
@@ -112,7 +112,7 @@ export default function ServicesPage() {
                                 <div className="w-14 h-14 bg-tac-brand/10 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-tac-brand/20 transition-colors">
                                     <item.icon className="w-6 h-6 text-tac-brand" />
                                 </div>
-                                <span className="text-white font-bold group-hover:text-tac-brand transition-colors">{item.name}</span>
+                                <span className="text-foreground font-bold group-hover:text-tac-brand transition-colors">{item.name}</span>
                             </motion.div>
                         ))}
                     </motion.div>
@@ -120,13 +120,13 @@ export default function ServicesPage() {
             </section>
 
             {/* Audit Image Section */}
-            <section className="py-12 bg-tac-dark">
+            <section className="py-12 bg-background">
                 <div className="max-w-7xl mx-auto px-4">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
-                        className="rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl"
+                        className="rounded-[3rem] overflow-hidden border border-foreground/10 shadow-2xl"
                     >
                         <img
                             src="/audit.png"
@@ -138,7 +138,7 @@ export default function ServicesPage() {
             </section>
 
             {/* Stakeholder & Compliance Section */}
-            <section className="py-24 relative bg-tac-dark/50 overflow-hidden">
+            <section className="py-24 relative bg-background/50 overflow-hidden">
                 <div className="absolute top-1/2 left-0 w-64 h-64 bg-tac-purple/10 blur-[120px] rounded-full -z-10" />
                 <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <motion.div
@@ -147,10 +147,10 @@ export default function ServicesPage() {
                         viewport={{ once: true }}
                         className="space-y-8"
                     >
-                        <h2 className="text-4xl font-bold text-white leading-tight">
+                        <h2 className="text-4xl font-bold text-foreground leading-tight">
                             Shaping the <span className="text-gradient">Professional Landscape</span>
                         </h2>
-                        <div className="space-y-6 text-gray-300 text-lg leading-relaxed">
+                        <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
                             <p>
                                 Over the years, our partners have played pivotal roles as stakeholders in shaping the professional practice landscape in Nigeria—actively contributing to the growth of client organizations and collaborating with regulatory bodies to strengthen compliance frameworks.
                             </p>
@@ -167,12 +167,12 @@ export default function ServicesPage() {
                         className="glass-card p-10 rounded-[3rem] border-tac-brand/20 relative"
                     >
                         <Building2 className="absolute top-8 right-8 w-12 h-12 text-tac-brand/10" />
-                        <h3 className="text-2xl font-bold text-white mb-8">Registered with Regulatory Bodies</h3>
+                        <h3 className="text-2xl font-bold text-foreground mb-8">Registered with Regulatory Bodies</h3>
                         <div className="space-y-4">
                             {regulatoryBodies.map((body, i) => (
-                                <div key={i} className="flex items-start gap-4 p-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors border border-white/5">
+                                <div key={i} className="flex items-start gap-4 p-4 rounded-2xl bg-foreground/5 hover:bg-foreground/10 transition-colors border border-foreground/5">
                                     <div className="w-2 h-2 rounded-full bg-tac-brand mt-2" />
-                                    <span className="text-gray-300 font-medium">{body}</span>
+                                    <span className="text-muted-foreground font-medium">{body}</span>
                                 </div>
                             ))}
                         </div>
@@ -181,7 +181,7 @@ export default function ServicesPage() {
             </section>
 
             {/* Service Delivery Excellence */}
-            <section className="py-24 relative bg-tac-dark">
+            <section className="py-24 relative bg-background">
                 <div className="max-w-7xl mx-auto px-4">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <motion.div
@@ -192,15 +192,15 @@ export default function ServicesPage() {
                         >
                             <div className="glass-card p-12 rounded-[3rem] border-tac-purple/20 bg-gradient-to-br from-tac-purple/5 to-transparent">
                                 <Users className="w-12 h-12 text-tac-purple mb-8" />
-                                <h3 className="text-3xl font-bold text-white mb-6">Accounting Outsourcing & Transaction Advisory</h3>
-                                <div className="space-y-4 text-gray-400">
+                                <h3 className="text-3xl font-bold text-foreground mb-6">Accounting Outsourcing & Transaction Advisory</h3>
+                                <div className="space-y-4 text-muted-foreground">
                                     <p>We assist our clients with adequate financial record keeping, reconciliation, and addressing complex financial structures and regulatory reporting.</p>
                                     <div className="grid grid-cols-2 gap-4 mt-8">
-                                        <div className="p-4 rounded-2xl bg-white/5 border border-white/5">
+                                        <div className="p-4 rounded-2xl bg-foreground/5 border border-foreground/5">
                                             <span className="text-tac-purple font-bold block mb-1">Onsite</span>
                                             <span className="text-xs">Direct deployment of skillful resources.</span>
                                         </div>
-                                        <div className="p-4 rounded-2xl bg-white/5 border border-white/5">
+                                        <div className="p-4 rounded-2xl bg-foreground/5 border border-white/5">
                                             <span className="text-tac-purple font-bold block mb-1">Offsite</span>
                                             <span className="text-xs">Dedicated remote support & management.</span>
                                         </div>
@@ -218,10 +218,10 @@ export default function ServicesPage() {
                             className="space-y-8 order-1 lg:order-2"
                         >
                             <span className="text-tac-purple font-bold tracking-widest uppercase text-sm">Advanced Methodology</span>
-                            <h2 className="text-4xl font-bold text-white leading-tight">
+                            <h2 className="text-4xl font-bold text-foreground leading-tight">
                                 Integrated <span className="text-gradient">AI & Automation</span>
                             </h2>
-                            <p className="text-gray-300 text-lg leading-relaxed">
+                            <p className="text-muted-foreground text-lg leading-relaxed">
                                 We deploy Accounting Software, Automated Systems, and Strong AI Accounting tools to deliver value-added record keeping that complies with local and international financial reporting.
                             </p>
                             <ul className="space-y-6">
@@ -236,8 +236,8 @@ export default function ServicesPage() {
                                             <div className="w-1.5 h-1.5 rounded-full bg-tac-brand" />
                                         </div>
                                         <div>
-                                            <span className="text-white font-bold block">{benefit.title}</span>
-                                            <span className="text-gray-500 text-sm">{benefit.desc}</span>
+                                            <span className="text-foreground font-bold block">{benefit.title}</span>
+                                            <span className="text-muted-foreground text-sm">{benefit.desc}</span>
                                         </div>
                                     </li>
                                 ))}
@@ -248,7 +248,7 @@ export default function ServicesPage() {
             </section>
 
             {/* Continuous Learning & Tech */}
-            <section className="py-24 relative bg-tac-dark overflow-hidden">
+            <section className="py-24 relative bg-background overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4">
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                         <motion.div
@@ -258,8 +258,8 @@ export default function ServicesPage() {
                             className="lg:col-span-2 glass-card p-12 rounded-[2.5rem] bg-gradient-to-br from-white/5 to-tac-brand/5 group"
                         >
                             <BookOpen className="w-12 h-12 text-tac-brand mb-8 group-hover:rotate-12 transition-transform" />
-                            <h3 className="text-3xl font-bold text-white mb-6">Continuous Learning & Development</h3>
-                            <p className="text-gray-300 text-lg leading-relaxed mb-8">
+                            <h3 className="text-3xl font-bold text-foreground mb-6">Continuous Learning & Development</h3>
+                            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
                                 In pursuit of global standards of excellence, TAC prioritizes continuous learning and professional development. Our team regularly undergoes local and international training to stay abreast of evolving methodologies in audit, assurance, and financial reporting.
                             </p>
                             <div className="flex flex-wrap gap-4 text-sm">
@@ -277,8 +277,8 @@ export default function ServicesPage() {
                             className="glass-card p-12 rounded-[2.5rem] border-tac-purple/20 flex flex-col justify-center text-center"
                         >
                             <Cpu className="w-16 h-16 text-tac-purple mx-auto mb-8 animate-pulse" />
-                            <h3 className="text-2xl font-bold text-white mb-6">Automated Solutions</h3>
-                            <p className="text-gray-400">
+                            <h3 className="text-2xl font-bold text-foreground mb-6">Automated Solutions</h3>
+                            <p className="text-muted-foreground">
                                 Backed by robust technology, our automated solutions and software enable us to deliver high-value audit, accounting, and tax advisory services with precision and speed.
                             </p>
                         </motion.div>
@@ -295,7 +295,7 @@ export default function ServicesPage() {
                         viewport={{ once: true }}
                     >
                         <h2 className="text-4xl md:text-5xl font-bold text-tac-dark mb-8">Ready to evolve with integrity?</h2>
-                        <button className="px-12 py-5 bg-tac-dark text-white font-bold rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-xl">
+                        <button className="px-12 py-5 bg-tac-brand text-tac-dark font-bold rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-xl">
                             Partner with TAC Group
                         </button>
                     </motion.div>

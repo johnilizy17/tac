@@ -64,7 +64,7 @@ const team = [
 
 export default function TeamSection() {
     return (
-        <section id="team" className="py-24 relative bg-tac-dark/50">
+        <section id="team" className="py-24 relative bg-background/50">
             <div className="max-w-7xl mx-auto px-4 relative z-10">
                 <div className="text-center mb-20">
                     <motion.span
@@ -80,7 +80,7 @@ export default function TeamSection() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-4xl md:text-5xl font-bold mt-4 mb-6"
+                        className="text-4xl md:text-5xl font-bold mt-4 mb-6 text-foreground"
                     >
                         Led by <span className="text-gradient">Visionaries</span>
                     </motion.h2>
@@ -89,7 +89,7 @@ export default function TeamSection() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="text-gray-400 max-w-2xl mx-auto text-lg"
+                        className="text-muted-foreground max-w-2xl mx-auto text-lg"
                     >
                         Our strength lies in our people. We combine local expertise with a global perspective to deliver exceptional value.
                     </motion.p>
@@ -118,16 +118,16 @@ export default function TeamSection() {
                             }}
                             className="group relative flex flex-col"
                         >
-                            <div className="relative aspect-[4/5] rounded-3xl overflow-hidden mb-6 border border-white/10 group-hover:border-tac-brand/50 transition-colors duration-500 shadow-[0_0_40px_rgba(0,0,0,0.3)] bg-white/5">
+                            <div className="relative aspect-[4/5] rounded-3xl overflow-hidden mb-6 border border-foreground/10 group-hover:border-tac-brand/50 transition-colors duration-500 shadow-[0_0_40px_rgba(0,0,0,0.3)] bg-foreground/5">
                                 <img
                                     src={member.image}
                                     alt={member.name}
                                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-110"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-tac-dark via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
 
                                 <div className="absolute bottom-4 left-4 right-4">
-                                    <h3 className="text-xl font-bold text-white mb-1 leading-tight">{member.name}</h3>
+                                    <h3 className="text-xl font-bold text-foreground mb-1 leading-tight">{member.name}</h3>
                                     <p className="text-tac-brand font-semibold text-xs tracking-wider uppercase">{member.role}</p>
                                 </div>
                             </div>
@@ -135,13 +135,13 @@ export default function TeamSection() {
                             <div className="px-2 flex flex-col gap-2">
                                 <a
                                     href={`mailto:${member.email}`}
-                                    className="flex items-center gap-2 text-gray-500 hover:text-tac-brand transition-colors text-sm"
+                                    className="flex items-center gap-2 text-muted-foreground hover:text-tac-brand transition-colors text-sm"
                                 >
                                     <Mail className="w-4 h-4" />
                                     {member.email}
                                 </a>
                                 {member.bio && (
-                                    <p className="text-gray-400 text-sm leading-relaxed line-clamp-2 italic">
+                                    <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2 italic">
                                         "{member.bio}"
                                     </p>
                                 )}

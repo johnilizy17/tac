@@ -7,6 +7,9 @@
   --color-tac-gold: #D7C1BD;
   --color-tac-brand: #66B929;
   --color-tac-glass: rgba(30, 26, 40, 0.7);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted-foreground: var(--muted-foreground);
 
   --font-sans: var(--font-inter), sans-serif;
 
@@ -29,15 +32,28 @@
 :root {
   --background: #1E1A28;
   --foreground: #ffffff;
+  --tac-brand: #66B929;
+  --tac-dark: #1E1A28;
+  --tac-purple: #9F69C5;
+  --tac-glass: rgba(30, 26, 40, 0.7);
   --font-inter: 'Inter', sans-serif;
+  --muted-foreground: #a1a1aa;
+}
+
+[data-theme='light'] {
+  --background: #ffffff;
+  --foreground: #1E1A28;
+  --tac-glass: rgba(255, 255, 255, 0.8);
+  --muted-foreground: #71717a;
 }
 
 @layer base {
   body {
-    background-color: var(--color-tac-dark);
-    color: white;
+    background-color: var(--background);
+    color: var(--foreground);
     font-family: var(--font-sans);
     font-feature-settings: "rlig" 1, "calt" 1;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   /* Custom Scrollbar */
@@ -65,16 +81,16 @@
   }
 
   .glass-card {
-    background-color: var(--color-tac-glass);
+    background-color: var(--tac-glass);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(128, 128, 128, 0.1);
     box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   }
 
   .text-gradient {
     background-clip: text;
     color: transparent;
-    background-image: linear-gradient(to right, var(--color-tac-brand), var(--color-tac-purple), var(--color-tac-gold));
+    background-image: linear-gradient(to right, var(--tac-brand), var(--tac-purple), #D7C1BD);
   }
 }
 

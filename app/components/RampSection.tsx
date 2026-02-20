@@ -36,7 +36,7 @@ const rampSteps = [
 
 export default function RampSection() {
     return (
-        <section id="ramp" className="py-24 relative overflow-hidden bg-tac-dark">
+        <section id="ramp" className="py-24 relative overflow-hidden bg-background">
             {/* Background decorative elements */}
             <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-tac-brand/5 to-transparent pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-1/3 h-full bg-gradient-to-r from-tac-brand/5 to-transparent pointer-events-none" />
@@ -65,7 +65,7 @@ export default function RampSection() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="text-gray-400 max-w-2xl mx-auto text-lg"
+                        className="text-muted-foreground max-w-2xl mx-auto text-lg"
                     >
                         A systematic approach designed to provide clarity, security, and growth for your business through every stage of the professional cycle.
                     </motion.p>
@@ -95,15 +95,15 @@ export default function RampSection() {
                             className="glass-card p-8 rounded-3xl group hover:border-tac-brand/30 transition-all duration-500"
                         >
                             <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${step.color} p-3 mb-6 shadow-lg shadow-black/20 group-hover:scale-110 transition-transform duration-500`}>
-                                <step.icon className="w-full h-full text-white" />
+                                <step.icon className="w-full h-full text-tac-dark" />
                             </div>
                             <div className="flex items-center gap-3 mb-4">
-                                <span className="text-4xl font-bold text-white/10 group-hover:text-tac-brand/30 transition-colors duration-500">
+                                <span className="text-4xl font-bold text-foreground/10 group-hover:text-tac-brand/30 transition-colors duration-500">
                                     {step.id}
                                 </span>
-                                <h3 className="text-xl font-bold text-white">{step.title}</h3>
+                                <h3 className="text-xl font-bold text-foreground">{step.title}</h3>
                             </div>
-                            <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-500 leading-relaxed text-sm">
+                            <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-500 leading-relaxed text-sm">
                                 {step.description}
                             </p>
                         </motion.div>
@@ -116,11 +116,11 @@ export default function RampSection() {
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.8 }}
-                    className="mt-20 p-8 rounded-3xl bg-white/5 border border-white/10 flex flex-col md:flex-row items-center justify-between gap-8 backdrop-blur-md"
+                    className="mt-20 p-8 rounded-3xl bg-foreground/5 border border-foreground/10 flex flex-col md:flex-row items-center justify-between gap-8 backdrop-blur-md"
                 >
                     <div className="flex-1">
-                        <h4 className="text-xl font-bold mb-2">Aerospace & Aviation Applications</h4>
-                        <p className="text-gray-400 text-sm">
+                        <h4 className="text-xl font-bold mb-2 text-foreground">Aerospace & Aviation Applications</h4>
+                        <p className="text-muted-foreground text-sm">
                             Our R.A.M.P methodology is extensively applied in high-stakes industries like Aviation, ensuring airworthiness compliance and operational excellence through technical and commercial audits.
                         </p>
                     </div>

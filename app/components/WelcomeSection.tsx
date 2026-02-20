@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function WelcomeSection() {
     return (
-        <section className="py-24 relative bg-tac-dark overflow-hidden">
+        <section className="py-24 relative bg-background overflow-hidden">
             {/* Background elements */}
             <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-tac-brand/5 to-transparent pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-tac-purple/10 blur-[120px] rounded-full pointer-events-none" />
@@ -30,7 +30,7 @@ export default function WelcomeSection() {
                             <div className="absolute inset-0 bg-gradient-to-t from-tac-dark/80 via-transparent to-transparent opacity-60" />
                         </div>
                         <div className="mt-6 text-center">
-                            <h3 className="text-2xl font-bold text-white">Tunde Adaramaja</h3>
+                            <h3 className="text-2xl font-bold text-foreground">Tunde Adaramaja</h3>
                             <p className="text-tac-brand font-medium">Managing Partner / CEO</p>
                         </div>
                     </div>
@@ -51,11 +51,11 @@ export default function WelcomeSection() {
                         <span className="text-tac-brand font-semibold tracking-widest uppercase text-sm">Welcome Note</span>
                     </div>
 
-                    <h2 className="text-4xl md:text-5xl font-bold mb-10 text-white">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-10 text-foreground">
                         Helping Your Business <span className="text-gradient">Thrive</span>
                     </h2>
 
-                    <div className="space-y-8 text-gray-300 text-lg leading-relaxed italic">
+                    <div className="space-y-8 text-muted-foreground text-lg leading-relaxed italic">
                         <div className="relative pl-8">
                             <span className="absolute left-0 top-0 text-6xl text-tac-brand/20 font-serif leading-none">"</span>
                             <p>
@@ -75,9 +75,9 @@ export default function WelcomeSection() {
                         </div>
                     </div>
 
-                    <div className="mt-12 flex items-center gap-6 p-6 border-l-4 border-tac-brand bg-white/5 rounded-r-xl">
-                        <div className="text-gray-400">
-                            <p className="text-xl text-white font-bold mb-1">Solution & Quality Assured...</p>
+                    <div className="mt-12 flex items-center gap-6 p-6 border-l-4 border-tac-brand bg-foreground/5 rounded-r-xl">
+                        <div className="text-muted-foreground">
+                            <p className="text-xl text-foreground font-bold mb-1">Solution & Quality Assured...</p>
                             <p className="text-sm tracking-[0.2em] uppercase">TAC Professional Services</p>
                         </div>
                     </div>

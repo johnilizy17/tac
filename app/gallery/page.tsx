@@ -3,7 +3,7 @@ import GalleryGrid from "../components/GalleryGrid";
 
 export default function GalleryPage() {
     return (
-        <main className="min-h-screen bg-tac-dark selection:bg-tac-purple selection:text-white pb-20">
+        <main className="min-h-screen bg-background selection:bg-tac-purple selection:text-white pb-20">
             <Navbar />
 
             <div className="pt-32 px-4 max-w-7xl mx-auto text-center">
@@ -12,7 +12,7 @@ export default function GalleryPage() {
                         Moments & Events
                     </span>
                 </h1>
-                <p className="text-gray-400 max-w-2xl mx-auto mb-16 text-lg">
+                <p className="text-muted-foreground max-w-2xl mx-auto mb-16 text-lg">
                     Explore our journey, team building activities, and professional seminars that define the TAC Group culture.
                 </p>
 

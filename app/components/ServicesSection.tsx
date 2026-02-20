@@ -44,7 +44,7 @@ const services = [
 
 export default function ServicesSection() {
     return (
-        <section id="services" className="py-24 relative bg-tac-dark/50">
+        <section id="services" className="py-24 relative bg-background">
             <div className="max-w-7xl mx-auto px-4 relative z-10">
                 <div className="text-center mb-16">
                     <motion.span
@@ -60,7 +60,7 @@ export default function ServicesSection() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-4xl md:text-5xl font-bold mt-4 mb-6"
+                        className="text-4xl md:text-5xl font-bold mt-4 mb-6 text-foreground"
                     >
                         Professional <span className="text-gradient">Solutions</span>
                     </motion.h2>
@@ -69,7 +69,7 @@ export default function ServicesSection() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="text-gray-400 max-w-2xl mx-auto text-lg"
+                        className="text-muted-foreground max-w-2xl mx-auto text-lg"
                     >
                         We offer a full array of professional services across numerous business fields to empower your growth with integrity.
                     </motion.p>
@@ -88,10 +88,10 @@ export default function ServicesSection() {
                             <div className="w-16 h-16 rounded-2xl bg-tac-brand/10 flex items-center justify-center mb-8 border border-tac-brand/20 group-hover:bg-tac-brand/20 group-hover:scale-110 transition-all duration-500">
                                 <service.icon className="w-8 h-8 text-tac-brand" />
                             </div>
-                            <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-tac-brand transition-colors">
+                            <h3 className="text-2xl font-bold text-foreground group-hover:text-tac-brand transition-colors">
                                 {service.title}
                             </h3>
-                            <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-500 leading-relaxed mb-8 flex-grow">
+                            <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-500 leading-relaxed mb-8 flex-grow">
                                 {service.description}
                             </p>
                             <button className="flex items-center gap-2 text-tac-brand font-medium hover:gap-4 transition-all duration-300">

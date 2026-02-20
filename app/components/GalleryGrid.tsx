@@ -32,8 +32,8 @@ export default function GalleryGrid() {
                         key={cat}
                         onClick={() => setFilter(cat)}
                         className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${filter === cat
-                                ? "bg-tac-purple text-white shadow-lg shadow-tac-purple/25"
-                                : "bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white"
+                            ? "bg-tac-purple text-foreground shadow-lg shadow-tac-purple/25"
+                            : "bg-foreground/5 text-muted-foreground hover:bg-foreground/10 hover:text-foreground"
                             }`}
                     >
                         {cat}
@@ -64,7 +64,7 @@ export default function GalleryGrid() {
                                 className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                             />
                             <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent z-20 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                                <span className="text-white text-sm font-medium">{img.category}</span>
+                                <span className="text-foreground text-sm font-medium">{img.category}</span>
                             </div>
                         </motion.div>
                     ))}

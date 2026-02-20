@@ -43,7 +43,7 @@ const coreValues = [
 
 export default function Philosophy() {
     return (
-        <section id="philosophy" className="py-24 relative bg-tac-dark overflow-hidden">
+        <section id="philosophy" className="py-24 relative bg-background overflow-hidden">
             {/* Background Depth */}
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(102,185,41,0.03),transparent)] pointer-events-none" />
 
@@ -61,10 +61,10 @@ export default function Philosophy() {
                             <Quote className="w-24 h-24 text-tac-brand rotate-180" />
                         </div>
                         <span className="text-tac-brand font-bold tracking-widest uppercase text-xs mb-6 block">Our Vision</span>
-                        <h3 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-8">
+                        <h3 className="text-3xl md:text-4xl font-bold text-foreground leading-tight mb-8">
                             To be the <span className="text-gradient">first choice</span>, solution-driven firm globally.
                         </h3>
-                        <p className="text-gray-400 text-lg leading-relaxed max-w-lg italic">
+                        <p className="text-muted-foreground text-lg leading-relaxed max-w-lg italic">
                             Connecting local insights with international standards to define the future of business consulting.
                         </p>
                     </motion.div>
@@ -74,13 +74,13 @@ export default function Philosophy() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="glass-card p-12 rounded-[2.5rem] border-tac-purple/20 bg-gradient-to-br from-white/5 to-tac-purple/5"
+                        className="glass-card p-12 rounded-[2.5rem] border-tac-purple/20 bg-gradient-to-br from-foreground/5 to-tac-purple/5"
                     >
                         <span className="text-tac-purple font-bold tracking-widest uppercase text-xs mb-6 block">Our Mission</span>
-                        <h3 className="text-2xl font-bold text-white leading-snug mb-8">
+                        <h3 className="text-2xl font-bold text-foreground leading-snug mb-8">
                             Enshrining accountability, professionalism, and objectivity in the industry.
                         </h3>
-                        <p className="text-gray-300 leading-relaxed text-sm">
+                        <p className="text-muted-foreground leading-relaxed text-sm">
                             We provide client-centered, value-for-money, and time-bound services that empower growth and transparency in the Nigerian professional services space.
                         </p>
                         <div className="mt-8 h-1 w-24 bg-gradient-to-r from-tac-purple to-tac-brand rounded-full" />
@@ -93,7 +93,7 @@ export default function Philosophy() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-4xl font-bold text-white mb-4"
+                        className="text-4xl font-bold text-foreground mb-4"
                     >
                         Our <span className="text-gradient">Core Values</span>
                     </motion.h2>
@@ -114,8 +114,8 @@ export default function Philosophy() {
                             <div className={`w-14 h-14 ${value.bg} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500`}>
                                 <value.icon className={`w-7 h-7 ${value.color}`} />
                             </div>
-                            <h4 className="text-lg font-bold text-white mb-4">{value.title}</h4>
-                            <p className="text-gray-400 text-xs leading-relaxed">
+                            <h4 className="text-lg font-bold text-foreground mb-4">{value.title}</h4>
+                            <p className="text-muted-foreground text-xs leading-relaxed">
                                 {value.description}
                             </p>
                         </motion.div>

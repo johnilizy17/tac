@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Hero3D() {
     return (
-        <div className="relative w-full h-screen overflow-hidden flex items-center justify-center bg-tac-dark">
+        <div className="relative w-full h-screen overflow-hidden flex items-center justify-center bg-background">
             {/* Background Gradients/Orbs */}
             <div className="absolute inset-0 pointer-events-none">
                 <motion.div
@@ -48,7 +48,7 @@ export default function Hero3D() {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
                     <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
-                        <span className="block text-white mb-2">Pioneering</span>
+                        <span className="block text-foreground mb-2">Pioneering</span>
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-tac-brand via-tac-purple to-tac-gold">
                             Business Excellence
                         </span>
@@ -59,7 +59,7 @@ export default function Hero3D() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                    className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed"
+                    className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
                 >
                     TAC Group delivers world-class professional services, audit, and customized business solutions.
                     Empowering your growth with integrity and innovation.
@@ -71,10 +71,10 @@ export default function Hero3D() {
                     transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
                     className="flex flex-col sm:flex-row gap-4 justify-center items-center"
                 >
-                    <button className="px-8 py-4 bg-white text-tac-dark font-semibold rounded-full hover:bg-gray-100 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+                    <button className="px-8 py-4 bg-tac-brand text-tac-dark font-semibold rounded-full hover:bg-tac-brand/90 transition-colors shadow-xl">
                         Our Services
                     </button>
-                    <button className="px-8 py-4 border border-white/20 text-white rounded-full hover:bg-white/5 transition-colors backdrop-blur-sm">
+                    <button className="px-8 py-4 border border-foreground/20 text-foreground rounded-full hover:bg-foreground/5 transition-colors backdrop-blur-sm">
                         Contact Us
                     </button>
                 </motion.div>

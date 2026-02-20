@@ -30,7 +30,7 @@ const contactInfo = [
 
 export default function ContactPage() {
     return (
-        <main className="min-h-screen bg-tac-dark">
+        <main className="min-h-screen bg-background text-foreground">
             <Navbar />
 
             {/* Hero Section */}
@@ -42,10 +42,10 @@ export default function ContactPage() {
                         animate={{ opacity: 1, y: 0 }}
                     >
                         <span className="text-tac-brand font-bold tracking-widest uppercase text-sm mb-6 block">Contact Us</span>
-                        <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+                        <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-8 leading-tight">
                             Let's Build Your <span className="text-gradient">Vision Together</span>
                         </h1>
-                        <p className="text-xl text-gray-400 leading-relaxed max-w-2xl">
+                        <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
                             Have a project in mind or need professional advisory? Our team of experts is ready to provide solution-driven consulting for your organization.
                         </p>
                     </motion.div>
@@ -56,7 +56,7 @@ export default function ContactPage() {
                         transition={{ delay: 0.2 }}
                         className="hidden lg:block relative"
                     >
-                        <div className="aspect-[4/3] rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl relative group">
+                        <div className="aspect-[4/3] rounded-[3rem] overflow-hidden border border-foreground/10 shadow-2xl relative group">
                             <img
                                 src="/asset/2.png"
                                 alt="Modern Architecture"
@@ -73,7 +73,7 @@ export default function ContactPage() {
             </section>
 
             {/* Contact Content */}
-            <section className="py-24 relative bg-tac-dark">
+            <section className="py-24 relative bg-background">
                 <div className="max-w-7xl mx-auto px-4">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
 
@@ -87,14 +87,14 @@ export default function ContactPage() {
                                         whileInView={{ opacity: 1, x: 0 }}
                                         viewport={{ once: true }}
                                         transition={{ delay: item.delay }}
-                                        className="flex gap-6 p-8 glass-card rounded-3xl group border-white/5 hover:border-tac-brand/30 transition-all duration-500"
+                                        className="flex gap-6 p-8 glass-card rounded-3xl group border-foreground/5 hover:border-tac-brand/30 transition-all duration-500"
                                     >
                                         <div className="w-14 h-14 bg-tac-brand/10 rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-500">
                                             <item.icon className="w-6 h-6 text-tac-brand" />
                                         </div>
                                         <div>
-                                            <h3 className="text-white font-bold text-lg mb-2">{item.title}</h3>
-                                            <p className="text-gray-400 leading-relaxed text-sm mb-1">{item.details}</p>
+                                            <h3 className="text-foreground font-bold text-lg mb-2">{item.title}</h3>
+                                            <p className="text-muted-foreground leading-relaxed text-sm mb-1">{item.details}</p>
                                             {item.subDetails && <p className="text-tac-brand/60 text-xs font-medium uppercase tracking-wider">{item.subDetails}</p>}
                                         </div>
                                     </motion.div>
@@ -107,13 +107,13 @@ export default function ContactPage() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.4 }}
-                                className="p-8 rounded-[2rem] bg-gradient-to-br from-tac-brand/5 to-transparent border border-white/5"
+                                className="p-8 rounded-[2rem] bg-gradient-to-br from-tac-brand/5 to-transparent border border-foreground/5"
                             >
                                 <div className="flex items-center gap-4 mb-4 text-tac-brand">
                                     <Clock size={20} />
                                     <span className="font-bold uppercase tracking-widest text-xs">Global Standards</span>
                                 </div>
-                                <p className="text-gray-400 text-sm leading-relaxed">
+                                <p className="text-muted-foreground text-sm leading-relaxed">
                                     TAC operates with international best practices from our headquarters in Lagos, serving clients across key economic sectors globally.
                                 </p>
                             </motion.div>
@@ -128,44 +128,44 @@ export default function ContactPage() {
                         >
                             <div className="absolute -top-12 -right-12 w-48 h-48 bg-tac-purple/10 blur-[80px] -z-10" />
 
-                            <h2 className="text-3xl font-bold text-white mb-8">Send us a <span className="text-gradient">Message</span></h2>
+                            <h2 className="text-3xl font-bold text-foreground mb-8">Send us a <span className="text-gradient">Message</span></h2>
 
                             <form className="space-y-6">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="space-y-2">
-                                        <label className="text-gray-400 text-sm font-medium ml-2">Full Name</label>
+                                        <label className="text-muted-foreground text-sm font-medium ml-2">Full Name</label>
                                         <input
                                             type="text"
                                             placeholder="John Doe"
-                                            className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white placeholder:text-gray-600 focus:outline-none focus:border-tac-brand/50 transition-colors"
+                                            className="w-full bg-foreground/5 border border-foreground/10 rounded-2xl px-6 py-4 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-tac-brand/50 transition-colors"
                                         />
                                     </div>
                                     <div className="space-y-2">
-                                        <label className="text-gray-400 text-sm font-medium ml-2">Email Address</label>
+                                        <label className="text-muted-foreground text-sm font-medium ml-2">Email Address</label>
                                         <input
                                             type="email"
                                             placeholder="john@example.com"
-                                            className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white placeholder:text-gray-600 focus:outline-none focus:border-tac-brand/50 transition-colors"
+                                            className="w-full bg-foreground/5 border border-foreground/10 rounded-2xl px-6 py-4 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-tac-brand/50 transition-colors"
                                         />
                                     </div>
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label className="text-gray-400 text-sm font-medium ml-2">Subject</label>
-                                    <select className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white appearance-none focus:outline-none focus:border-tac-brand/50 transition-colors">
-                                        <option className="bg-tac-dark">Audit & Assurance Inquiry</option>
-                                        <option className="bg-tac-dark">Tax Management Advisory</option>
-                                        <option className="bg-tac-dark">Business Consulting</option>
-                                        <option className="bg-tac-dark">General Inquiry</option>
+                                    <label className="text-muted-foreground text-sm font-medium ml-2">Subject</label>
+                                    <select className="w-full bg-foreground/5 border border-foreground/10 rounded-2xl px-6 py-4 text-foreground appearance-none focus:outline-none focus:border-tac-brand/50 transition-colors">
+                                        <option className="bg-background">Audit & Assurance Inquiry</option>
+                                        <option className="bg-background">Tax Management Advisory</option>
+                                        <option className="bg-background">Business Consulting</option>
+                                        <option className="bg-background">General Inquiry</option>
                                     </select>
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label className="text-gray-400 text-sm font-medium ml-2">Your Message</label>
+                                    <label className="text-muted-foreground text-sm font-medium ml-2">Your Message</label>
                                     <textarea
                                         rows={5}
                                         placeholder="Tell us how we can help your organization..."
-                                        className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white placeholder:text-gray-600 focus:outline-none focus:border-tac-brand/50 transition-colors resize-none"
+                                        className="w-full bg-foreground/5 border border-foreground/10 rounded-2xl px-6 py-4 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-tac-brand/50 transition-colors resize-none"
                                     ></textarea>
                                 </div>
 
@@ -174,7 +174,7 @@ export default function ContactPage() {
                                     <Send size={18} />
                                 </button>
 
-                                <p className="text-center text-gray-500 text-xs">
+                                <p className="text-center text-muted-foreground text-xs">
                                     By submitting, you agree to our privacy policy and data protection terms.
                                 </p>
                             </form>
@@ -184,20 +184,20 @@ export default function ContactPage() {
             </section>
 
             {/* Map Placeholder or Visual Representation */}
-            <section className="py-24 bg-tac-dark/50 overflow-hidden">
+            <section className="py-24 bg-background overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
-                        className="w-full aspect-[21/9] rounded-[3.5rem] bg-white/5 border border-white/5 relative overflow-hidden group shadow-2xl"
+                        className="w-full aspect-[21/9] rounded-[3.5rem] bg-foreground/5 border border-foreground/5 relative overflow-hidden group shadow-2xl"
                     >
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(102,185,41,0.1),transparent_70%)]" />
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div className="text-center space-y-4">
                                 <MapPin className="w-16 h-16 text-tac-brand mx-auto animate-bounce" />
-                                <h4 className="text-2xl font-bold text-white">Find Us in Lagos</h4>
-                                <p className="text-gray-400">Adebisi Ogunniyi Crescent, Lekki Phase 1</p>
+                                <h4 className="text-2xl font-bold text-foreground">Find Us in Lagos</h4>
+                                <p className="text-muted-foreground">Adebisi Ogunniyi Crescent, Lekki Phase 1</p>
                             </div>
                         </div>
                         {/* Abstract Map Lines Overlay */}

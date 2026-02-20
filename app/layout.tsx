@@ -4,6 +4,8 @@ import "./globals.css";
 import { clsx } from "clsx";
 import CustomCursor from "./components/CustomCursor";
 
+import { ThemeProvider } from "./components/ThemeProvider";
+
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
@@ -18,9 +20,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={clsx(inter.variable, "font-sans bg-tac-dark text-white min-h-screen md:cursor-none")}>
-        <CustomCursor />
-        {children}
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var theme = localStorage.getItem('theme');
+                  if (!theme) theme = 'dark';
+                  document.documentElement.setAttribute('data-theme', theme);
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
+      </head>
+      <body className={clsx(inter.variable, "font-sans min-h-screen md:cursor-none")}>
+        <ThemeProvider>
+          <CustomCursor />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
