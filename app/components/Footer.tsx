@@ -18,7 +18,7 @@ export default function Footer() {
                     {/* Brand Column */}
                     <div className="space-y-6">
                         <Link href="/" className="text-2xl font-bold tracking-tighter text-foreground">
-                            TAC<span className="text-tac-brand">GROUP</span>
+                            TAC<span className="text-tac-brand"> GROUP</span>
                         </Link>
                         <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
                             A composite one-stop professional & consulting firm providing excellence in audit, tax, and advisory services.

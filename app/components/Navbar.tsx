@@ -47,8 +47,8 @@ export default function Navbar() {
             >
                 <div className="glass-card rounded-[2rem] md:rounded-full px-6 md:px-8 py-3 md:py-4 flex items-center justify-between gap-4 md:gap-12 max-w-5xl w-full mx-auto border-foreground/10 shadow-2xl">
                     <Link href="/" className="text-lg md:text-xl font-black tracking-tighter flex items-center gap-2">
-                        <div className="w-8 h-8 bg-tac-brand rounded-lg flex items-center justify-center text-tac-dark text-sm">T</div>
-                        <span className="text-foreground">TAC<span className="text-tac-brand">GROUP</span></span>
+                        <img src="/favicon.ico" className="w-8 h-8 rounded-lg flex items-center justify-center text-tac-dark text-sm" />
+                        <span className="text-foreground">TAC<span className="text-tac-brand"> GROUP</span></span>
                     </Link>
 
                     {/* Desktop Menu */}
