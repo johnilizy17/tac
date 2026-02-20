@@ -36,8 +36,8 @@ export default function Navbar() {
                     <Link href="/" className="hover:text-white transition-colors">Home</Link>
                     <Link href="/#about" className="hover:text-white transition-colors">About</Link>
                     <Link href="/services" className="hover:text-white transition-colors">Services</Link>
-                    <Link href="/industries" className="hover:text-white transition-colors">Industries</Link>
-                    <Link href="/team" className="hover:text-white transition-colors">Team</Link>
+                    <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
+                    <Link href="/#team" className="hover:text-white transition-colors">Team</Link>
                     <Link href="/gallery" className="hover:text-white transition-colors">Gallery</Link>
                 </div>
 

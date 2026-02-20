@@ -119,6 +119,24 @@ export default function ServicesPage() {
                 </div>
             </section>
 
+            {/* Audit Image Section */}
+            <section className="py-12 bg-tac-dark">
+                <div className="max-w-7xl mx-auto px-4">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        className="rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl"
+                    >
+                        <img
+                            src="/audit.png"
+                            alt="TAC Audit Excellence"
+                            className="w-full h-auto object-cover"
+                        />
+                    </motion.div>
+                </div>
+            </section>
+
             {/* Stakeholder & Compliance Section */}
             <section className="py-24 relative bg-tac-dark/50 overflow-hidden">
                 <div className="absolute top-1/2 left-0 w-64 h-64 bg-tac-purple/10 blur-[120px] rounded-full -z-10" />
@@ -159,6 +177,73 @@ export default function ServicesPage() {
                             ))}
                         </div>
                     </motion.div>
+                </div>
+            </section>
+
+            {/* Service Delivery Excellence */}
+            <section className="py-24 relative bg-tac-dark">
+                <div className="max-w-7xl mx-auto px-4">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            className="relative order-2 lg:order-1"
+                        >
+                            <div className="glass-card p-12 rounded-[3rem] border-tac-purple/20 bg-gradient-to-br from-tac-purple/5 to-transparent">
+                                <Users className="w-12 h-12 text-tac-purple mb-8" />
+                                <h3 className="text-3xl font-bold text-white mb-6">Accounting Outsourcing & Transaction Advisory</h3>
+                                <div className="space-y-4 text-gray-400">
+                                    <p>We assist our clients with adequate financial record keeping, reconciliation, and addressing complex financial structures and regulatory reporting.</p>
+                                    <div className="grid grid-cols-2 gap-4 mt-8">
+                                        <div className="p-4 rounded-2xl bg-white/5 border border-white/5">
+                                            <span className="text-tac-purple font-bold block mb-1">Onsite</span>
+                                            <span className="text-xs">Direct deployment of skillful resources.</span>
+                                        </div>
+                                        <div className="p-4 rounded-2xl bg-white/5 border border-white/5">
+                                            <span className="text-tac-purple font-bold block mb-1">Offsite</span>
+                                            <span className="text-xs">Dedicated remote support & management.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {/* Decorative element */}
+                            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-tac-purple/10 blur-3xl -z-10" />
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, x: 30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="space-y-8 order-1 lg:order-2"
+                        >
+                            <span className="text-tac-purple font-bold tracking-widest uppercase text-sm">Advanced Methodology</span>
+                            <h2 className="text-4xl font-bold text-white leading-tight">
+                                Integrated <span className="text-gradient">AI & Automation</span>
+                            </h2>
+                            <p className="text-gray-300 text-lg leading-relaxed">
+                                We deploy Accounting Software, Automated Systems, and Strong AI Accounting tools to deliver value-added record keeping that complies with local and international financial reporting.
+                            </p>
+                            <ul className="space-y-6">
+                                {[
+                                    { title: "Competitive Rates", desc: "Unequalled cost-benefit ratios across all disciplines." },
+                                    { title: "Quick Turnaround", desc: "Agile execution and timely service delivery." },
+                                    { title: "Data Protection", desc: "Guaranteed security and confidentiality of client data." },
+                                    { title: "Quality Delivery", desc: "High-value precision in every engagement." }
+                                ].map((benefit, i) => (
+                                    <li key={i} className="flex gap-4">
+                                        <div className="mt-1 w-5 h-5 rounded-full bg-tac-brand/20 flex items-center justify-center shrink-0">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-tac-brand" />
+                                        </div>
+                                        <div>
+                                            <span className="text-white font-bold block">{benefit.title}</span>
+                                            <span className="text-gray-500 text-sm">{benefit.desc}</span>
+                                        </div>
+                                    </li>
+                                ))}
+                            </ul>
+                        </motion.div>
+                    </div>
                 </div>
             </section>
 

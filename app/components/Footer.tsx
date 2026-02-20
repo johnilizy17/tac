@@ -43,7 +43,7 @@ export default function Footer() {
                             {["Home", "About", "Services", "Gallery", "Careers"].map((link) => (
                                 <li key={link}>
                                     <Link
-                                        href={link === "Home" ? "/" : link === "Gallery" ? "/gallery" : link === "Services" ? "/services" : `/#${link.toLowerCase()}`}
+                                        href={link === "Home" ? "/" : link === "Gallery" ? "/gallery" : link === "Services" ? "/services" : link === "Careers" ? "/contact" : `/#${link.toLowerCase()}`}
                                         className="text-gray-400 hover:text-tac-brand transition-colors"
                                     >
                                         {link}
@@ -66,7 +66,7 @@ export default function Footer() {
                                 "Receivership & Liquidation"
                             ].map((service) => (
                                 <li key={service}>
-                                    <a href="#" className="text-gray-400 hover:text-tac-brand transition-colors">
+                                    <a href="/services" className="text-gray-400 hover:text-tac-brand transition-colors">
                                         {service}
                                     </a>
                                 </li>
