@@ -1,19 +1,64 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Mail } from "lucide-react";
 
 const team = [
     {
         name: "Tunde Adaramaja",
         role: "Managing Partner / CEO",
         image: "3s.jpeg",
+        email: "tunde@tacgroupng.com",
         bio: "Leading TAC with over two decades of professional expertise in audit and business consulting.",
     },
     {
         name: "Tunde Faniyi",
         role: "Senior Partner/COO",
         image: "2s.jpeg",
+        email: "faniyi@tacgroupng.com",
         bio: "Dedicated and competent professionals using technology to drive client success with integrity.",
+    },
+    {
+        name: "Dr. Abraham O. Bamigboje",
+        role: "Associate Partner, Assurance & Transaction Advisory Service",
+        image: "5s.jpg",
+        email: "abraham@tacgroupng.com",
+    },
+    {
+        name: "James Oni",
+        role: "Director, TAC Tax Advisory Service",
+        image: "6s.jpg",
+        email: "James@tacgroupng.com",
+    },
+    {
+        name: "Tunde Latinwo",
+        role: "Director, Business Development & Corporate Services",
+        image: "7s.jpg",
+        email: "latinwo@tacgroupng.com",
+    },
+    {
+        name: "Amaebi Fiderikumo",
+        role: "Associate Director, Business Advisory",
+        image: "1s.jpg",
+        email: "amaebi@tacgroupng.com",
+    },
+    {
+        name: "Oluwole Adaramaja",
+        role: "Associate Director, Corporate Transactions, Compliance, Recovery & Liquidation",
+        image: "2s.jpeg",
+        email: "wole@tacgroupng.com",
+    },
+    {
+        name: "Muheez Popoola",
+        role: "Senior Manager, TAC Tax Advisory Service",
+        image: "3s.jpeg",
+        email: "muheez@tacgroupng.com",
+    },
+    {
+        name: "Anjola Dapo Fagbure",
+        role: "Manager, Audit & Assurance Services",
+        image: "5s.jpg",
+        email: "anjola@tacgroupng.com",
     },
 ];
 
@@ -58,11 +103,11 @@ export default function TeamSection() {
                         hidden: {},
                         show: {
                             transition: {
-                                staggerChildren: 0.2
+                                staggerChildren: 0.1
                             }
                         }
                     }}
-                    className="flex flex-wrap justify-center gap-12"
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
                 >
                     {team.map((member) => (
                         <motion.div
@@ -71,43 +116,39 @@ export default function TeamSection() {
                                 hidden: { opacity: 0, y: 50 },
                                 show: { opacity: 1, y: 0 }
                             }}
-                            className="group relative max-w-sm"
+                            className="group relative flex flex-col"
                         >
-                            <div className="relative aspect-[3/4] rounded-3xl overflow-hidden mb-6 border border-white/10 group-hover:border-tac-brand/50 transition-colors duration-500 shadow-[0_0_40px_rgba(0,0,0,0.3)]">
+                            <div className="relative aspect-[4/5] rounded-3xl overflow-hidden mb-6 border border-white/10 group-hover:border-tac-brand/50 transition-colors duration-500 shadow-[0_0_40px_rgba(0,0,0,0.3)] bg-white/5">
                                 <img
                                     src={member.image}
                                     alt={member.name}
                                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-110"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-tac-dark via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-                                <div className="absolute bottom-6 left-6 right-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                                    <h3 className="text-2xl font-bold text-white mb-1 leading-tight">{member.name}</h3>
-                                    <p className="text-tac-brand font-semibold text-sm tracking-wider">{member.role}</p>
+
+                                <div className="absolute bottom-4 left-4 right-4">
+                                    <h3 className="text-xl font-bold text-white mb-1 leading-tight">{member.name}</h3>
+                                    <p className="text-tac-brand font-semibold text-xs tracking-wider uppercase">{member.role}</p>
                                 </div>
                             </div>
-                            <p className="text-gray-400 text-center text-sm leading-relaxed px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                {member.bio}
-                            </p>
+
+                            <div className="px-2 flex flex-col gap-2">
+                                <a
+                                    href={`mailto:${member.email}`}
+                                    className="flex items-center gap-2 text-gray-500 hover:text-tac-brand transition-colors text-sm"
+                                >
+                                    <Mail className="w-4 h-4" />
+                                    {member.email}
+                                </a>
+                                {member.bio && (
+                                    <p className="text-gray-400 text-sm leading-relaxed line-clamp-2 italic">
+                                        "{member.bio}"
+                                    </p>
+                                )}
+                            </div>
                         </motion.div>
                     ))}
 
-                    {/* Join Us Card */}
-                    <motion.div
-                        variants={{
-                            hidden: { opacity: 0, y: 50 },
-                            show: { opacity: 1, y: 0 }
-                        }}
-                        className="max-w-sm w-full flex flex-col items-center justify-center p-12 glass-card rounded-3xl border-dashed border-2 border-white/10 hover:border-tac-brand/30 transition-all group"
-                    >
-                        <div className="text-tac-brand text-5xl mb-6 group-hover:rotate-90 transition-transform duration-500">+</div>
-                        <h3 className="text-xl font-bold text-white mb-4">Join Our Journey</h3>
-                        <p className="text-gray-500 text-center text-sm mb-8">
-                            We are always looking for passionate professionals to join our one-stop consulting firm.
-                        </p>
-                        <button className="px-6 py-2 border border-white/10 rounded-full text-sm font-medium hover:bg-tac-brand hover:text-white hover:border-tac-brand transition-all duration-300">
-                            View Careers
-                        </button>
-                    </motion.div>
                 </motion.div>
             </div>
         </section>

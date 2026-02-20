@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={clsx(inter.variable, "font-sans bg-tac-dark text-white min-h-screen cursor-none")}>
+      <body className={clsx(inter.variable, "font-sans bg-tac-dark text-white min-h-screen md:cursor-none")}>
         <CustomCursor />
         {children}
       </body>

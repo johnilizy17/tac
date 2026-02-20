@@ -5,6 +5,7 @@ import { motion, useMotionValue, useSpring } from "framer-motion";
 
 export default function CustomCursor() {
     const [isVisible, setIsVisible] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
 
     // Position of the mouse
     const mouseX = useMotionValue(0);
@@ -16,25 +17,41 @@ export default function CustomCursor() {
     const springY = useSpring(mouseY, springConfig);
 
     useEffect(() => {
+        // Check if device is mobile or has touch capabilities
+        const checkMobile = () => {
+            const isTouch = window.matchMedia("(pointer: coarse)").matches;
+            const isSmallScreen = window.innerWidth < 768;
+            setIsMobile(isTouch || isSmallScreen);
+        };
+
+        checkMobile();
+        window.addEventListener("resize", checkMobile);
+
         const moveMouse = (e: MouseEvent) => {
+            if (isMobile) return;
             mouseX.set(e.clientX);
             mouseY.set(e.clientY);
             if (!isVisible) setIsVisible(true);
         };
 
-        const handleMouseEnter = () => setIsVisible(true);
+        const handleMouseEnter = () => !isMobile && setIsVisible(true);
         const handleMouseLeave = () => setIsVisible(false);
 
-        window.addEventListener("mousemove", moveMouse);
-        document.addEventListener("mouseenter", handleMouseEnter);
-        document.addEventListener("mouseleave", handleMouseLeave);
+        if (!isMobile) {
+            window.addEventListener("mousemove", moveMouse);
+            document.addEventListener("mouseenter", handleMouseEnter);
+            document.addEventListener("mouseleave", handleMouseLeave);
+        }
 
         return () => {
+            window.removeEventListener("resize", checkMobile);
             window.removeEventListener("mousemove", moveMouse);
             document.removeEventListener("mouseenter", handleMouseEnter);
             document.removeEventListener("mouseleave", handleMouseLeave);
         };
-    }, [mouseX, mouseY, isVisible]);
+    }, [mouseX, mouseY, isVisible, isMobile]);
+
+    if (isMobile) return null;
 
     return (
         <>

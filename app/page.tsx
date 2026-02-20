@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
-import Hero3D from "./components/Hero3D";
+import HeroCarousel from "./components/HeroCarousel";
 import AboutSection from "./components/AboutSection";
+import WelcomeSection from "./components/WelcomeSection";
 import Philosophy from "./components/Philosophy";
 import RampSection from "./components/RampSection";
 import ServicesSection from "./components/ServicesSection";
@@ -15,7 +16,8 @@ export default function Home() {
     <main className="min-h-screen bg-tac-dark selection:bg-tac-purple selection:text-white">
       <LoadingScreen />
       <Navbar />
-      <Hero3D />
+      <HeroCarousel />
+      <WelcomeSection />
       <AboutSection />
       <Philosophy />
       {/* <RampSection /> */}
