@@ -21,7 +21,7 @@ const team = [
     {
         name: "Dr. Abraham O. Bamigboje",
         role: "Associate Partner, Assurance & Transaction Advisory Service",
-        image: "5s.jpg",
+        image: "1s.jpg",
         email: "abraham@tacgroupng.com",
     },
     {
@@ -33,26 +33,14 @@ const team = [
     {
         name: "Tunde Latinwo",
         role: "Director, Business Development & Corporate Services",
-        image: "7s.jpg",
+        image: "8s.jpg",
         email: "latinwo@tacgroupng.com",
     },
     {
         name: "Amaebi Fiderikumo",
         role: "Associate Director, Business Advisory",
-        image: "1s.jpg",
+        image: "9s.png",
         email: "amaebi@tacgroupng.com",
-    },
-    {
-        name: "Oluwole Adaramaja",
-        role: "Associate Director, Corporate Transactions, Compliance, Recovery & Liquidation",
-        image: "2s.jpeg",
-        email: "wole@tacgroupng.com",
-    },
-    {
-        name: "Muheez Popoola",
-        role: "Senior Manager, TAC Tax Advisory Service",
-        image: "3s.jpeg",
-        email: "muheez@tacgroupng.com",
     },
     {
         name: "Anjola Dapo Fagbure",
