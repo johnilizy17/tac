@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion";
 import { useTheme } from "./ThemeProvider";
 import { Moon, Sun, Menu, X, ChevronRight } from "lucide-react";
@@ -9,9 +10,11 @@ import { Moon, Sun, Menu, X, ChevronRight } from "lucide-react";
 export default function Navbar() {
     const [hidden, setHidden] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+    const [activeSection, setActiveSection] = useState("");
     const { scrollY } = useScroll();
     const { theme, toggleTheme } = useTheme();
     const [scrolled, setScrolled] = useState(false);
+    const pathname = usePathname();
 
     useMotionValueEvent(scrollY, "change", (latest) => {
         const previous = scrollY.getPrevious() || 0;
@@ -23,6 +26,39 @@ export default function Navbar() {
             setHidden(false);
         }
     });
+
+    // Track active section on scroll
+    useEffect(() => {
+        const handleScroll = () => {
+            const sections = document.querySelectorAll("section[id]");
+            const scrollPosition = window.scrollY + 200;
+
+            sections.forEach((section) => {
+                const sectionTop = (section as HTMLElement).offsetTop;
+                const sectionHeight = (section as HTMLElement).offsetHeight;
+                const sectionId = section.getAttribute("id");
+
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    setActiveSection(sectionId || "");
+                }
+            });
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        handleScroll(); // Initial check
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    const isActive = (href: string) => {
+        // Check if it's a hash link
+        if (href.startsWith("/#")) {
+            const section = href.replace("/#", "");
+            return activeSection === section;
+        }
+        // Check if it's a page link
+        return pathname === href;
+    };
 
     const navLinks = [
         { name: "Home", href: "/" },
@@ -57,10 +93,14 @@ export default function Navbar() {
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className="hover:text-tac-brand transition-colors cursor-pointer relative group"
+                                className={`hover:text-tac-brand transition-colors cursor-pointer relative group ${
+                                    isActive(link.href) ? "text-tac-brand" : ""
+                                }`}
                             >
                                 {link.name}
-                                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-tac-brand transition-all group-hover:w-full" />
+                                <span className={`absolute -bottom-1 left-0 h-0.5 bg-tac-brand transition-all ${
+                                    isActive(link.href) ? "w-full" : "w-0 group-hover:w-full"
+                                }`} />
                             </Link>
                         ))}
                     </div>
@@ -134,12 +174,20 @@ export default function Navbar() {
                                         <Link
                                             href={link.href}
                                             onClick={() => setIsOpen(false)}
-                                            className="flex items-center justify-between p-4 rounded-2xl hover:bg-tac-brand/10 group transition-colors"
+                                            className={`flex items-center justify-between p-4 rounded-2xl hover:bg-tac-brand/10 group transition-colors ${
+                                                isActive(link.href) ? "bg-tac-brand/10" : ""
+                                            }`}
                                         >
-                                            <span className="text-lg font-bold text-foreground group-hover:text-tac-brand transition-colors">
+                                            <span className={`text-lg font-bold transition-colors ${
+                                                isActive(link.href) ? "text-tac-brand" : "text-foreground group-hover:text-tac-brand"
+                                            }`}>
                                                 {link.name}
                                             </span>
-                                            <ChevronRight className="text-tac-brand opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0" />
+                                            <ChevronRight className={`transition-all ${
+                                                isActive(link.href) 
+                                                    ? "text-tac-brand opacity-100 translate-x-0" 
+                                                    : "text-tac-brand opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0"
+                                            }`} />
                                         </Link>
                                     </motion.div>
                                 ))}
