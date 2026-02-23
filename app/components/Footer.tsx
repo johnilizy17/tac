@@ -9,9 +9,9 @@ export default function Footer() {
     };
 
     return (
-        <footer className="bg-background border-t border-white/5 pt-20 pb-10 relative overflow-hidden">
+        <footer className="bg-background border-t border-foreground/5 pt-20 pb-10 relative overflow-hidden">
             {/* Subtle background glow */}
-            <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-tac-brand/5 rounded-full blur-[100px] pointer-events-none" />
+            <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-tac-brand/10 rounded-full blur-[100px] pointer-events-none opacity-50 dark:opacity-100" />
 
             <div className="max-w-7xl mx-auto px-4 relative z-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
@@ -20,7 +20,7 @@ export default function Footer() {
                         <Link href="/" className="text-2xl font-bold tracking-tighter text-foreground">
                             TAC<span className="text-tac-brand"> GROUP</span>
                         </Link>
-                        <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
+                        <p className="text-muted-foreground text-sm leadicg-relaxed max-w-xs">
                             A composite one-stop professional & consulting firm providing excellence in audit, tax, and advisory services.
                         </p>
                         <div className="flex gap-4">
@@ -28,7 +28,7 @@ export default function Footer() {
                                 <a
                                     key={i}
                                     href="#"
-                                    className="w-10 h-10 rounded-full border border-foreground/10 flex items-center justify-center text-muted-foreground hover:text-tac-brand hover:border-tac-brand/50 transition-all duration-300"
+                                    className="w-10 h-10 rounded-full border border-foreground/10 flex items-center justify-center text-muted-foreground hover:text-tac-brand hover:border-tac-brand transition-all duration-300 bg-foreground/5 hover:bg-transparent"
                                 >
                                     <Icon size={18} />
                                 </a>
@@ -86,13 +86,13 @@ export default function Footer() {
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="pt-8 border-t border-white/5 flex flex-col md:row items-center justify-between gap-6">
-                    <p className="text-muted-foreground text-xs">
+                <div className="pt-8 border-t border-foreground/5 flex flex-col md:flex-row items-center justify-between gap-6">
+                    <p className="text-muted-foreground text-xs text-center md:text-left">
                         Copyright © {new Date().getFullYear()} TAC Group. All Rights Reserved.
                     </p>
                     <button
                         onClick={scrollToTop}
-                        className="w-12 h-12 rounded-2xl bg-foreground/5 flex items-center justify-center text-foreground hover:bg-tac-brand hover:text-background transition-all duration-500 border border-foreground/10 group"
+                        className="w-12 h-12 rounded-2xl bg-foreground/5 flex items-center justify-center text-foreground hover:bg-tac-brand hover:text-white transition-all duration-500 border border-foreground/10 group shadow-lg"
                     >
                         <ArrowUp className="group-hover:-translate-y-1 transition-transform" size={20} />
                     </button>

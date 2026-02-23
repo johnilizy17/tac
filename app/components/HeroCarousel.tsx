@@ -119,7 +119,7 @@ export default function HeroCarousel() {
                                     {slides[current].tag}
                                 </span>
 
-                                <h1 className="text-5xl md:text-8xl font-bold tracking-tight mb-8 leading-none">
+                                <h1 className="text-5xl md:text-8xl font-bold tracking-tight mb-8 leading-none drop-shadow-sm">
                                     <span className="block text-foreground opacity-90">{slides[current].title}</span>
                                     <span className={`text-transparent bg-clip-text bg-gradient-to-r ${slides[current].gradient}`}>
                                         {slides[current].subtitle}
@@ -165,7 +165,7 @@ export default function HeroCarousel() {
                             }}
                             className="group relative py-4"
                         >
-                            <div className={`h-1.5 rounded-full transition-all duration-500 ${index === current ? "w-12 bg-tac-brand" : "w-4 bg-foreground/20 group-hover:bg-foreground/40"}`} />
+                            <div className={`h-1.5 rounded-full transition-all duration-500 ${index === current ? "w-12 bg-tac-brand" : "w-4 bg-foreground/30 group-hover:bg-foreground/50"}`} />
                         </button>
                     ))}
                 </div>

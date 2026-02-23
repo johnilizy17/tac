@@ -62,7 +62,7 @@ export default function AboutSection() {
                             fill
                             className="object-cover rounded-xl"
                         />
-                        <div className="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-background/90 to-transparent z-20">
+                        <div className="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-black/80 to-transparent z-20">
                             <motion.div
                                 initial={{ y: 20, opacity: 0 }}
                                 whileInView={{ y: 0, opacity: 1 }}
@@ -71,7 +71,7 @@ export default function AboutSection() {
                             >
                                 TAC
                             </motion.div>
-                            <div className="text-muted-foreground font-medium tracking-widest uppercase text-sm">Professional Services</div>
+                            <div className="text-white/80 font-medium tracking-widest uppercase text-sm">Professional Services</div>
                         </div>
                     </div>
                     {/* Decorative elements */}

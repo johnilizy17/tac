@@ -118,17 +118,17 @@ export default function TeamSection() {
                             }}
                             className="group relative flex flex-col"
                         >
-                            <div className="relative aspect-[4/5] rounded-3xl overflow-hidden mb-6 border border-foreground/10 group-hover:border-tac-brand/50 transition-colors duration-500 shadow-[0_0_40px_rgba(0,0,0,0.3)] bg-foreground/5">
+                            <div className="relative aspect-[4/5] rounded-3xl overflow-hidden mb-6 border border-foreground/10 group-hover:border-tac-brand/50 transition-colors duration-500 shadow-xl dark:shadow-[0_0_40px_rgba(0,0,0,0.3)] bg-foreground/5">
                                 <img
                                     src={member.image}
                                     alt={member.name}
                                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-110"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
 
                                 <div className="absolute bottom-4 left-4 right-4">
-                                    <h3 className="text-xl font-bold text-foreground mb-1 leading-tight">{member.name}</h3>
-                                    <p className="text-tac-brand font-semibold text-xs tracking-wider uppercase">{member.role}</p>
+                                    <h3 className="text-xl font-bold text-white mb-1 leading-tight">{member.name}</h3>
+                                    <p className="text-tac-brand font-bold text-xs tracking-wider uppercase">{member.role}</p>
                                 </div>
                             </div>
 

@@ -57,7 +57,7 @@ export default function Philosophy() {
                         transition={{ duration: 0.8 }}
                         className="glass-card p-12 rounded-[2.5rem] relative overflow-hidden group"
                     >
-                        <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
+                        <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
                             <Quote className="w-24 h-24 text-tac-brand rotate-180" />
                         </div>
                         <span className="text-tac-brand font-bold tracking-widest uppercase text-xs mb-6 block">Our Vision</span>
@@ -74,7 +74,7 @@ export default function Philosophy() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="glass-card p-12 rounded-[2.5rem] border-tac-purple/20 bg-gradient-to-br from-foreground/5 to-tac-purple/5"
+                        className="glass-card p-12 rounded-[2.5rem] border-tac-purple/30 bg-gradient-to-br from-foreground/10 to-tac-purple/10 dark:from-foreground/5 dark:to-tac-purple/5"
                     >
                         <span className="text-tac-purple font-bold tracking-widest uppercase text-xs mb-6 block">Our Mission</span>
                         <h3 className="text-2xl font-bold text-foreground leading-snug mb-8">
@@ -124,8 +124,8 @@ export default function Philosophy() {
             </div>
 
             {/* Decorative background orbs */}
-            <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-tac-brand/5 blur-[120px] rounded-full -z-0" />
-            <div className="absolute -top-24 -right-24 w-96 h-96 bg-tac-purple/5 blur-[120px] rounded-full -z-0" />
+            <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-tac-brand/10 blur-[120px] rounded-full -z-0 opacity-50 dark:opacity-100" />
+            <div className="absolute -top-24 -right-24 w-96 h-96 bg-tac-purple/10 blur-[120px] rounded-full -z-0 opacity-50 dark:opacity-100" />
         </section>
     );
 }
