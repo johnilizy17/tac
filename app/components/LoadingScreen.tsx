@@ -15,8 +15,25 @@ export default function LoadingScreen() {
     const [progress, setProgress] = useState(0);
     const [textIndex, setTextIndex] = useState(0);
     const [isLoading, setIsLoading] = useState(true);
+    const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
+        setIsMounted(true);
+        
+        // Check if page was already loaded in this session
+        const hasLoaded = typeof window !== 'undefined' ? sessionStorage.getItem('hasLoadedBefore') : null;
+        
+        if (hasLoaded) {
+            // Skip loading screen if already loaded in this session
+            setIsLoading(false);
+            return;
+        }
+
+        // Mark as loaded for this session
+        if (typeof window !== 'undefined') {
+            sessionStorage.setItem('hasLoadedBefore', 'true');
+        }
+
         // Progress counter
         const interval = setInterval(() => {
             setProgress((prev) => {
@@ -40,6 +57,11 @@ export default function LoadingScreen() {
         };
     }, []);
 
+    // Don't render anything until mounted to avoid hydration mismatch
+    if (!isMounted) {
+        return null;
+    }
+
     return (
         <AnimatePresence>
             {isLoading && (
@@ -61,7 +83,7 @@ export default function LoadingScreen() {
                             animate={{ opacity: 1, y: 0 }}
                             className="text-4xl md:text-6xl font-black tracking-tighter text-foreground mb-2"
                         >
-                            TAC<span className="text-tac-brand">GROUP</span>
+                            <span style={{ letterSpacing: '1.3px' }}>TAC</span><span className="text-tac-brand">GROUP</span>
                         </motion.div>
 
                         {/* Cycling Text */}

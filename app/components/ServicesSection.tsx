@@ -2,43 +2,38 @@
 
 import { motion } from "framer-motion";
 import { ClipboardCheck, BookOpen, Scaling, Search, Briefcase, Recycle } from "lucide-react";
+import Link from "next/link";
 
 const services = [
     {
+        id: 1,
+        title: "Accounting Outsourcing",
+        description: "Customized outsourced accounting solutions that deliver high-value financial management.",
+        icon: BookOpen,
+    },
+    {
+        id: 2,
         title: "Audit & Assurance",
         description: "Delivering international best practice auditing to provide confidence to key business decision-makers.",
         icon: ClipboardCheck,
-        link: "/services/audit",
     },
     {
-        title: "Accounting Services",
-        description: "Customized outsourced accounting solutions that deliver high-value financial management.",
-        icon: BookOpen,
-        link: "/services/accounting",
-    },
-    {
-        title: "Taxation Management",
-        description: "Comprehensive advisory to corporate and individual clients to minimize tax burdens through planning.",
-        icon: Scaling,
-        link: "/services/taxation",
-    },
-    {
+        id: 3,
         title: "Forensic Investigation",
         description: "Expert reactive and proactive investigations into criminal matters and corporate disputes.",
         icon: Search,
-        link: "/services/forensic",
     },
     {
+        id: 4,
         title: "Business Consulting",
         description: "Quality solution-driven management consulting and advisory across various economic sectors.",
         icon: Briefcase,
-        link: "/services/consulting",
     },
     {
+        id: 5,
         title: "Receivership & Liquidation",
         description: "Specialized debt recovery, business restructuring, and turnaround management services.",
         icon: Recycle,
-        link: "/services/liquidation",
     },
 ];
 
@@ -77,27 +72,28 @@ export default function ServicesSection() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {services.map((service, index) => (
-                        <motion.div
-                            key={service.title}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
-                            className="glass-card p-10 rounded-3xl group hover:border-tac-brand/30 transition-all duration-500 flex flex-col items-start"
-                        >
-                            <div className="w-16 h-16 rounded-2xl bg-tac-brand/10 flex items-center justify-center mb-8 border border-tac-brand/20 group-hover:bg-tac-brand/20 group-hover:scale-110 transition-all duration-500">
-                                <service.icon className="w-8 h-8 text-tac-brand" />
-                            </div>
-                            <h3 className="text-2xl font-bold text-foreground group-hover:text-tac-brand transition-colors">
-                                {service.title}
-                            </h3>
-                            <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-500 leading-relaxed mb-8 flex-grow">
-                                {service.description}
-                            </p>
-                            <button className="flex items-center gap-2 text-tac-brand font-medium hover:gap-4 transition-all duration-300">
-                                Explore More <span className="text-xl">→</span>
-                            </button>
-                        </motion.div>
+                        <Link key={service.id} href={`/services/${service.id}`}>
+                            <motion.div
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.1 }}
+                                className="glass-card p-10 rounded-3xl group hover:border-tac-brand/30 transition-all duration-500 flex flex-col items-start h-full cursor-pointer"
+                            >
+                                <div className="w-16 h-16 rounded-2xl bg-tac-brand/10 flex items-center justify-center mb-8 border border-tac-brand/20 group-hover:bg-tac-brand/20 group-hover:scale-110 transition-all duration-500">
+                                    <service.icon className="w-8 h-8 text-tac-brand" />
+                                </div>
+                                <h3 className="text-2xl font-bold text-foreground group-hover:text-tac-brand transition-colors">
+                                    {service.title}
+                                </h3>
+                                <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-500 leading-relaxed mb-8 flex-grow">
+                                    {service.description}
+                                </p>
+                                <span className="flex items-center gap-2 text-tac-brand font-medium group-hover:gap-4 transition-all duration-300">
+                                    Explore More <span className="text-xl">→</span>
+                                </span>
+                            </motion.div>
+                        </Link>
                     ))}
                 </div>
             </div>

@@ -1,7 +1,40 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail } from "lucide-react";
+import { Mail, Shield, Award, Users, Lightbulb, CheckCircle, Heart } from "lucide-react";
+
+const coreValues = [
+    {
+        icon: Shield,
+        title: "INTEGRITY",
+        description: "We uphold the highest ethical standards, ensuring transparency, honesty, and accountability in every engagement."
+    },
+    {
+        icon: Award,
+        title: "PROFESSIONAL EXCELLENCE",
+        description: "We are committed to delivering superior quality services through technical expertise, continuous learning, and adherence to global best practices."
+    },
+    {
+        icon: Users,
+        title: "CLIENT-CENTRICITY",
+        description: "Our clients are at the heart of everything we do. We listen, understand their needs, and provide tailored solutions that create lasting value."
+    },
+    {
+        icon: Lightbulb,
+        title: "INNOVATION",
+        description: "We leverage cutting-edge technology and forward-thinking strategies to solve complex business challenges and drive sustainable growth."
+    },
+    {
+        icon: CheckCircle,
+        title: "RELIABILITY",
+        description: "We honor our commitments and consistently deliver dependable, timely, and high-quality results our clients can trust."
+    },
+    {
+        icon: Heart,
+        title: "PEOPLE EMPOWERMENT",
+        description: "We are committed to fostering a supportive and inspiring work environment where our people are valued, motivated, and empowered to thrive. We invest in their growth, prioritize their well-being, and recognize excellence—because our strength lies in the success and fulfillment of our team."
+    }
+];
 
 const team = [
     {
@@ -23,30 +56,14 @@ const team = [
         role: "Associate Partner, Assurance & Transaction Advisory Service",
         image: "1s.jpg",
         email: "abraham@tacgroupng.com",
+        bio:"He began his career with Ernst & Young (EY) in 1992 and later joined ExxonMobil in 1994, where he held several strategic roles across finance, control, and project management functions. Over nearly three decades at ExxonMobil, he rose through the ranks to the position of Senior Manager, consistently demonstrating excellence in leadership, governance, and performance management."
     },
     {
         name: "James Oni",
         role: "Director, TAC Tax Advisory Service",
         image: "6s.jpg",
         email: "James@tacgroupng.com",
-    },
-    {
-        name: "Tunde Latinwo",
-        role: "Director, Business Development & Corporate Services",
-        image: "8s.jpg",
-        email: "latinwo@tacgroupng.com",
-    },
-    {
-        name: "Amaebi Fiderikumo",
-        role: "Associate Director, Business Advisory",
-        image: "9s.png",
-        email: "amaebi@tacgroupng.com",
-    },
-    {
-        name: "Anjola Dapo Fagbure",
-        role: "Manager, Audit & Assurance Services",
-        image: "5s.jpg",
-        email: "anjola@tacgroupng.com",
+        bio:"He currently serves as Director, TAC Tax Advisory Services at TAC Professional Services, where he leads a team of experts delivering innovative, compliant, and value-driven tax solutions."
     },
 ];
 

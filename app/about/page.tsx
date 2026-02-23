@@ -2,6 +2,7 @@
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import {
     ShieldCheck,
@@ -87,7 +88,7 @@ export default function AboutPage() {
                         >
                             <div className="aspect-[4/5] rounded-[4rem] overflow-hidden border border-foreground/10 shadow-2xl skew-y-3 hover:skew-y-0 transition-transform duration-1000">
                                 <img
-                                    src="/asset/6.png"
+                                    src="office.jpg"
                                     alt="Professional Excellence"
                                     className="w-full h-full object-cover"
                                 />
@@ -256,9 +257,9 @@ export default function AboutPage() {
                     <h2 className="text-4xl md:text-6xl font-bold text-tac-dark max-w-4xl mx-auto">
                         Delivering superior solutions across every segment of the economy.
                     </h2>
-                    <button className="px-12 py-5 bg-tac-brand text-tac-dark font-bold rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-xl">
+                    <Link href="/services" className="inline-block px-12 py-5 bg-tac-brand text-tac-dark font-bold rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-xl">
                         Explore Our Services
-                    </button>
+                    </Link>
                 </div>
             </section>
 

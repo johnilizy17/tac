@@ -1,34 +1,64 @@
 "use client";
 
+import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Send, Clock, Globe } from "lucide-react";
 
+const locations = [
+    {
+        name: "Lagos Office (Head Office)",
+        address: "Block 113, Plot 22, Adebisi Ogunniyi Crescent, Lekki Phase 1, Lagos, Nigeria.",
+        mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.6537!2d3.4553!3d6.4474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMjYnNTAuNiJOIDPCsDI3JzE5LjEiRQ!5e0!3m2!1sen!2sng!4v1234567890"
+    },
+    {
+        name: "Abuja Office",
+        address: "Suite 30, Block B, Landmark Plaza, Plot 3124, Ibrahim Babangida Way. Maitama, Abuja.",
+        mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.9876!2d7.4926!3d9.0820!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwMDQnNTUuMiJOIDfCsDI5JzMzLjQiRQ!5e0!3m2!1sen!2sng!4v1234567890"
+    }
+];
+
 const contactInfo = [
     {
-        title: "Visit Our Office",
+        title: "Lagos Office (Head Office)",
         details: "Block 113, Plot 22, Adebisi Ogunniyi Crescent, Lekki Phase 1, Lagos, Nigeria.",
         icon: MapPin,
-        delay: 0.1
+        delay: 0.1,
+        link: "https://maps.app.goo.gl/nE8aRrqjVUhp1Rsj8",
+        type: "map"
+    },
+    {
+        title: "Abuja Office",
+        details: "Suite 30, Block B, Landmark Plaza, Plot 3124, Ibrahim Babangida Way. Maitama, Abuja.",
+        icon: MapPin,
+        delay: 0.15,
+        link: "https://maps.app.goo.gl/qZP6aif2BBNZ8uom9",
+        type: "map"
     },
     {
         title: "Call Us Directly",
         details: "+234 906 284 0810",
         subDetails: "Mon-Fri, 8:00am - 5:00pm",
         icon: Phone,
-        delay: 0.2
+        delay: 0.2,
+        link: "tel:+2349062840810",
+        type: "phone"
     },
     {
         title: "Email Inquiries",
         details: "info@tacgroupng.com",
         subDetails: "support@tacgroupng.com",
         icon: Mail,
-        delay: 0.3
+        delay: 0.3,
+        link: "mailto:info@tacgroupng.com",
+        type: "email"
     }
 ];
 
 export default function ContactPage() {
+    const [selectedLocation, setSelectedLocation] = useState(0);
+
     return (
         <main className="min-h-screen bg-background text-foreground">
             <Navbar />
@@ -81,23 +111,26 @@ export default function ContactPage() {
                         <div className="lg:col-span-5 space-y-12">
                             <div className="space-y-8">
                                 {contactInfo.map((item, i) => (
-                                    <motion.div
+                                    <motion.a
                                         key={i}
+                                        href={item.link}
+                                        target={item.type === 'map' ? "_blank" : undefined}
+                                        rel={item.type === 'map' ? "noopener noreferrer" : undefined}
                                         initial={{ opacity: 0, x: -20 }}
                                         whileInView={{ opacity: 1, x: 0 }}
                                         viewport={{ once: true }}
                                         transition={{ delay: item.delay }}
-                                        className="flex gap-6 p-8 glass-card rounded-3xl group border-foreground/5 hover:border-tac-brand/30 transition-all duration-500"
+                                        className="flex gap-6 p-8 glass-card rounded-3xl group border-foreground/5 hover:border-tac-brand/30 transition-all duration-500 cursor-pointer"
                                     >
                                         <div className="w-14 h-14 bg-tac-brand/10 rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-500">
                                             <item.icon className="w-6 h-6 text-tac-brand" />
                                         </div>
                                         <div>
-                                            <h3 className="text-foreground font-bold text-lg mb-2">{item.title}</h3>
+                                            <h3 className="text-foreground font-bold text-lg mb-2 group-hover:text-tac-brand transition-colors">{item.title}</h3>
                                             <p className="text-muted-foreground leading-relaxed text-sm mb-1">{item.details}</p>
                                             {item.subDetails && <p className="text-tac-brand/60 text-xs font-medium uppercase tracking-wider">{item.subDetails}</p>}
                                         </div>
-                                    </motion.div>
+                                    </motion.a>
                                 ))}
                             </div>
 
@@ -183,29 +216,76 @@ export default function ContactPage() {
                 </div>
             </section>
 
-            {/* Map Placeholder or Visual Representation */}
+            {/* Interactive Map Section */}
             <section className="py-24 bg-background overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4">
+                    <div className="text-center mb-12">
+                        <motion.h2
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="text-4xl font-bold text-foreground mb-6"
+                        >
+                            Visit Our <span className="text-gradient">Offices</span>
+                        </motion.h2>
+                        <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
+                            Select a location to view on the map
+                        </p>
+                        
+                        {/* Location Selector */}
+                        <div className="flex flex-wrap justify-center gap-4 mb-8">
+                            {locations.map((location, index) => (
+                                <button
+                                    key={index}
+                                    onClick={() => setSelectedLocation(index)}
+                                    className={`px-8 py-4 rounded-2xl font-bold transition-all duration-300 ${
+                                        selectedLocation === index
+                                            ? 'bg-tac-brand text-tac-dark shadow-lg scale-105'
+                                            : 'bg-foreground/5 text-foreground hover:bg-foreground/10 border border-foreground/10'
+                                    }`}
+                                >
+                                    <div className="flex items-center gap-2">
+                                        <MapPin className="w-5 h-5" />
+                                        {location.name}
+                                    </div>
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+
                     <motion.div
+                        key={selectedLocation}
                         initial={{ opacity: 0, scale: 0.95 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        className="w-full aspect-[21/9] rounded-[3.5rem] bg-foreground/5 border border-foreground/5 relative overflow-hidden group shadow-2xl"
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.3 }}
+                        className="w-full aspect-[21/9] rounded-[3.5rem] overflow-hidden border border-foreground/10 shadow-2xl"
                     >
-                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(102,185,41,0.1),transparent_70%)]" />
-                        <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="text-center space-y-4">
-                                <MapPin className="w-16 h-16 text-tac-brand mx-auto animate-bounce" />
-                                <h4 className="text-2xl font-bold text-foreground">Find Us in Lagos</h4>
-                                <p className="text-muted-foreground">Adebisi Ogunniyi Crescent, Lekki Phase 1</p>
-                            </div>
-                        </div>
-                        {/* Abstract Map Lines Overlay */}
-                        <div className="absolute inset-0 opacity-10 pointer-events-none">
-                            <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                                <path d="M0 20 Q 50 10 100 20 M0 50 Q 50 40 100 50 M0 80 Q 50 70 100 80 M20 0 Q 10 50 20 100 M50 0 Q 40 50 50 100 M80 0 Q 70 50 80 100" stroke="white" fill="none" strokeWidth="0.1" />
-                            </svg>
-                        </div>
+                        <iframe
+                            src={locations[selectedLocation].mapUrl}
+                            width="100%"
+                            height="100%"
+                            style={{ border: 0 }}
+                            allowFullScreen
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            className="w-full h-full"
+                        ></iframe>
+                    </motion.div>
+
+                    {/* Selected Location Info */}
+                    <motion.div
+                        key={`info-${selectedLocation}`}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.3, delay: 0.2 }}
+                        className="mt-8 text-center glass-card p-8 rounded-3xl max-w-2xl mx-auto"
+                    >
+                        <h3 className="text-2xl font-bold text-foreground mb-4">
+                            {locations[selectedLocation].name}
+                        </h3>
+                        <p className="text-muted-foreground leading-relaxed">
+                            {locations[selectedLocation].address}
+                        </p>
                     </motion.div>
                 </div>
             </section>

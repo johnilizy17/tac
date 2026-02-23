@@ -3,6 +3,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import {
     ShieldCheck,
     Globe,
@@ -66,8 +67,8 @@ export default function ServicesPage() {
             <Navbar />
 
             {/* Hero Section */}
-            <section className="pt-40 pb-20 relative overflow-hidden bg-gradient-to-b from-tac-dark via-tac-dark to-tac-dark/50">
-                <div className="absolute top-0 right-0 w-1/3 h-full bg-tac-brand/5 blur-[120px] -z-10" />
+            <section className="pt-40 pb-20 relative overflow-hidden bg-gradient-to-b from-foreground/5 via-background to-background dark:from-tac-dark dark:via-tac-dark dark:to-tac-dark/50">
+                <div className="absolute top-0 right-0 w-1/3 h-full bg-tac-brand/10 blur-[120px] -z-10" />
                 <div className="max-w-7xl mx-auto px-4 relative">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -107,7 +108,7 @@ export default function ServicesPage() {
                                 key={item.name}
                                 variants={itemVariants}
                                 whileHover={{ y: -8, scale: 1.02 }}
-                                className="glass-card p-8 rounded-3xl flex flex-col items-center text-center group hover:border-tac-brand/30 transition-all duration-500"
+                                className="glass-card p-8 rounded-3xl flex flex-col items-center text-center group hover:border-tac-brand/30 transition-all duration-500 bg-white/60 dark:bg-foreground/5 shadow-md"
                             >
                                 <div className="w-14 h-14 bg-tac-brand/10 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-tac-brand/20 transition-colors">
                                     <item.icon className="w-6 h-6 text-tac-brand" />
@@ -164,7 +165,7 @@ export default function ServicesPage() {
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
-                        className="glass-card p-10 rounded-[3rem] border-tac-brand/20 relative"
+                        className="glass-card p-10 rounded-[3rem] border-tac-brand/20 relative bg-white/60 dark:bg-foreground/5 shadow-lg"
                     >
                         <Building2 className="absolute top-8 right-8 w-12 h-12 text-tac-brand/10" />
                         <h3 className="text-2xl font-bold text-foreground mb-8">Registered with Regulatory Bodies</h3>
@@ -190,7 +191,7 @@ export default function ServicesPage() {
                             viewport={{ once: true }}
                             className="relative order-2 lg:order-1"
                         >
-                            <div className="glass-card p-12 rounded-[3rem] border-tac-purple/20 bg-gradient-to-br from-tac-purple/5 to-transparent">
+                            <div className="glass-card p-12 rounded-[3rem] border-tac-purple/20 bg-gradient-to-br from-tac-purple/5 to-transparent shadow-lg dark:shadow-none">
                                 <Users className="w-12 h-12 text-tac-purple mb-8" />
                                 <h3 className="text-3xl font-bold text-foreground mb-6">Accounting Outsourcing & Transaction Advisory</h3>
                                 <div className="space-y-4 text-muted-foreground">
@@ -255,7 +256,7 @@ export default function ServicesPage() {
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="lg:col-span-2 glass-card p-12 rounded-[2.5rem] bg-gradient-to-br from-white/5 to-tac-brand/5 group"
+                            className="lg:col-span-2 glass-card p-12 rounded-[2.5rem] bg-gradient-to-br from-white/60 to-tac-brand/10 dark:from-white/5 dark:to-tac-brand/5 group shadow-lg dark:shadow-none"
                         >
                             <BookOpen className="w-12 h-12 text-tac-brand mb-8 group-hover:rotate-12 transition-transform" />
                             <h3 className="text-3xl font-bold text-foreground mb-6">Continuous Learning & Development</h3>
@@ -274,7 +275,7 @@ export default function ServicesPage() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.2 }}
-                            className="glass-card p-12 rounded-[2.5rem] border-tac-purple/20 flex flex-col justify-center text-center"
+                            className="glass-card p-12 rounded-[2.5rem] border-tac-purple/20 flex flex-col justify-center text-center bg-white/60 dark:bg-foreground/5 shadow-lg dark:shadow-none"
                         >
                             <Cpu className="w-16 h-16 text-tac-purple mx-auto mb-8 animate-pulse" />
                             <h3 className="text-2xl font-bold text-foreground mb-6">Automated Solutions</h3>
@@ -295,9 +296,9 @@ export default function ServicesPage() {
                         viewport={{ once: true }}
                     >
                         <h2 className="text-4xl md:text-5xl font-bold text-tac-dark mb-8">Ready to evolve with integrity?</h2>
-                        <button className="px-12 py-5 bg-tac-brand text-tac-dark font-bold rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-xl">
+                        <Link href="/contact" className="inline-block px-12 py-5 bg-tac-dark text-white font-bold rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-xl">
                             Partner with TAC Group
-                        </button>
+                        </Link>
                     </motion.div>
                 </div>
             </section>

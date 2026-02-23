@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function FinalCTA() {
     return (
@@ -52,7 +53,7 @@ export default function FinalCTA() {
                                     </div>
                                     <div>
                                         <h4 className="text-foreground font-bold">Abuja Office</h4>
-                                        <p className="text-muted-foreground text-sm">Suite 30, Block B, Landmark Plaza, Maitama, Abuja.</p>
+                                        <p className="text-muted-foreground text-sm">Suite 30, Block B, Landmark Plaza, Plot 3124, Ibrahim Babangida Way. Maitama, Abuja.</p>
                                     </div>
                                 </div>
                             </motion.div>
@@ -84,9 +85,9 @@ export default function FinalCTA() {
                                         <p className="text-xl font-bold text-foreground">info@tacgroupng.com</p>
                                     </div>
                                 </a>
-                                <button className="w-full py-4 bg-tac-brand text-tac-dark font-bold rounded-2xl hover:bg-tac-brand/90 transition-colors flex items-center justify-center gap-3 shadow-xl group">
+                                <Link href="/contact" className="w-full py-4 bg-tac-brand text-tac-dark font-bold rounded-2xl hover:bg-tac-brand/90 transition-colors flex items-center justify-center gap-3 shadow-xl group">
                                     Contact Support <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                                </button>
+                                </Link>
                             </div>
                         </motion.div>
                     </div>

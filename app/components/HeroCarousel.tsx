@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const slides = [
     {
@@ -134,9 +135,9 @@ export default function HeroCarousel() {
                                     <button className="px-10 py-5 bg-tac-brand text-tac-dark font-bold rounded-xl hover:bg-tac-brand/90 transition-all shadow-[0_0_30px_rgba(102,185,41,0.3)] hover:scale-105 active:scale-95">
                                         Explore Solutions
                                     </button>
-                                    <button className="px-10 py-5 border-2 border-foreground/20 text-foreground font-bold rounded-xl hover:bg-foreground/5 transition-all backdrop-blur-md hover:scale-105 active:scale-95">
+                                    <Link href="/partners" className="inline-block px-10 py-5 border-2 border-foreground/20 text-foreground font-bold rounded-xl hover:bg-foreground/5 transition-all backdrop-blur-md hover:scale-105 active:scale-95">
                                         Partner With Us
-                                    </button>
+                                    </Link>
                                 </div>
                             </motion.div>
                         </div>

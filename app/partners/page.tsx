@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { motion } from "framer-motion";
 import { Globe, Users, ShieldCheck, Zap, Award, BookOpen, Building2 } from "lucide-react";
+import Link from "next/link";
 
 const partnerImages = [
     "Picture8.png", "Picture9.png", "Picture10.png", "Picture11.jpg", "Picture12.jpg", "Picture13.png",
@@ -77,21 +78,12 @@ export default function PartnersPage() {
                             animate={{ opacity: 1, scale: 1 }}
                             className="relative"
                         >
-                            <div className="aspect-square glass-card rounded-[4rem] p-12 flex items-center justify-center border-tac-brand/20 relative group">
-                                <div className="absolute inset-0 bg-tac-brand/5 blur-3xl rounded-full" />
+                            <div className="rounded-[3rem] overflow-hidden border border-foreground/10 shadow-2xl">
                                 <img
-                                    src="/asset/integra_logo.png"
-                                    alt="Integra International"
-                                    className="w-3/4 h-auto relative z-10 opacity-80 group-hover:opacity-100 transition-opacity"
-                                    onError={(e) => {
-                                        // Fallback if logo doesn't exist
-                                        e.currentTarget.style.display = 'none';
-                                    }}
+                                    src="/international.jpg"
+                                    alt="Integra International Network"
+                                    className="w-full h-auto object-cover"
                                 />
-                                <div className="text-center relative z-10">
-                                    <Globe className="w-32 h-32 text-tac-brand/20 mx-auto animate-spin-slow mb-4" />
-                                    <h2 className="text-3xl font-black text-foreground/10 italic">INTEGRA INTERNATIONAL</h2>
-                                </div>
                             </div>
                             {/* Decorative orbs */}
                             <div className="absolute -top-10 -right-10 w-32 h-32 bg-tac-brand/10 blur-[60px] rounded-full" />
@@ -219,9 +211,9 @@ export default function PartnersPage() {
                             "At TAC, we leverage the Integra International global advantage to provide expert & specialist support in any area of concern, and provide the necessary solution across the globe."
                         </p>
                         <div className="flex flex-wrap justify-center gap-6">
-                            <button className="px-10 py-5 bg-tac-brand text-tac-dark font-black rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-xl">
+                            <Link href="/contact" className="inline-block px-10 py-5 bg-tac-brand text-tac-dark font-black rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-xl">
                                 Partner With Us
-                            </button>
+                            </Link>
                             <button className="px-10 py-5 bg-foreground/5 text-foreground font-bold rounded-2xl hover:bg-foreground/10 transition-all border border-foreground/10">
                                 Learn More
                             </button>

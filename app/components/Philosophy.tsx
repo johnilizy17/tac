@@ -1,44 +1,51 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Star, ShieldCheck, Zap, UserCheck, Target, Quote } from "lucide-react";
+import { Shield, Award, Users, Lightbulb, CheckCircle, Heart, Quote } from "lucide-react";
 
 const coreValues = [
     {
-        title: "Excellence",
-        icon: Star,
-        description: "Striving for superior quality and total client satisfaction in every engagement.",
-        color: "text-tac-gold",
-        bg: "bg-tac-gold/10"
-    },
-    {
-        title: "Integrity",
-        icon: ShieldCheck,
-        description: "Upholding the highest ethical standards with transparency and honesty.",
+        title: "INTEGRITY",
+        icon: Shield,
+        description: "Upholding the highest ethical standards with transparency, honesty, and accountability.",
         color: "text-blue-500",
         bg: "bg-blue-500/10"
     },
     {
-        title: "Innovation",
-        icon: Zap,
-        description: "Embracing creative solutions and cutting-edge technology to drive value.",
+        title: "PROFESSIONAL EXCELLENCE",
+        icon: Award,
+        description: "Delivering superior quality through technical expertise and global best practices.",
+        color: "text-tac-gold",
+        bg: "bg-tac-gold/10"
+    },
+    {
+        title: "CLIENT-CENTRICITY",
+        icon: Users,
+        description: "Putting clients first with tailored solutions that create lasting value.",
         color: "text-tac-brand",
         bg: "bg-tac-brand/10"
     },
     {
-        title: "Professionalism",
-        icon: UserCheck,
-        description: "Executing tasks with world-class expertise and disciplined conduct.",
+        title: "INNOVATION",
+        icon: Lightbulb,
+        description: "Leveraging cutting-edge technology to solve complex business challenges.",
         color: "text-tac-purple",
         bg: "bg-tac-purple/10"
     },
     {
-        title: "Objectivity",
-        icon: Target,
-        description: "Maintaining unbiased, evidence-based perspectives in all our advisory.",
+        title: "RELIABILITY",
+        icon: CheckCircle,
+        description: "Honoring commitments with dependable, timely, and high-quality results.",
         color: "text-emerald-500",
         bg: "bg-emerald-500/10"
     },
+    {
+        title: "PEOPLE EMPOWERMENT",
+        icon: Heart,
+        description: "Fostering a supportive environment where our team is valued and empowered to thrive.",
+        color: "text-rose-500",
+        bg: "bg-rose-500/10"
+    }
 ];
 
 export default function Philosophy() {
@@ -100,7 +107,7 @@ export default function Philosophy() {
                     <div className="h-1 w-20 bg-tac-brand/30 mx-auto rounded-full" />
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {coreValues.map((value, index) => (
                         <motion.div
                             key={value.title}
@@ -108,14 +115,14 @@ export default function Philosophy() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            whileHover={{ y: -12 }}
-                            className="glass-card p-8 rounded-3xl flex flex-col items-center text-center group hover:border-tac-brand/40 transition-all duration-500"
+                            whileHover={{ y: -8 }}
+                            className="glass-card p-6 rounded-2xl flex flex-col items-start group hover:border-tac-brand/40 transition-all duration-500"
                         >
-                            <div className={`w-14 h-14 ${value.bg} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500`}>
-                                <value.icon className={`w-7 h-7 ${value.color}`} />
+                            <div className={`w-12 h-12 ${value.bg} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500`}>
+                                <value.icon className={`w-6 h-6 ${value.color}`} />
                             </div>
-                            <h4 className="text-lg font-bold text-foreground mb-4">{value.title}</h4>
-                            <p className="text-muted-foreground text-xs leading-relaxed">
+                            <h4 className="text-base font-bold text-foreground mb-2">{value.title}</h4>
+                            <p className="text-muted-foreground text-sm leading-relaxed">
                                 {value.description}
                             </p>
                         </motion.div>

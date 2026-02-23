@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Hero3D() {
     return (
@@ -71,12 +72,12 @@ export default function Hero3D() {
                     transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
                     className="flex flex-col sm:flex-row gap-4 justify-center items-center"
                 >
-                    <button className="px-8 py-4 bg-tac-brand text-tac-dark font-semibold rounded-full hover:bg-tac-brand/90 transition-colors shadow-xl">
+                    <Link href="/#services" className="px-8 py-4 bg-tac-brand text-tac-dark font-semibold rounded-full hover:bg-tac-brand/90 transition-colors shadow-xl">
                         Our Services
-                    </button>
-                    <button className="px-8 py-4 border border-foreground/20 text-foreground rounded-full hover:bg-foreground/5 transition-colors backdrop-blur-sm">
+                    </Link>
+                    <Link href="/contact" className="px-8 py-4 border border-foreground/20 text-foreground rounded-full hover:bg-foreground/5 transition-colors backdrop-blur-sm">
                         Contact Us
-                    </button>
+                    </Link>
                 </motion.div>
             </div>
 
