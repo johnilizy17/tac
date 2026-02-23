@@ -45,6 +45,26 @@ const team = [
         bio: "Leading TAC with over two decades of professional expertise in audit and business consulting.",
     },
     {
+        name: "Muheez Popoola",
+        role: "Senior Manager, TAC Tax Advisory Services",
+        image: "4s.jpg",
+        email: "muheez@tacgroupng.com",
+        bio:"He has successfully led and managed tax advisory engagements covering tax planning, compliance, management, investigation, and regulatory advisory for clients across diverse sectors including Manufacturing, Construction, Real Estate, Oil & Gas, Trade, and Public Sector Agencies."
+    },
+    {
+        name: "Tunde Latinwo",
+        role: "Director, Business Development & Corporate Services",
+        image: "8s.jpg",
+        email: "latinwo@tacgroupng.com",
+        bio: "Tunde is highly skilled in business strategy design, market development, relationship management, and negotiation. His expertise lies in crafting and executing innovative business development models that enhance client value and organizational performance."
+    },
+    {
+        name: "Anjola Dapo Fagbure",
+        role: "Manager, Audit & Assurance Services",
+        image: "5s.jpg",
+        email: "anjola@tacgroupng.com",
+    },
+    {
         name: "Tunde Faniyi",
         role: "Senior Partner/COO",
         image: "2s.jpeg",
@@ -52,18 +72,11 @@ const team = [
         bio: "Dedicated and competent professionals using technology to drive client success with integrity.",
     },
     {
-        name: "Dr. Abraham O. Bamigboje",
-        role: "Associate Partner, Assurance & Transaction Advisory Service",
-        image: "1s.jpg",
-        email: "abraham@tacgroupng.com",
-        bio:"He began his career with Ernst & Young (EY) in 1992 and later joined ExxonMobil in 1994, where he held several strategic roles across finance, control, and project management functions. Over nearly three decades at ExxonMobil, he rose through the ranks to the position of Senior Manager, consistently demonstrating excellence in leadership, governance, and performance management."
-    },
-    {
         name: "James Oni",
         role: "Director, TAC Tax Advisory Service",
         image: "6s.jpg",
         email: "James@tacgroupng.com",
-        bio:"He currently serves as Director, TAC Tax Advisory Services at TAC Professional Services, where he leads a team of experts delivering innovative, compliant, and value-driven tax solutions."
+        bio: "He currently serves as Director, TAC Tax Advisory Services at TAC Professional Services, where he leads a team of experts delivering innovative, compliant, and value-driven tax solutions."
     },
 ];
 
@@ -114,7 +127,7 @@ export default function TeamSection() {
                     }}
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
                 >
-                    {team.map((member) => (
+                    {team.slice(0, 4).map((member) => (
                         <motion.div
                             key={member.name}
                             variants={{
@@ -154,6 +167,22 @@ export default function TeamSection() {
                         </motion.div>
                     ))}
 
+                </motion.div>
+
+                {/* View All Team Button */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.5 }}
+                    className="text-center mt-16"
+                >
+                    <a
+                        href="/team"
+                        className="inline-block px-10 py-4 bg-tac-brand text-tac-dark font-bold rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-xl"
+                    >
+                        View All Team Members
+                    </a>
                 </motion.div>
             </div>
         </section>
