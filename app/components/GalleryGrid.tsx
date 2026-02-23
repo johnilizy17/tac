@@ -4,17 +4,36 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
-const categories = ["All", "Events", "Seminars", "Team"];
-
-const images = [
-    { id: 1, src: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80", category: "Events", span: "row-span-2" },
-    { id: 2, src: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80", category: "Seminars", span: "row-span-1" },
-    { id: 3, src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80", category: "Team", span: "row-span-1" },
-    { id: 4, src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80", category: "Seminars", span: "row-span-1" },
-    { id: 5, src: "https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?auto=format&fit=crop&q=80", category: "Team", span: "row-span-2" },
-    { id: 6, src: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80", category: "Events", span: "row-span-1" },
-    { id: 7, src: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80", category: "Meeting", span: "row-span-1" },
+const galleryImages = [
+    "thumbs_DSC_5085__1627367718_129.205.99.98.jpg",
+    "thumbs_DSC_5135-1-scaled.jpg",
+    "thumbs_DSC_5154-1-scaled.jpg",
+    "thumbs_DSC_5161-1-scaled.jpg",
+    "thumbs_DSC_5166-1-scaled.jpg",
+    "thumbs_DSC_5169-1-scaled.jpg",
+    "thumbs_IMG_0056__1627367760_129.205.99.98 (1).jpg",
+    "thumbs_IMG_0056__1627367760_129.205.99.98.jpg",
+    "thumbs_IMG_0069__1627367803_129.205.99.98.jpg",
+    "thumbs_IMG_0082__1627367831_129.205.99.98.jpg",
+    "thumbs_IMG_0088__1627367881_129.205.99.98.jpg",
+    "thumbs_IMG_0161__1627367907_129.205.99.98.jpg",
+    "thumbs_IMG_8311-002__1627367950_129.205.99.98.jpg",
+    "thumbs_IMG_8315-002__1627367975_129.205.99.98.jpg",
+    "thumbs_IMG-20200327-WA0001.jpg",
+    "thumbs_IMG-20200327-WA0002.jpg",
+    "thumbs_IMG-20200327-WA0003.jpg",
+    "thumbs_IMG-20200327-WA0005.jpg",
+    "thumbs_IMG-20200327-WA0006.jpg"
 ];
+
+const categories = ["All", "Events", "Team", "Office"];
+
+const images = galleryImages.map((img, index) => ({
+    id: index + 1,
+    src: `/gallery/${img}`,
+    category: index < 6 ? "Events" : index < 12 ? "Team" : "Office",
+    span: index % 5 === 0 ? "row-span-2" : "row-span-1"
+}));
 
 export default function GalleryGrid() {
     const [filter, setFilter] = useState("All");
