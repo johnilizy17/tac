@@ -58,6 +58,31 @@ const contactInfo = [
 
 export default function ContactPage() {
     const [selectedLocation, setSelectedLocation] = useState(0);
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        subject: 'Audit & Assurance Inquiry',
+        message: ''
+    });
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        
+        // Create mailto link with form data
+        const mailtoLink = `mailto:info@tacgroupng.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
+            `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+        )}`;
+        
+        // Open email client
+        window.location.href = mailtoLink;
+    };
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
 
     return (
         <main className="min-h-screen bg-background text-foreground">
@@ -163,13 +188,17 @@ export default function ContactPage() {
 
                             <h2 className="text-3xl font-bold text-foreground mb-8">Send us a <span className="text-gradient">Message</span></h2>
 
-                            <form className="space-y-6">
+                            <form onSubmit={handleSubmit} className="space-y-6">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="space-y-2">
                                         <label className="text-muted-foreground text-sm font-medium ml-2">Full Name</label>
                                         <input
                                             type="text"
+                                            name="name"
+                                            value={formData.name}
+                                            onChange={handleChange}
                                             placeholder="John Doe"
+                                            required
                                             className="w-full bg-foreground/5 border border-foreground/10 rounded-2xl px-6 py-4 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-tac-brand/50 transition-colors"
                                         />
                                     </div>
@@ -177,7 +206,11 @@ export default function ContactPage() {
                                         <label className="text-muted-foreground text-sm font-medium ml-2">Email Address</label>
                                         <input
                                             type="email"
+                                            name="email"
+                                            value={formData.email}
+                                            onChange={handleChange}
                                             placeholder="john@example.com"
+                                            required
                                             className="w-full bg-foreground/5 border border-foreground/10 rounded-2xl px-6 py-4 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-tac-brand/50 transition-colors"
                                         />
                                     </div>
@@ -185,7 +218,12 @@ export default function ContactPage() {
 
                                 <div className="space-y-2">
                                     <label className="text-muted-foreground text-sm font-medium ml-2">Subject</label>
-                                    <select className="w-full bg-foreground/5 border border-foreground/10 rounded-2xl px-6 py-4 text-foreground appearance-none focus:outline-none focus:border-tac-brand/50 transition-colors">
+                                    <select 
+                                        name="subject"
+                                        value={formData.subject}
+                                        onChange={handleChange}
+                                        className="w-full bg-foreground/5 border border-foreground/10 rounded-2xl px-6 py-4 text-foreground appearance-none focus:outline-none focus:border-tac-brand/50 transition-colors"
+                                    >
                                         <option className="bg-background">Audit & Assurance Inquiry</option>
                                         <option className="bg-background">Tax Management Advisory</option>
                                         <option className="bg-background">Business Consulting</option>
@@ -196,13 +234,20 @@ export default function ContactPage() {
                                 <div className="space-y-2">
                                     <label className="text-muted-foreground text-sm font-medium ml-2">Your Message</label>
                                     <textarea
+                                        name="message"
+                                        value={formData.message}
+                                        onChange={handleChange}
                                         rows={5}
                                         placeholder="Tell us how we can help your organization..."
+                                        required
                                         className="w-full bg-foreground/5 border border-foreground/10 rounded-2xl px-6 py-4 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-tac-brand/50 transition-colors resize-none"
                                     ></textarea>
                                 </div>
 
-                                <button className="w-full bg-tac-brand hover:bg-tac-brand/90 text-tac-dark font-bold py-5 rounded-2xl transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-3 shadow-xl">
+                                <button 
+                                    type="submit"
+                                    className="w-full bg-tac-brand hover:bg-tac-brand/90 text-tac-dark font-bold py-5 rounded-2xl transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-3 shadow-xl"
+                                >
                                     <span>Submit Engagement</span>
                                     <Send size={18} />
                                 </button>
