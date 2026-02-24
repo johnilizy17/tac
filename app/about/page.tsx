@@ -341,7 +341,7 @@ export default function AboutPage() {
                     >
                         <span className="text-tac-brand font-bold tracking-widest uppercase text-sm mb-6 block">Our International Affiliation</span>
                         <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8 leading-tight">
-                            Integra International <span className="text-gradient">Partnership</span>
+                            Global <span className="text-gradient">Advantage</span>
                         </h2>
                         <p className="text-xl text-muted-foreground leading-relaxed">
                             TAC Professional Services is a proud member firm of Integra International, with headquarters located in London, United Kingdom.
