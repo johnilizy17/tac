@@ -12,6 +12,8 @@ interface Service {
     id: number;
     title: string;
     details: string;
+    services?: Array<string | { title: string; description: string }>;
+    image?: string;
 }
 
 export default function ServiceDetailPage() {
@@ -80,6 +82,22 @@ export default function ServiceDetailPage() {
                         <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-8 leading-tight">
                             {service.title}
                         </h1>
+                        
+                        {/* Service Image */}
+                        {service.image && (
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ delay: 0.2 }}
+                                className="mt-12 rounded-3xl overflow-hidden shadow-2xl"
+                            >
+                                <img
+                                    src={service.image}
+                                    alt={service.title}
+                                    className="w-full h-[400px] object-cover"
+                                />
+                            </motion.div>
+                        )}
                     </motion.div>
                 </div>
             </section>
@@ -100,6 +118,49 @@ export default function ServiceDetailPage() {
                         </div>
                     </motion.div>
 
+                    {/* Sub-Services Section */}
+                    {service.services && service.services.length > 0 && (
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.3 }}
+                            className="mt-16"
+                        >
+                            <h2 className="text-3xl font-bold text-foreground mb-8">
+                                Our <span className="text-gradient">Service Areas</span>
+                            </h2>
+                            <div className="space-y-6">
+                                {service.services.map((item, i) => {
+                                    const isString = typeof item === 'string';
+                                    return (
+                                        <motion.div
+                                            key={i}
+                                            initial={{ opacity: 0, x: -20 }}
+                                            animate={{ opacity: 1, x: 0 }}
+                                            transition={{ delay: 0.4 + i * 0.1 }}
+                                            className="glass-card p-8 rounded-2xl bg-white/80 dark:bg-foreground/5 shadow-md hover:shadow-lg transition-shadow"
+                                        >
+                                            {isString ? (
+                                                <div className="flex items-start gap-4">
+                                                    <CheckCircle className="w-6 h-6 text-tac-brand shrink-0 mt-1" />
+                                                    <span className="text-muted-foreground text-lg">{item}</span>
+                                                </div>
+                                            ) : (
+                                                <div>
+                                                    <div className="flex items-start gap-4 mb-4">
+                                                        <CheckCircle className="w-6 h-6 text-tac-brand shrink-0 mt-1" />
+                                                        <h3 className="text-xl font-bold text-foreground">{item.title}</h3>
+                                                    </div>
+                                                    <p className="text-muted-foreground leading-relaxed ml-10">{item.description}</p>
+                                                </div>
+                                            )}
+                                        </motion.div>
+                                    );
+                                })}
+                            </div>
+                        </motion.div>
+                    )}
+
                     {/* Key Benefits */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -108,7 +169,7 @@ export default function ServiceDetailPage() {
                         className="mt-16"
                     >
                         <h2 className="text-3xl font-bold text-foreground mb-8">
-                            Why Choose <span className="text-gradient">TAC Group</span>
+                            Why Choose <span className="text-gradient">TAC</span>
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {[

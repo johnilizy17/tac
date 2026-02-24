@@ -8,8 +8,8 @@ import { MapPin, Phone, Mail, Send, Clock, Globe } from "lucide-react";
 
 const locations = [
     {
-        name: "Lagos Office (Head Office)",
-        address: "Block 113, Plot 22, Adebisi Ogunniyi Crescent, Lekki Phase 1, Lagos, Nigeria.",
+        name: "Lagos - Head Office",
+        address: "The TAC Place. Block 113, Plot 22, Adebisi Ogunniyi Crescent, Off Oladimeji Alo Street, Lekki Phase 1, Lagos.",
         mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.6537!2d3.4553!3d6.4474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMjYnNTAuNiJOIDPCsDI3JzE5LjEiRQ!5e0!3m2!1sen!2sng!4v1234567890"
     },
     {
@@ -21,8 +21,9 @@ const locations = [
 
 const contactInfo = [
     {
-        title: "Lagos Office (Head Office)",
-        details: "Block 113, Plot 22, Adebisi Ogunniyi Crescent, Lekki Phase 1, Lagos, Nigeria.",
+        title: "Lagos - Head Office",
+        details: "The TAC Place. Block 113, Plot 22, Adebisi Ogunniyi Crescent, Off Oladimeji Alo Street, Lekki Phase 1, Lagos.",
+        phone: "+234 906 284 0807",
         icon: MapPin,
         delay: 0.1,
         link: "https://maps.app.goo.gl/nE8aRrqjVUhp1Rsj8",
@@ -31,24 +32,15 @@ const contactInfo = [
     {
         title: "Abuja Office",
         details: "Suite 30, Block B, Landmark Plaza, Plot 3124, Ibrahim Babangida Way. Maitama, Abuja.",
+        phone: "+234 906 284 0810",
         icon: MapPin,
-        delay: 0.15,
+        delay: 0.2,
         link: "https://maps.app.goo.gl/qZP6aif2BBNZ8uom9",
         type: "map"
     },
     {
-        title: "Call Us Directly",
-        details: "+234 906 284 0810",
-        subDetails: "Mon-Fri, 8:00am - 5:00pm",
-        icon: Phone,
-        delay: 0.2,
-        link: "tel:+2349062840810",
-        type: "phone"
-    },
-    {
-        title: "Email Inquiries",
+        title: "Send A Mail",
         details: "info@tacgroupng.com",
-        subDetails: "support@tacgroupng.com",
         icon: Mail,
         delay: 0.3,
         link: "mailto:info@tacgroupng.com",
@@ -150,10 +142,19 @@ export default function ContactPage() {
                                         <div className="w-14 h-14 bg-tac-brand/10 rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-500">
                                             <item.icon className="w-6 h-6 text-tac-brand" />
                                         </div>
-                                        <div>
+                                        <div className="flex-1">
                                             <h3 className="text-foreground font-bold text-lg mb-2 group-hover:text-tac-brand transition-colors">{item.title}</h3>
-                                            <p className="text-muted-foreground leading-relaxed text-sm mb-1">{item.details}</p>
-                                            {item.subDetails && <p className="text-tac-brand/60 text-xs font-medium uppercase tracking-wider">{item.subDetails}</p>}
+                                            <p className="text-muted-foreground leading-relaxed text-sm mb-3">{item.details}</p>
+                                            {item.phone && (
+                                                <a 
+                                                    href={`tel:${item.phone.replace(/\s/g, '')}`}
+                                                    className="inline-flex items-center gap-2 text-tac-brand hover:text-tac-brand/80 transition-colors text-sm font-semibold"
+                                                    onClick={(e) => e.stopPropagation()}
+                                                >
+                                                    <Phone className="w-4 h-4" />
+                                                    Call Us: {item.phone}
+                                                </a>
+                                            )}
                                         </div>
                                     </motion.a>
                                 ))}
@@ -265,16 +266,16 @@ export default function ContactPage() {
             <section className="py-24 bg-background overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4">
                     <div className="text-center mb-12">
-                        <motion.h2
+                                        <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             className="text-4xl font-bold text-foreground mb-6"
                         >
-                            Visit Our <span className="text-gradient">Offices</span>
+                            Get In Touch
                         </motion.h2>
                         <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-                            Select a location to view on the map
+                            Thank you for your interest. You can reach us for your business inquiries, we will love to hear from you.
                         </p>
                         
                         {/* Location Selector */}

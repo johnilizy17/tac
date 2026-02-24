@@ -22,7 +22,7 @@ export default function GalleryPage() {
                             Moments & <span className="text-gradient">Events</span>
                         </h1>
                         <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-                            Explore our journey, team building activities, and professional events that define the TAC Group culture.
+                            Explore our journey, team building activities, and professional events that define the TAC culture.
                         </p>
                     </motion.div>
                 </div>

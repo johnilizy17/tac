@@ -8,7 +8,7 @@ const loadingTexts = [
     "Strategizing Growth",
     "Ensuring Integrity",
     "Optimizing Performance",
-    "TAC Group Revamp"
+    "TAC Revamp"
 ];
 
 export default function LoadingScreen() {
@@ -83,7 +83,7 @@ export default function LoadingScreen() {
                             animate={{ opacity: 1, y: 0 }}
                             className="text-4xl md:text-6xl font-black tracking-tighter text-foreground mb-2"
                         >
-                            <span style={{ letterSpacing: '1.3px' }}>TAC</span><span className="text-tac-brand">GROUP</span>
+                            <span style={{ letterSpacing: '1.3px' }}>TAC</span>
                         </motion.div>
 
                         {/* Cycling Text */}

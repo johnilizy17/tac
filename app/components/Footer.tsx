@@ -20,7 +20,7 @@ export default function Footer() {
                     {/* Brand Column */}
                     <div className="space-y-6">
                         <Link href="/" className="text-2xl font-bold tracking-tighter text-white drop-shadow-lg">
-                            <span style={{ letterSpacing: '1.3px' }}>TAC</span><span className="text-tac-dark"> GROUP</span>
+                            <span style={{ letterSpacing: '1.3px' }}>TAC</span>
                         </Link>
                         <p className="text-white/90 text-sm leading-relaxed max-w-xs drop-shadow">
                             A composite one-stop professional & consulting firm providing excellence in audit, tax, and advisory services.
@@ -60,7 +60,7 @@ export default function Footer() {
                             {["Home", "About", "Services", "Partners", "Gallery", "Careers"].map((link) => (
                                 <li key={link}>
                                     <Link
-                                        href={link === "Home" ? "/" : link === "Gallery" ? "/gallery" : link === "Services" ? "/services" : link === "Partners" ? "/partners" : link === "About" ? "/about" : link === "Careers" ? "/contact" : `/#${link.toLowerCase()}`}
+                                        href={link === "Home" ? "/" : link === "Gallery" ? "/gallery" : link === "Services" ? "/services" : link === "Partners" ? "/partners" : link === "About" ? "/about" : link === "Careers" ? "/careers" : `/#${link.toLowerCase()}`}
                                         className="text-white/90 hover:text-white hover:translate-x-1 inline-block transition-all"
                                     >
                                         {link}
@@ -94,37 +94,50 @@ export default function Footer() {
                     <div>
                         <h4 className="text-white font-bold mb-6 text-lg">Contact</h4>
                         <div className="space-y-5 text-sm text-white/90">
-                            <a 
-                                href="https://maps.app.goo.gl/nE8aRrqjVUhp1Rsj8"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-start gap-3 hover:text-white transition-colors group"
-                            >
-                                <MapPin className="w-5 h-5 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
-                                <div>
-                                    <p className="font-semibold mb-1">Lagos Office</p>
-                                    <p className="leading-relaxed text-xs">Block 113, Plot 22, Adebisi Ogunniyi Crescent, Lekki Phase 1, Lagos.</p>
-                                </div>
-                            </a>
-                            <a 
-                                href="https://maps.app.goo.gl/qZP6aif2BBNZ8uom9"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-start gap-3 hover:text-white transition-colors group"
-                            >
-                                <MapPin className="w-5 h-5 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
-                                <div>
-                                    <p className="font-semibold mb-1">Abuja Office</p>
-                                    <p className="leading-relaxed text-xs">Suite 30, Block B, Landmark Plaza, Plot 3124, Ibrahim Babangida Way. Maitama, Abuja.</p>
-                                </div>
-                            </a>
-                            <a 
-                                href="tel:+2349062840810"
-                                className="flex items-center gap-3 hover:text-white transition-colors group"
-                            >
-                                <Phone className="w-5 h-5 shrink-0 group-hover:scale-110 transition-transform" />
-                                <p className="font-semibold">+234 906 284 0810</p>
-                            </a>
+                            <div className="space-y-2">
+                                <a 
+                                    href="https://maps.app.goo.gl/nE8aRrqjVUhp1Rsj8"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-start gap-3 hover:text-white transition-colors group"
+                                >
+                                    <MapPin className="w-5 h-5 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+                                    <div>
+                                        <p className="font-semibold mb-1">Lagos - Head Office</p>
+                                        <p className="leading-relaxed text-xs">The TAC Place. Block 113, Plot 22, Adebisi Ogunniyi Crescent, Off Oladimeji Alo Street, Lekki Phase 1, Lagos.</p>
+                                    </div>
+                                </a>
+                                <a 
+                                    href="tel:+2349062840807"
+                                    className="flex items-center gap-3 hover:text-white transition-colors group ml-8"
+                                >
+                                    <Phone className="w-4 h-4 shrink-0 group-hover:scale-110 transition-transform" />
+                                    <p className="text-xs">+234 906 284 0807</p>
+                                </a>
+                            </div>
+
+                            <div className="space-y-2">
+                                <a 
+                                    href="https://maps.app.goo.gl/qZP6aif2BBNZ8uom9"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-start gap-3 hover:text-white transition-colors group"
+                                >
+                                    <MapPin className="w-5 h-5 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+                                    <div>
+                                        <p className="font-semibold mb-1">Abuja Office</p>
+                                        <p className="leading-relaxed text-xs">Suite 30, Block B, Landmark Plaza, Plot 3124, Ibrahim Babangida Way. Maitama, Abuja.</p>
+                                    </div>
+                                </a>
+                                <a 
+                                    href="tel:+2349062840810"
+                                    className="flex items-center gap-3 hover:text-white transition-colors group ml-8"
+                                >
+                                    <Phone className="w-4 h-4 shrink-0 group-hover:scale-110 transition-transform" />
+                                    <p className="text-xs">+234 906 284 0810</p>
+                                </a>
+                            </div>
+
                             <a 
                                 href="mailto:info@tacgroupng.com"
                                 className="flex items-center gap-3 hover:text-white transition-colors group"
@@ -139,7 +152,7 @@ export default function Footer() {
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-white/20 flex flex-col md:flex-row items-center justify-between gap-6">
                     <p className="text-white/80 text-xs text-center md:text-left">
-                        Copyright © {new Date().getFullYear()} TAC Group. All Rights Reserved.
+                        Copyright © {new Date().getFullYear()} TAC. All Rights Reserved.
                     </p>
                     <button
                         onClick={scrollToTop}

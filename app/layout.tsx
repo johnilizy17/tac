@@ -9,7 +9,7 @@ import { ThemeProvider } from "./components/ThemeProvider";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "TAC Group - Professional Services",
+  title: "TAC - Professional Services",
   description: "Leading indigenous Professional and Business Consulting firm in Nigeria.",
 };
 

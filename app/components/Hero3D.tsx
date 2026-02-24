@@ -62,7 +62,7 @@ export default function Hero3D() {
                     transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                     className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
                 >
-                    TAC Group delivers world-class professional services, audit, and customized business solutions.
+                    TAC delivers world-class professional services, audit, and customized business solutions.
                     Empowering your growth with integrity and innovation.
                 </motion.p>
 

@@ -2,8 +2,7 @@ import Navbar from "./components/Navbar";
 import HeroCarousel from "./components/HeroCarousel";
 import AboutSection from "./components/AboutSection";
 import WelcomeSection from "./components/WelcomeSection";
-import Philosophy from "./components/Philosophy";
-import RampSection from "./components/RampSection";
+import ExperienceSection from "./components/ExperienceSection";
 import ServicesSection from "./components/ServicesSection";
 import IndustriesSection from "./components/IndustriesSection";
 import TeamSection from "./components/TeamSection";
@@ -19,11 +18,11 @@ export default function Home() {
       <HeroCarousel />
       <WelcomeSection />
       <AboutSection />
-      <Philosophy />
-      {/* <RampSection /> */}
+      <TeamSection />
+     
+      <ExperienceSection />
       <ServicesSection />
       <IndustriesSection />
-      <TeamSection />
       <FinalCTA />
       <Footer />
     </main>
