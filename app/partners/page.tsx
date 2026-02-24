@@ -56,7 +56,7 @@ export default function PartnersPage() {
                                 <span>Our Global Advantage</span>
                             </div>
                             <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight">
-                                Integra  <span className="text-gradient">international</span>
+                                Integra  <span className="text-gradient">International</span>
                             </h1>
                             <p className="text-xl text-muted-foreground leading-relaxed">
                                 TAC is a proud member firm of <span className="text-foreground font-bold">Integra International</span>, a global association of independently owned professional services firms.
