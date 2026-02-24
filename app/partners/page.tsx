@@ -53,10 +53,10 @@ export default function PartnersPage() {
                         >
                             <div className="inline-flex items-center gap-2 px-4 py-2 bg-tac-brand/10 rounded-full border border-tac-brand/20 text-tac-brand text-xs font-bold uppercase tracking-widest">
                                 <Globe size={14} />
-                                <span>Global Membership</span>
+                                <span>Our Global Advantage</span>
                             </div>
                             <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight">
-                                Our Global <span className="text-gradient">Advantage</span>
+                                Global <span className="text-gradient">Membership</span>
                             </h1>
                             <p className="text-xl text-muted-foreground leading-relaxed">
                                 TAC is a proud member firm of <span className="text-foreground font-bold">Integra International</span>, a global association of independently owned professional services firms.
