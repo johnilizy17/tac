@@ -187,7 +187,7 @@ export default function AboutPage() {
                             <div className="relative aspect-square rounded-2xl overflow-hidden glass-card p-2">
                                 <div className="absolute inset-0 bg-tac-brand/10 z-10 mix-blend-overlay" />
                                 <img
-                                    src="/2s.jpeg"
+                                    src="firm.jpg"
                                     alt="TAC Professional Excellence"
                                     className="w-full h-full object-cover rounded-xl"
                                 />
