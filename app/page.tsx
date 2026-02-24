@@ -19,7 +19,6 @@ export default function Home() {
       <WelcomeSection />
       <AboutSection />
       <TeamSection />
-     
       <ServicesSection />
       <IndustriesSection />
       <FinalCTA />
