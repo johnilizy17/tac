@@ -18,67 +18,6 @@
   },
   {
     "id": 2,
-    "name": "Muheez Popoola",
-    "credentials": "FCA, FCIT",
-    "position": "Senior Manager, TAC Tax Advisory Services",
-    "image": "/4s.jpg",
-    "email": "muheez.popoola@tacgroupng.com",
-    "shortBio": "Highly skilled tax professional with over a decade of post-qualification experience in tax management and advisory.",
-    "fullBio": [
-      "Muheez Popoola is a dependable, resourceful, and highly skilled tax professional with over a decade of post-qualification experience in tax management, advisory, and accountancy services. He has successfully led and managed tax advisory engagements covering tax planning, compliance, management, investigation, and regulatory advisory for clients across diverse sectors including Manufacturing, Construction, Real Estate, Oil & Gas, Trade, and Public Sector Agencies.",
-      "He began his professional career in 2010 as an Accountant with Obasanjo Holdings, before joining Yemi Sanni & Co (Chartered Accountants) in 2012 as an Associate Tax Consultant. In 2019, he joined Mazars Nigeria, where he advanced to Senior Associate, demonstrating exceptional expertise in complex tax engagements and client advisory. He later worked with Ascension Consulting Services in 2022, further strengthening his competence in strategic tax planning and compliance management.",
-      "Muheez joined TAC Professional Services in March 2023 as Tax Manager, where he continues to deliver high-value tax and advisory solutions that drive efficiency and compliance for clients.",
-      "He is a Fellow of the Institute of Chartered Accountants of Nigeria (ICAN) and the Chartered Institute of Taxation of Nigeria (CITN). He holds an accounting degree from Moshood Abiola Polytechnic, Abeokuta."
-    ]
-  },
-  {
-    "id": 3,
-    "name": "Tunde Latinwo",
-    "credentials": "MBA, B.Eng.",
-    "position": "Director, Business Development & Corporate Services",
-    "image": "/8s.jpg",
-    "email": "tunde.latinwo@tacgroupng.com",
-    "shortBio": "Results-oriented Business Development Executive with close to two decades of experience in financial services and consulting.",
-    "fullBio": [
-      "Tunde Latinwo is a resourceful and results-oriented Business Development Executive with close to two decades of progressive experience spanning financial services, professional practice, and business consulting. He currently oversees Business Development and Corporate Services at TAC Professional Services, where he plays a pivotal role in driving strategic growth, client engagement, and operational excellence.",
-      "Tunde is highly skilled in business strategy design, market development, relationship management, and negotiation. His expertise lies in crafting and executing innovative business development models that enhance client value and organizational performance.",
-      "He began his professional career with United Bank for Africa Plc in 2006 as a Relationship Manager in the Commercial Banking Group and subsequently held several managerial positions across the Retail, Commercial, and Corporate Banking segments, successfully managing high-net-worth client portfolios and driving revenue growth.",
-      "Tunde holds a Master's Degree in Business Administration (MBA) from the prestigious Obafemi Awolowo University and a Bachelor's Degree in Mechanical Engineering from the University of Ilorin, Nigeria. He also holds a Certificate in Design Thinking & Creativity for Innovation from the University of Queensland, Australia."
-    ]
-  },
-  {
-    "id": 4,
-    "name": "Anjola Dapo Fagbure",
-    "credentials": "ACA, MSc",
-    "position": "Manager, Audit & Assurance",
-    "image": "/5s.jpg",
-    "email": "anjola.fagbure@tacgroupng.com",
-    "shortBio": "Dynamic Audit and Assurance professional with proven expertise in audit management and financial reporting.",
-    "fullBio": [
-      "Anjola Dapo Fagbure is a dynamic and results-oriented Audit and Assurance professional with proven expertise in audit management, financial reporting, compliance, and consulting. She joined the firm in 2022 and currently serves as Manager, Audit & Assurance, where she leads and supervises audit teams in delivering quality-driven, standards-compliant engagements across multiple industries.",
-      "Anjola combines technical precision and leadership excellence, demonstrated through her effective management of complex audit assignments, preparation of audit reports and management letters, as well as her role in facilitating in-house training sessions to build team capacity.",
-      "She holds a Master's Degree in Managerial Psychology (2021) and a Bachelor's Degree in International Relations (2017)—both from Obafemi Awolowo University, Ile-Ife.",
-      "Anjola is an Associate Member of the Institute of Chartered Accountants of Nigeria (ICAN) and regularly participates in ICAN MCPE programs and Integra International workshops to stay updated on global developments in audit, consulting, and financial reporting."
-    ]
-  },
-  {
-    "id": 5,
-    "name": "Dr. Abraham Bamigboje",
-    "credentials": "PhD, FCA, CPA, MBA, B.Sc.",
-    "position": "Associate Partner, Assurance & Transaction Advisory Services",
-    "image": "/1s.jpg",
-    "email": "abraham.bamigboje@tacgroupng.com",
-    "shortBio": "Distinguished finance professional with over 30 years of experience in audit, assurance, and internal control, particularly in oil and gas.",
-    "fullBio": [
-      "Dr. Abraham Bamigboje is a distinguished finance and accounting professional with over 30 years of extensive experience spanning audit, assurance, internal control, finance, and systems review, particularly within the oil and gas industry.",
-      "He began his career with Ernst & Young (EY) in 1992 and later joined ExxonMobil in 1994, where he held several strategic roles across finance, control, and project management functions. Over nearly three decades at ExxonMobil, he rose through the ranks to the position of Senior Manager, consistently demonstrating excellence in leadership, governance, and performance management.",
-      "Dr. Bamigboje holds a Ph.D. in Transformational Leadership from Bakke University, Dallas, Texas, USA, and is a Certified Public Accountant (CPA, Illinois, USA), as well as a Fellow of the Institute of Chartered Accountants of Nigeria (FCA) and the Chartered Institute of Taxation of Nigeria (FCIT). He also holds an MBA and a B.Sc. in Accounting.",
-      "Renowned for his strategic insight and analytical depth, he brings expertise in strategic planning, costing methodologies, competitive market metrics analysis, management control reporting, and the design of business performance indicators and control tools.",
-      "Dr. Bamigboje currently serves as Associate Partner, Assurance & Transaction Advisory Services at TAC Professional Services, where he continues to contribute his wealth of experience and leadership to advancing the firm's standards of excellence."
-    ]
-  },
-  {
-    "id": 6,
     "name": "Tunde Faniyi",
     "credentials": "FCA, MBA",
     "position": "Senior Partner/Chief Operating Officer",
@@ -93,7 +32,23 @@
     ]
   },
   {
-    "id": 7,
+    "id": 3,
+    "name": "Dr. Abraham Bamigboje",
+    "credentials": "PhD, FCA, CPA, MBA, B.Sc.",
+    "position": "Associate Partner, Assurance & Transaction Advisory Services",
+    "image": "/1s.jpg",
+    "email": "abraham.bamigboje@tacgroupng.com",
+    "shortBio": "Distinguished finance professional with over 30 years of experience in audit, assurance, and internal control, particularly in oil and gas.",
+    "fullBio": [
+      "Dr. Abraham Bamigboje is a distinguished finance and accounting professional with over 30 years of extensive experience spanning audit, assurance, internal control, finance, and systems review, particularly within the oil and gas industry.",
+      "He began his career with Ernst & Young (EY) in 1992 and later joined ExxonMobil in 1994, where he held several strategic roles across finance, control, and project management functions. Over nearly three decades at ExxonMobil, he rose through the ranks to the position of Senior Manager, consistently demonstrating excellence in leadership, governance, and performance management.",
+      "Dr. Bamigboje holds a Ph.D. in Transformational Leadership from Bakke University, Dallas, Texas, USA, and is a Certified Public Accountant (CPA, Illinois, USA), as well as a Fellow of the Institute of Chartered Accountants of Nigeria (FCA) and the Chartered Institute of Taxation of Nigeria (FCIT). He also holds an MBA and a B.Sc. in Accounting.",
+      "Renowned for his strategic insight and analytical depth, he brings expertise in strategic planning, costing methodologies, competitive market metrics analysis, management control reporting, and the design of business performance indicators and control tools.",
+      "Dr. Bamigboje currently serves as Associate Partner, Assurance & Transaction Advisory Services at TAC Professional Services, where he continues to contribute his wealth of experience and leadership to advancing the firm's standards of excellence."
+    ]
+  },
+   {
+    "id": 4,
     "name": "Amaebi Fiderikumo",
     "credentials": "FCA, CFA, MBA, BSC",
     "position": "Director, Business Advisory & Consulting",
@@ -109,7 +64,23 @@
     ]
   },
   {
-    "id": 8,
+    "id": 5,
+    "name": "Mrs. Omolola Samuel",
+    "credentials": "FCA, MBA",
+    "position": "Associate Partner, Audit & Assurance",
+    "image": "/11s.jpg",
+    "email": "omolola.samuel@tacgroupng.com",
+    "shortBio": "Multi-dimensional finance professional with over 26 years of experience in accounting, audit, and compliance.",
+    "fullBio": [
+      "Omolola is a multi-dimensional finance and accounting professional with over 26 years of progressive experience spanning accounting, statutory audit and assurance, investigations, due diligence, compliance and governance reviews, enterprise risk management, financial planning and reporting, and the design and implementation of robust internal control systems. She is a Fellow of both the Institute of Chartered Accountants of Nigeria (ICAN) and the Chartered Institute of Taxation of Nigeria (CITN).",
+      "Throughout her career, she has delivered strategic value across some of Nigeria's most reputable organizations, contributing to their growth, transformation, profitability, and long-term sustainability. Her deep understanding of business operations, combined with her analytical rigor and commitment to excellence, has enabled her to drive impactful outcomes for clients in aviation, oil and gas, manufacturing, trading, conglomerates, banking and financial services, education, NGOs, construction, hospitality, and government institutions.",
+      "Omolola began her professional journey in 1998 as an intern/audit trainee at Crowe Dafinone, Chartered Accountants. Over the course of 25 years, she rose through the ranks to lead the Audit Practice and ultimately serve as Partner, providing strategic oversight, client leadership, and mentoring to emerging professionals.",
+      "She holds a Higher National Diploma from the Federal Polytechnic, Ilaro, and earned her Master of Business Administration (MBA) from the prestigious Edinburgh Business School, Heriot-Watt University, in 2019.",
+      "She currently serves as Associate Partner, Audit & Assurance, where she leads the firm's high-level audit, advisory and compliance engagements across both the private and public sectors. She has led key ICFR advisory reviews for listed entities and regulatory bodies, including the Securities & Exchange Commission, delivering insights that strengthen governance, enhance operational efficiency, and reinforce stakeholder confidence."
+    ]
+  },
+   {
+    "id": 6,
     "name": "Oluwole Adaramaja",
     "credentials": "LL.B, LL.M",
     "position": "Associate Director, Corporate Transactions, Compliance, Recovery & Liquidation",
@@ -124,20 +95,19 @@
       "Wole is the Managing Partner at Hoist Solicitors and currently serves as Associate Director, Corporate Transactions, Compliance, Recovery & Liquidation at TAC Professional Services, where he brings a wealth of legal and strategic insight to client engagements across multiple sectors."
     ]
   },
-  {
-    "id": 9,
-    "name": "Mrs. Omolola Samuel",
-    "credentials": "FCA, MBA",
-    "position": "Associate Partner, Audit & Assurance",
-    "image": "/11s.jpg",
-    "email": "omolola.samuel@tacgroupng.com",
-    "shortBio": "Multi-dimensional finance professional with over 26 years of experience in accounting, audit, and compliance.",
+ {
+    "id": 7,
+    "name": "Tunde Latinwo",
+    "credentials": "MBA, B.Eng.",
+    "position": "Director, Business Development & Corporate Services",
+    "image": "/8s.jpg",
+    "email": "tunde.latinwo@tacgroupng.com",
+    "shortBio": "Results-oriented Business Development Executive with close to two decades of experience in financial services and consulting.",
     "fullBio": [
-      "Omolola is a multi-dimensional finance and accounting professional with over 26 years of progressive experience spanning accounting, statutory audit and assurance, investigations, due diligence, compliance and governance reviews, enterprise risk management, financial planning and reporting, and the design and implementation of robust internal control systems. She is a Fellow of both the Institute of Chartered Accountants of Nigeria (ICAN) and the Chartered Institute of Taxation of Nigeria (CITN).",
-      "Throughout her career, she has delivered strategic value across some of Nigeria's most reputable organizations, contributing to their growth, transformation, profitability, and long-term sustainability. Her deep understanding of business operations, combined with her analytical rigor and commitment to excellence, has enabled her to drive impactful outcomes for clients in aviation, oil and gas, manufacturing, trading, conglomerates, banking and financial services, education, NGOs, construction, hospitality, and government institutions.",
-      "Omolola began her professional journey in 1998 as an intern/audit trainee at Crowe Dafinone, Chartered Accountants. Over the course of 25 years, she rose through the ranks to lead the Audit Practice and ultimately serve as Partner, providing strategic oversight, client leadership, and mentoring to emerging professionals.",
-      "She holds a Higher National Diploma from the Federal Polytechnic, Ilaro, and earned her Master of Business Administration (MBA) from the prestigious Edinburgh Business School, Heriot-Watt University, in 2019.",
-      "She currently serves as Associate Partner, Audit & Assurance, where she leads the firm's high-level audit, advisory and compliance engagements across both the private and public sectors. She has led key ICFR advisory reviews for listed entities and regulatory bodies, including the Securities & Exchange Commission, delivering insights that strengthen governance, enhance operational efficiency, and reinforce stakeholder confidence."
+      "Tunde Latinwo is a resourceful and results-oriented Business Development Executive with close to two decades of progressive experience spanning financial services, professional practice, and business consulting. He currently oversees Business Development and Corporate Services at TAC Professional Services, where he plays a pivotal role in driving strategic growth, client engagement, and operational excellence.",
+      "Tunde is highly skilled in business strategy design, market development, relationship management, and negotiation. His expertise lies in crafting and executing innovative business development models that enhance client value and organizational performance.",
+      "He began his professional career with United Bank for Africa Plc in 2006 as a Relationship Manager in the Commercial Banking Group and subsequently held several managerial positions across the Retail, Commercial, and Corporate Banking segments, successfully managing high-net-worth client portfolios and driving revenue growth.",
+      "Tunde holds a Master's Degree in Business Administration (MBA) from the prestigious Obafemi Awolowo University and a Bachelor's Degree in Mechanical Engineering from the University of Ilorin, Nigeria. He also holds a Certificate in Design Thinking & Creativity for Innovation from the University of Queensland, Australia."
     ]
   },
   {
@@ -155,6 +125,37 @@
       "His expertise spans tax risk management, due diligence, tax-efficient structuring, regulatory compliance, and dispute resolution. Known for his analytical precision and deep regulatory insight, James has consistently delivered measurable tax savings, optimized compliance frameworks, and strategic advisory outcomes for his clients.",
       "He is also a sought-after facilitator and speaker at professional tax trainings and industry sessions, sharing practical insights on emerging tax trends and regulatory developments."
     ]
+  },
+  {
+    "id": 11,
+    "name": "Muheez Popoola",
+    "credentials": "FCA, FCIT",
+    "p  osition": "Senior Manager, TAC Tax Advisory Services",
+    "image": "/4s.jpg",
+    "email": "muheez.popoola@tacgroupng.com",
+    "shortBio": "Highly skilled tax professional with over a decade of post-qualification experience in tax management and advisory.",
+    "fullBio": [
+      "Muheez Popoola is a dependable, resourceful, and highly skilled tax professional with over a decade of post-qualification experience in tax management, advisory, and accountancy services. He has successfully led and managed tax advisory engagements covering tax planning, compliance, management, investigation, and regulatory advisory for clients across diverse sectors including Manufacturing, Construction, Real Estate, Oil & Gas, Trade, and Public Sector Agencies.",
+      "He began his professional career in 2010 as an Accountant with Obasanjo Holdings, before joining Yemi Sanni & Co (Chartered Accountants) in 2012 as an Associate Tax Consultant. In 2019, he joined Mazars Nigeria, where he advanced to Senior Associate, demonstrating exceptional expertise in complex tax engagements and client advisory. He later worked with Ascension Consulting Services in 2022, further strengthening his competence in strategic tax planning and compliance management.",
+      "Muheez joined TAC Professional Services in March 2023 as Tax Manager, where he continues to deliver high-value tax and advisory solutions that drive efficiency and compliance for clients.",
+      "He is a Fellow of the Institute of Chartered Accountants of Nigeria (ICAN) and the Chartered Institute of Taxation of Nigeria (CITN). He holds an accounting degree from Moshood Abiola Polytechnic, Abeokuta."
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Anjola Dapo Fagbure",
+    "credentials": "ACA, MSc",
+    "position": "Manager, Audit & Assurance",
+    "image": "/5s.jpg",
+    "email": "anjola.fagbure@tacgroupng.com",
+    "shortBio": "Dynamic Audit and Assurance professional with proven expertise in audit management and financial reporting.",
+    "fullBio": [
+      "Anjola Dapo Fagbure is a dynamic and results-oriented Audit and Assurance professional with proven expertise in audit management, financial reporting, compliance, and consulting. She joined the firm in 2022 and currently serves as Manager, Audit & Assurance, where she leads and supervises audit teams in delivering quality-driven, standards-compliant engagements across multiple industries.",
+      "Anjola combines technical precision and leadership excellence, demonstrated through her effective management of complex audit assignments, preparation of audit reports and management letters, as well as her role in facilitating in-house training sessions to build team capacity.",
+      "She holds a Master's Degree in Managerial Psychology (2021) and a Bachelor's Degree in International Relations (2017)—both from Obafemi Awolowo University, Ile-Ife.",
+      "Anjola is an Associate Member of the Institute of Chartered Accountants of Nigeria (ICAN) and regularly participates in ICAN MCPE programs and Integra International workshops to stay updated on global developments in audit, consulting, and financial reporting."
+    ]
   }
+  
 ]
 

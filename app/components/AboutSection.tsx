@@ -65,14 +65,15 @@ export default function AboutSection() {
                         </h2>
                         <div className="space-y-6 text-muted-foreground text-lg leading-relaxed mb-8">
                             <p>
-                        TAC stands as one of Nigeria’s foremost indigenous professional and business consulting firms, renowned for excellence, integrity, and innovation. We are a composite, one-stop professional & Consulting firm providing Audit & Assurance, Tax Planning, Compliance & Advisory, Business Advisory & Consulting, Financial Advisory, and Strategic Support Services to clients and organizations across diverse sectors of the economy.    </p>
+                                TAC stands as one of Nigeria’s foremost indigenous professional and business consulting firms, renowned for excellence, integrity, and innovation. We are a composite, one-stop professional & Consulting firm providing Audit & Assurance, Tax Planning, Compliance & Advisory, Business Advisory & Consulting, Financial Advisory, and Strategic Support Services to clients and organizations across diverse sectors of the economy.    </p>
                             <p>
-                          Since our establishment in 2001, TAC Professional Services has evolved over the past two decades into a trusted name in professional practice and business advisory. Our success is built on a culture of deep expertise, forward-thinking solutions, and an unwavering commitment to client value.  </p>
+                                Since our establishment in 2001, TAC Professional Services has evolved over the past two decades into a trusted name in professional practice and business advisory. Our success is built on a culture of deep expertise, forward-thinking solutions, and an unwavering commitment to client value.  </p>
                             <p>
-                               As a proud member firm of <span className="text-foreground font-semibold">Integra International,</span> a global network of over 150 independent accounting and consulting firms across 90 countries worldwide, we combine local insight with global standards to provide world-class solutions tailored to the specific needs of our clients.
+                                As a proud member firm of <span className="text-foreground font-semibold">Integra International,</span> a global network of over 150 independent accounting and consulting firms across 90 countries worldwide, we combine local insight with global standards to provide world-class solutions tailored to the specific needs of our clients.
                             </p>
                             <p>
-                       At TAC Professional Services, we are more than consultants — we are strategic partners committed to driving growth, efficiency, and sustainable success for every organization we serve.     </p>
+                                At TAC Professional Services, we are more than consultants — we are strategic partners committed to driving growth, efficiency, and sustainable success for every organization we serve.
+                            </p>
                         </div>
                         <div className="flex flex-wrap gap-8">
                             <div className="flex flex-col">
@@ -123,7 +124,7 @@ export default function AboutSection() {
                 </div>
             </section>
 
-           
+
             {/* Philosophy Section */}
             <section className="py-24 relative bg-gradient-to-b from-background to-foreground/5 dark:to-tac-dark/30">
                 <div className="max-w-7xl mx-auto px-4">
@@ -216,7 +217,7 @@ export default function AboutSection() {
                                 <div className="absolute top-4 right-4 text-8xl font-black text-foreground/5 group-hover:text-foreground/10 transition-colors">
                                     {value.letter}
                                 </div>
-                                
+
                                 <div className={`w-14 h-14 ${value.bg} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 relative z-10`}>
                                     <value.icon className={`w-7 h-7 ${value.color}`} />
                                 </div>
