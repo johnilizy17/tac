@@ -163,15 +163,16 @@ export default function AboutPage() {
                             </h2>
                             <div className="space-y-6 text-muted-foreground text-lg leading-relaxed mb-8">
                                 <p>
-                                    TAC stands as one of Nigeria’s foremost indigenous professional and business consulting firms, renowned for excellence, integrity, and innovation. We are a composite, one-stop professional & Consulting firm providing Audit & Assurance, Tax Planning, Compliance & Advisory, Business Advisory & Consulting, Financial Advisory, and Strategic Support Services to clients and organizations across diverse sectors of the economy.    </p>
+                             TAC Professional Services is a Chartered Accounting and Business Consulting firm delivering a comprehensive suite of professional services to a diverse portfolio of clients. Our areas of expertise include Audit & Assurance, Accounting & Transaction, Forensic Investigation & Accounting, Reporting Accounting & Due Diligence, IFRS Advisory, Debt Recovery & Liquidation, and Financial & Business Advisory Services. 
+                               </p>
                                 <p>
-                                    Since our establishment in 2001, TAC Professional Services has evolved over the past two decades into a trusted name in professional practice and business advisory. Our success is built on a culture of deep expertise, forward-thinking solutions, and an unwavering commitment to client value.  </p>
+                             TAC Tax Advisory is our Tax Advisory & Regulatory Services unit, providing  Tax Planning, Corporate Tax, Transaction Tax, Transfer Pricing, Personal Income Tax, Tax Advisory & Compliance, and Regulatory Services. 
+                              </p>
                                 <p>
-                                    As a proud member firm of <span className="text-foreground font-semibold">Integra International,</span> a global network of over 150 independent accounting and consulting firms across 90 countries worldwide, we combine local insight with global standards to provide world-class solutions tailored to the specific needs of our clients.
+                            Through our Business Consulting and Advisory Unit, we provide high-quality, solution-driven Business and Management Consulting Services designed to help organizations achieve operational efficiency, financial growth, and strategic transformation. Our offerings span Financial Advisory and Strategy, Internal Control & Risk Management, Investment and Funding Advisory, Corporate and Business Valuation, Human Resource Consulting, Systems and Staff Outsourcing Services, as well as Software and Systems Development Support.
                                 </p>
                                 <p>
-                                    At TAC Professional Services, we are more than consultants — we are strategic partners committed to driving growth, efficiency, and sustainable success for every organization we serve.
-                                </p>
+                    TAC Professional Services is a proud member firm of Integra International—a global network of over 150 independent accounting and consulting firms across 90 countries worldwide. This affiliation enables us to deliver cross-border business support through shared expertise, resource collaboration, and access to global best practices, ensuring that our clients’ local and international needs are met with excellence and precision.           </p>
                             </div>
                         </motion.div>
 
