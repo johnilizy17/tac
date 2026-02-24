@@ -49,7 +49,7 @@ export default function TeamPage() {
                                 Meet the <span className="text-gradient">Experts</span>
                             </h1>
                             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                                Our team of seasoned professionals brings decades of combined experience in accounting, taxation, audit, and business consulting. Each member is committed to delivering excellence and driving your success.
+                                Meet the dynamic team of professionals at TAC Professional Services—a group of highly skilled experts committed to delivering quality leadership, sustainable growth, and exceptional value to our clients and the industries we serve.
                             </p>
                         </motion.div>
                     </div>
@@ -77,46 +77,58 @@ export default function TeamPage() {
                                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
                             >
                                 {team.map((member) => (
-                                <motion.div
-                                    key={member.id}
-                                    variants={{
-                                        hidden: { opacity: 0, y: 50 },
-                                        show: { opacity: 1, y: 0 }
-                                    }}
-                                    onClick={() => setSelectedMember(member)}
-                                    className="group relative flex flex-col cursor-pointer"
-                                >
-                                    <div className="relative aspect-[4/5] rounded-3xl overflow-hidden mb-6 border border-foreground/10 group-hover:border-tac-brand/50 transition-colors duration-500 shadow-xl dark:shadow-[0_0_40px_rgba(0,0,0,0.3)] bg-foreground/5">
-                                        <img
-                                            src={member.image}
-                                            alt={member.name}
-                                            className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-110"
-                                        />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
+                                    <motion.div
+                                        key={member.id}
+                                        variants={{
+                                            hidden: { opacity: 0, y: 50 },
+                                            show: { opacity: 1, y: 0 }
+                                        }}
+                                        onClick={() => setSelectedMember(member)}
+                                        className="group relative flex flex-col cursor-pointer"
+                                    >
+                                        <div className="relative aspect-[4/5] rounded-3xl overflow-hidden mb-6 border border-foreground/10 group-hover:border-tac-brand/50 transition-colors duration-500 shadow-xl dark:shadow-[0_0_40px_rgba(0,0,0,0.3)] bg-foreground/5">
+                                            <img
+                                                src={member.image}
+                                                alt={member.name}
+                                                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-110"
+                                            />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
 
-                                        <div className="absolute bottom-4 left-4 right-4">
-                                            <h3 className="text-xl font-bold text-white mb-1 leading-tight">{member.name}</h3>
-                                            <p className="text-tac-brand font-bold text-xs tracking-wider uppercase">{member.credentials}</p>
+                                            <div className="absolute bottom-4 left-4 right-4">
+                                                <h3 className="text-xl font-bold text-white mb-1 leading-tight">{member.name}</h3>
+                                                <p className="text-tac-brand font-bold text-xs tracking-wider uppercase">{member.credentials}</p>
+                                            </div>
+
+                                            {/* Click to view overlay */}
+                                            <div className="absolute inset-0 bg-tac-brand/0 group-hover:bg-tac-brand/10 transition-colors flex items-center justify-center">
+                                                <span className="text-white font-bold text-sm opacity-0 group-hover:opacity-100 transition-opacity bg-tac-brand px-6 py-2 rounded-full">
+                                                    View Profile
+                                                </span>
+                                            </div>
                                         </div>
 
-                                        {/* Click to view overlay */}
-                                        <div className="absolute inset-0 bg-tac-brand/0 group-hover:bg-tac-brand/10 transition-colors flex items-center justify-center">
-                                            <span className="text-white font-bold text-sm opacity-0 group-hover:opacity-100 transition-opacity bg-tac-brand px-6 py-2 rounded-full">
-                                                View Profile
-                                            </span>
+                                        <div className="px-2 flex flex-col gap-2">
+                                            <p className="text-foreground font-semibold text-sm">{member.position}</p>
+                                            <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2">
+                                                {member.shortBio}
+                                            </p>
                                         </div>
-                                    </div>
-
-                                    <div className="px-2 flex flex-col gap-2">
-                                        <p className="text-foreground font-semibold text-sm">{member.position}</p>
-                                        <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2">
-                                            {member.shortBio}
-                                        </p>
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </motion.div>
+                                    </motion.div>
+                                ))}
+                            </motion.div>
                         )}
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="text-center max-w-3xl mx-auto mt-10"
+                            
+                        >
+
+                            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+
+                                Our team combines deep professional expertise, innovative thinking, and a passion for excellence to ensure every engagement reflects our core values and drives meaningful results.
+                            </p>
+                        </motion.div>
                     </div>
                 </section>
 
