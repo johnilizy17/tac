@@ -38,30 +38,50 @@ export default function FinalCTA() {
                                 transition={{ delay: 0.2 }}
                                 className="space-y-6"
                             >
-                                <div className="flex items-start gap-4 group">
-                                    <div className="w-12 h-12 rounded-2xl bg-foreground/5 flex items-center justify-center group-hover:bg-tac-brand/20 transition-colors">
-                                        <MapPin className="text-tac-brand" />
+                                <a
+                                    href="https://maps.app.goo.gl/nE8aRrqjVUhp1Rsj8"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex gap-6 p-8 glass-card rounded-3xl group border-foreground/5 hover:border-tac-brand/30 transition-all duration-500 cursor-pointer"
+                                >
+                                    <div className="w-14 h-14 bg-tac-brand/10 rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-500">
+                                        <MapPin className="w-6 h-6 text-tac-brand" />
                                     </div>
-                                    <div>
-                                        <h4 className="text-foreground font-bold">Lekki Office (Head Office)</h4>
-                                        <p className="text-muted-foreground text-sm">Block 113, Plot 22, Adebisi Ogunniyi Crescent, Lekki Phase 1, Lagos.</p>
-                                        <p className="text-muted-foreground text-sm mt-1 flex items-center gap-2">
-                                            <Phone className="w-3 h-3" /> +234 906 284 0810
-                                        </p>
+                                    <div className="flex-1">
+                                        <h3 className="text-foreground font-bold text-lg mb-2 group-hover:text-tac-brand transition-colors">Lagos - Head Office</h3>
+                                        <p className="text-muted-foreground leading-relaxed text-sm mb-3">The TAC Place. Block 113, Plot 22, Adebisi Ogunniyi Crescent, Off Oladimeji Alo Street, Lekki Phase 1, Lagos.</p>
+                                        <a 
+                                            href="tel:+2349062840807"
+                                            className="inline-flex items-center gap-2 text-tac-brand hover:text-tac-brand/80 transition-colors text-sm font-semibold"
+                                            onClick={(e) => e.stopPropagation()}
+                                        >
+                                            <Phone className="w-4 h-4" />
+                                            Call Us: +234 906 284 0807
+                                        </a>
                                     </div>
-                                </div>
-                                <div className="flex items-start gap-4 group">
-                                    <div className="w-12 h-12 rounded-2xl bg-foreground/5 flex items-center justify-center group-hover:bg-tac-pink/20 transition-colors">
-                                        <MapPin className="text-tac-pink" />
+                                </a>
+                                <a
+                                    href="https://maps.app.goo.gl/qZP6aif2BBNZ8uom9"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex gap-6 p-8 glass-card rounded-3xl group border-foreground/5 hover:border-tac-brand/30 transition-all duration-500 cursor-pointer"
+                                >
+                                    <div className="w-14 h-14 bg-tac-brand/10 rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-500">
+                                        <MapPin className="w-6 h-6 text-tac-brand" />
                                     </div>
-                                    <div>
-                                        <h4 className="text-foreground font-bold">Abuja Office</h4>
-                                        <p className="text-muted-foreground text-sm">Suite 30, Block B, Landmark Plaza, Plot 3124, Ibrahim Babangida Way. Maitama, Abuja.</p>
-                                        <p className="text-muted-foreground text-sm mt-1 flex items-center gap-2">
-                                            <Phone className="w-3 h-3" /> +234 906 284 0810
-                                        </p>
+                                    <div className="flex-1">
+                                        <h3 className="text-foreground font-bold text-lg mb-2 group-hover:text-tac-brand transition-colors">Abuja Office</h3>
+                                        <p className="text-muted-foreground leading-relaxed text-sm mb-3">Suite 30, Block B, Landmark Plaza, Plot 3124, Ibrahim Babangida Way. Maitama, Abuja.</p>
+                                        <a 
+                                            href="tel:+2349062840810"
+                                            className="inline-flex items-center gap-2 text-tac-brand hover:text-tac-brand/80 transition-colors text-sm font-semibold"
+                                            onClick={(e) => e.stopPropagation()}
+                                        >
+                                            <Phone className="w-4 h-4" />
+                                            Call Us: +234 906 284 0810
+                                        </a>
                                     </div>
-                                </div>
+                                </a>
                             </motion.div>
                         </div>
 
@@ -73,15 +93,6 @@ export default function FinalCTA() {
                             className="bg-foreground/5 rounded-3xl p-10 backdrop-blur-md border border-foreground/10"
                         >
                             <div className="space-y-8">
-                                <a href="tel:+2349062840810" className="flex items-center gap-6 group cursor-pointer">
-                                    <div className="w-14 h-14 rounded-full bg-tac-purple/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                                        <Phone className="text-tac-purple" />
-                                    </div>
-                                    <div>
-                                        <p className="text-muted-foreground text-xs uppercase tracking-widest font-bold">Call Us</p>
-                                        <p className="text-xl font-bold text-foreground">+234 906 284 0810</p>
-                                    </div>
-                                </a>
                                 <a href="mailto:info@tacgroupng.com" className="flex items-center gap-6 group cursor-pointer">
                                     <div className="w-14 h-14 rounded-full bg-tac-gold/10 flex items-center justify-center group-hover:scale-110 transition-transform">
                                         <Mail className="text-tac-gold" />
@@ -91,9 +102,7 @@ export default function FinalCTA() {
                                         <p className="text-xl font-bold text-foreground">info@tacgroupng.com</p>
                                     </div>
                                 </a>
-                                <Link href="/contact" className="w-full py-4 bg-tac-brand text-tac-dark font-bold rounded-2xl hover:bg-tac-brand/90 transition-colors flex items-center justify-center gap-3 shadow-xl group">
-                                    Contact Support <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                                </Link>
+                               
                             </div>
                         </motion.div>
                     </div>
