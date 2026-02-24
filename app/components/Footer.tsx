@@ -57,10 +57,10 @@ export default function Footer() {
                     <div>
                         <h4 className="text-white font-bold mb-6 text-lg">Quick Links</h4>
                         <ul className="space-y-4 text-sm">
-                            {["Home", "About", "Services", "Partners", "Gallery", "Careers"].map((link) => (
+                            {["Home", "About", "Services", "Industries", "Partners", "Gallery", "Careers"].map((link) => (
                                 <li key={link}>
                                     <Link
-                                        href={link === "Home" ? "/" : link === "Gallery" ? "/gallery" : link === "Services" ? "/services" : link === "Partners" ? "/partners" : link === "About" ? "/about" : link === "Careers" ? "/careers" : `/#${link.toLowerCase()}`}
+                                        href={link === "Home" ? "/" : link === "Gallery" ? "/gallery" : link === "Services" ? "/services" : link === "Industries" ? "/industries" : link === "Partners" ? "/partners" : link === "About" ? "/about" : link === "Careers" ? "/careers" : `/#${link.toLowerCase()}`}
                                         className="text-white/90 hover:text-white hover:translate-x-1 inline-block transition-all"
                                     >
                                         {link}

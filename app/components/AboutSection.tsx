@@ -72,8 +72,7 @@ export default function AboutSection() {
                                As a proud member firm of <span className="text-foreground font-semibold">Integra International,</span> a global network of over 150 independent accounting and consulting firms across 90 countries worldwide, we combine local insight with global standards to provide world-class solutions tailored to the specific needs of our clients.
                             </p>
                             <p>
-                                Our success is built on a culture of deep expertise, forward-thinking solutions, and an unwavering commitment to client value. At TAC, we are more than consultants — we are strategic partners committed to driving your sustainable success.
-                            </p>
+                       At TAC Professional Services, we are more than consultants — we are strategic partners committed to driving growth, efficiency, and sustainable success for every organization we serve.     </p>
                         </div>
                         <div className="flex flex-wrap gap-8">
                             <div className="flex flex-col">

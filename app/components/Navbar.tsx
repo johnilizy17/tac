@@ -62,6 +62,7 @@ export default function Navbar() {
         { name: "Home", href: "/" },
         { name: "About", href: "/about" },
         { name: "Services", href: "/services" },
+        { name: "Industries", href: "/industries" },
         { name: "Partners", href: "/partners" },
         { name: "Team", href: "/team" },
         { name: "Gallery", href: "/gallery" },
@@ -86,7 +87,7 @@ export default function Navbar() {
 
                 {/* Desktop Menu */}
                 <div className="hidden lg:flex items-center gap-6 text-[13px] font-bold uppercase tracking-widest text-foreground/70">
-                    {navLinks.slice(0, 6).map((link) => (
+                    {navLinks.slice(0, 7).map((link) => (
                         <Link
                             key={link.name}
                             href={link.href}
