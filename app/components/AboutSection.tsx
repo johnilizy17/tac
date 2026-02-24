@@ -65,13 +65,11 @@ export default function AboutSection() {
                         </h2>
                         <div className="space-y-6 text-muted-foreground text-lg leading-relaxed mb-8">
                             <p>
-                                TAC stands as one of Nigeria's foremost indigenous professional and business consulting firms, renowned for excellence, integrity, and innovation. Since our establishment in 2001, we have evolved into a trusted name in professional practice and business advisory.
-                            </p>
+                        TAC stands as one of Nigeria’s foremost indigenous professional and business consulting firms, renowned for excellence, integrity, and innovation. We are a composite, one-stop professional & Consulting firm providing Audit & Assurance, Tax Planning, Compliance & Advisory, Business Advisory & Consulting, Financial Advisory, and Strategic Support Services to clients and organizations across diverse sectors of the economy.    </p>
                             <p>
-                                We are a composite, one-stop firm providing Audit & Assurance, Tax Planning, Compliance & Advisory, Business Advisory & Consulting, Financial Advisory, and Strategic Support Services to clients across diverse sectors of the economy.
-                            </p>
+                          Since our establishment in 2001, TAC Professional Services has evolved over the past two decades into a trusted name in professional practice and business advisory. Our success is built on a culture of deep expertise, forward-thinking solutions, and an unwavering commitment to client value.  </p>
                             <p>
-                                As a proud member firm of <span className="text-foreground font-semibold">Integra International</span>, a global network of over 150 independent accounting and consulting firms across 90 countries, we combine local insight with global standards to provide world-class solutions tailored to your specific needs.
+                               As a proud member firm of <span className="text-foreground font-semibold">Integra International,</span> a global network of over 150 independent accounting and consulting firms across 90 countries worldwide, we combine local insight with global standards to provide world-class solutions tailored to the specific needs of our clients.
                             </p>
                             <p>
                                 Our success is built on a culture of deep expertise, forward-thinking solutions, and an unwavering commitment to client value. At TAC, we are more than consultants — we are strategic partners committed to driving your sustainable success.
