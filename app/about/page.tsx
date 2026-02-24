@@ -198,61 +198,7 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Core Capabilities */}
-            <section className="py-24 relative bg-background">
-                <div className="max-w-7xl mx-auto px-4">
-                    <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
-                        <h2 className="text-4xl font-bold text-foreground">Our Core <span className="text-gradient">Capabilities</span></h2>
-                        <p className="text-muted-foreground text-lg">Delivering a comprehensive suite of professional services through specialized business units.</p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <ExpertiseCard
-                            title="TAC Professional Services"
-                            icon={ShieldCheck}
-                            colorClass="bg-tac-brand/10 text-tac-brand"
-                            delay={0.1}
-                            services={[
-                                "Audit & Assurance",
-                                "Accounting & Transaction",
-                                "Forensic Investigation",
-                                "Due Diligence",
-                                "IFRS Advisory",
-                                "Debt Recovery & Liquidation"
-                            ]}
-                        />
-                        <ExpertiseCard
-                            title="TAC Tax Advisory"
-                            icon={Scale}
-                            colorClass="bg-tac-purple/10 text-tac-purple"
-                            delay={0.2}
-                            services={[
-                                "Tax Planning",
-                                "Corporate & Transaction Tax",
-                                "Transfer Pricing",
-                                "Personal Income Tax",
-                                "Compliance Services",
-                                "Regulatory Advisory"
-                            ]}
-                        />
-                        <ExpertiseCard
-                            title="Business Consulting"
-                            icon={TrendingUp}
-                            colorClass="bg-foreground/10 text-foreground"
-                            delay={0.3}
-                            services={[
-                                "Internal Control & Risk",
-                                "Corporate Valuation",
-                                "Human Resource Consulting",
-                                "Systems Outsourcing",
-                                "Software Development",
-                                "Investment Advisory"
-                            ]}
-                        />
-                    </div>
-                </div>
-            </section>
-
+            
             {/* Our Experience Section */}
             <section id="our-experience" className="py-24 relative overflow-hidden bg-background">
                 <div className="max-w-7xl mx-auto px-4">
