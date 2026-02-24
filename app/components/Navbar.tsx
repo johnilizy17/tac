@@ -5,12 +5,13 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion";
 import { useTheme } from "./ThemeProvider";
-import { Moon, Sun, Menu, X } from "lucide-react";
+import { Moon, Sun, Menu, X, ChevronDown } from "lucide-react";
 
 export default function Navbar() {
     const [hidden, setHidden] = useState(false);
     const [activeSection, setActiveSection] = useState("");
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
     const { scrollY } = useScroll();
     const { theme, toggleTheme } = useTheme();
     const [scrolled, setScrolled] = useState(false);
@@ -62,12 +63,21 @@ export default function Navbar() {
     const navLinks = [
         { name: "Home", href: "/" },
         { name: "About", href: "/about" },
-        { name: "Services", href: "/services" },
+        { name: "Services", href: "/services", hasDropdown: true },
         { name: "Industries", href: "/industries" },
         { name: "Partners", href: "/partners" },
         { name: "Team", href: "/team" },
         { name: "Gallery", href: "/gallery" },
         { name: "Contact", href: "/contact" },
+    ];
+
+    const services = [
+        { id: 1, name: "Accounting Outsourcing & Transaction Advisory" },
+        { id: 2, name: "Audit & Assurance" },
+        { id: 3, name: "Tax Compliance & Advisory" },
+        { id: 4, name: "Forensic Investigation & Accounting" },
+        { id: 5, name: "Business Consulting & Advisory" },
+        { id: 6, name: "Internal Control & Risk Management" }
     ];
 
     return (
