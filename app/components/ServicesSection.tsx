@@ -57,7 +57,7 @@ export default function ServicesSection() {
                         transition={{ delay: 0.1 }}
                         className="text-4xl md:text-5xl font-bold mt-4 mb-6 text-foreground"
                     >
-                        Our <span className="text-gradient">Solutions</span>
+                        Our <span className="text-gradient">Services</span>
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
