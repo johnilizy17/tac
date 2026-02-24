@@ -15,11 +15,8 @@ export default function LoadingScreen() {
     const [progress, setProgress] = useState(0);
     const [textIndex, setTextIndex] = useState(0);
     const [isLoading, setIsLoading] = useState(true);
-    const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
-        setIsMounted(true);
-        
         // Check if page was already loaded in this session
         const hasLoaded = typeof window !== 'undefined' ? sessionStorage.getItem('hasLoadedBefore') : null;
         
@@ -56,11 +53,6 @@ export default function LoadingScreen() {
             clearInterval(textInterval);
         };
     }, []);
-
-    // Don't render anything until mounted to avoid hydration mismatch
-    if (!isMounted) {
-        return null;
-    }
 
     return (
         <AnimatePresence>
