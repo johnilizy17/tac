@@ -20,7 +20,6 @@ export default function Home() {
       <AboutSection />
       <TeamSection />
      
-      <ExperienceSection />
       <ServicesSection />
       <IndustriesSection />
       <FinalCTA />
