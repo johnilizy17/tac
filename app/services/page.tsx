@@ -61,7 +61,8 @@ export default function ServicesPage() {
                             { id: 3, title: "Tax Compliance & Advisory", icon: Globe, image: "/service/3.jpg" },
                             { id: 4, title: "Forensic Investigation & Accounting", icon: Building2, image: "/service/4.jpg" },
                             { id: 5, title: "Business Consulting & Advisory", icon: Users, image: "/service/5.jpg" },
-                            { id: 6, title: "Internal Control & Risk Management", icon: ShieldCheck, image: "/service/6.jpg" }
+                            { id: 6, title: "Internal Control & Risk Management", icon: ShieldCheck, image: "/service/6.jpg" },
+                            { id: 7, title: "Receivership & Liquidation", icon: Building2, image: "/service/1.jpg" }
                         ].map((service, index) => (
                             <motion.div
                                 key={service.id}
