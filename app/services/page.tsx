@@ -27,9 +27,8 @@ export default function ServicesPage() {
                         animate={{ opacity: 1, y: 0 }}
                         className="max-w-4xl mx-auto text-center"
                     >
-                        <span className="text-tac-brand font-bold tracking-widest uppercase text-2xl mb-6 block">Our Services</span>
                         <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-8 leading-tight">
-                            Comprehensive <span className="text-gradient">Professional Services</span>
+                            Our <span className="text-gradient"> Services</span>
                         </h1>
                         <p className="text-xl text-muted-foreground leading-relaxed">
                             TAC is a Professional & Business Consulting firm delivering a comprehensive suite of professional services to a diverse portfolio of clients in both the private and public sectors. Our broad services includes but not limited to Audit & Assurance, Accounting & Transaction, Tax Compliance & Advisory, Forensic Investigation & Accounting, Financial & Business Advisory, and Other Auxiliary Professional & Consulting Services.
