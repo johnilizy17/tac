@@ -115,5 +115,18 @@
       "Act as watch dog and report to the Board of Directors"
     ],
     "image": "/asset/6.png"
+  },
+  {
+    "id": 7,
+    "title": "RECEIVERSHIP & LIQUIDATION",
+    "shortDescription": "Professional receivership and liquidation services including debt recovery, business recovery, company restructuring, and turnaround management.",
+    "details": "Receivership involves the taking over charged assets of insolvent companies, turning them around and recovering debt owed before handling over to the business owners. The process involves identifying the problems and causes of insolvent companies and take over the management for effective turn around.\n\nWhere the business and assets could not be run due to lack liquidity or other fundamental reasons, the charged assets will be realized to pay off secured creditors.\n\nLiquidation can be voluntary where the owners of business are faced with the difficult choice of winding down the company due to inability to meet creditors' obligations, change in strategy or other fundamental reasons. Liquidation can be compulsory/legal where this is initiated by unpaid creditors in other to recover their debt.\n\nOur receivership and liquidation services include debt recovery, business recovery, company restructuring and turn around management services.",
+    "services": [
+      "Debt Recovery",
+      "Business Recovery",
+      "Company Restructuring",
+      "Turnaround Management Services"
+    ],
+    "image": "/asset/1.png"
   }
 ]
