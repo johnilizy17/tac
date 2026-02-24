@@ -77,9 +77,11 @@ export default function Footer() {
                             {[
                                 { name: "Accounting Outsourcing", id: 1 },
                                 { name: "Audit & Assurance", id: 2 },
-                                { name: "Forensic Investigation", id: 3 },
-                                { name: "Business Consulting", id: 4 },
-                                { name: "Receivership & Liquidation", id: 5 }
+                                { name: "Tax Compliance & Advisory", id: 3 },
+                                { name: "Forensic Investigation", id: 4 },
+                                { name: "Business Consulting", id: 5 },
+                              { name: "Business Support Services", id: 6 }, 
+                                { name: "Receivership & Liquidation", id: 7 }
                             ].map((service) => (
                                 <li key={service.id}>
                                     <Link href={`/services/${service.id}`} className="text-white/90 hover:text-white hover:translate-x-1 inline-block transition-all">
