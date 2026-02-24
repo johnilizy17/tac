@@ -45,6 +45,9 @@ export default function FinalCTA() {
                                     <div>
                                         <h4 className="text-foreground font-bold">Lekki Office (Head Office)</h4>
                                         <p className="text-muted-foreground text-sm">Block 113, Plot 22, Adebisi Ogunniyi Crescent, Lekki Phase 1, Lagos.</p>
+                                        <p className="text-muted-foreground text-sm mt-1 flex items-center gap-2">
+                                            <Phone className="w-3 h-3" /> +234 906 284 0810
+                                        </p>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-4 group">
@@ -54,6 +57,9 @@ export default function FinalCTA() {
                                     <div>
                                         <h4 className="text-foreground font-bold">Abuja Office</h4>
                                         <p className="text-muted-foreground text-sm">Suite 30, Block B, Landmark Plaza, Plot 3124, Ibrahim Babangida Way. Maitama, Abuja.</p>
+                                        <p className="text-muted-foreground text-sm mt-1 flex items-center gap-2">
+                                            <Phone className="w-3 h-3" /> +234 906 284 0810
+                                        </p>
                                     </div>
                                 </div>
                             </motion.div>
