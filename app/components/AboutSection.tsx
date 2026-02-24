@@ -126,76 +126,7 @@ export default function AboutSection() {
                 </div>
             </section>
 
-            {/* Global Advantage Section */}
-            <section id="about" className="py-24 relative bg-background overflow-hidden">
-                <div className="absolute top-0 right-0 w-1/2 h-full bg-tac-brand/5 blur-[120px] -z-10" />
-                <div className="max-w-7xl mx-auto px-4">
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-center max-w-4xl mx-auto mb-16"
-                    >
-                        <span className="text-tac-brand font-bold tracking-widest uppercase text-sm mb-6 block">Global Advantage</span>
-                        <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8 leading-tight">
-                            Integra International <span className="text-gradient">Partnership</span>
-                        </h2>
-                    </motion.div>
-
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                        <motion.div
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            className="space-y-6 text-muted-foreground leading-relaxed"
-                        >
-                            <p>
-                                TAC Professional Services is a proud member firm of Integra International, with headquarters located in London, United Kingdom—a global association of over 150 independently owned and managed professional services firms across more than 90 countries worldwide. Member firms provide a broad range of audit, tax, consulting, and specialist advisory services to clients operating locally and internationally.
-                            </p>
-                            <p>
-                                Integra International fosters active collaboration among its members, encouraging the open exchange of knowledge, expertise, and best practices. This global network empowers member firms to deliver expanded professional services and effectively meet the national and cross-border needs of their clients.
-                            </p>
-                            <p>
-                                Each member firm within the Integra network retains its name, identity, and independence, while benefiting from the collective knowledge and technical expertise of more than 2,000 professionals worldwide. English serves as the common working language, ensuring seamless communication and collaboration across member firms.
-                            </p>
-                        </motion.div>
-
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            className="relative"
-                        >
-                            <div className="rounded-[3rem] overflow-hidden border border-foreground/10 shadow-2xl">
-                                <img
-                                    src="/international.jpg"
-                                    alt="Integra International Network"
-                                    className="w-full h-auto object-cover"
-                                />
-                            </div>
-                            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-tac-brand/20 blur-3xl -z-10" />
-                        </motion.div>
-                    </div>
-
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="mt-12 space-y-6 text-muted-foreground leading-relaxed max-w-5xl mx-auto"
-                    >
-                        <p>
-                            All member firms are locally owned and managed, led by professionals who understand the unique dynamics of owner-managed businesses and local market realities. This structure allows for a perfect balance of global reach and local insight, ensuring that clients receive personalized, high-quality, and innovative solutions backed by global standards of excellence.
-                        </p>
-                        <div className="glass-card p-8 rounded-3xl bg-tac-brand/5 border-tac-brand/20">
-                            <p className="text-foreground font-semibold text-lg italic">
-                                "At TAC, we leverage the Integra International global advantage to provide expert & specialist support in any area of concern, and provide the necessary solution across the globe."
-                            </p>
-                        </div>
-                    </motion.div>
-
-                </div>
-            </section>
-
+           
             {/* Philosophy Section */}
             <section className="py-24 relative bg-gradient-to-b from-background to-foreground/5 dark:to-tac-dark/30">
                 <div className="max-w-7xl mx-auto px-4">
