@@ -4,14 +4,14 @@
     "title": "ACCOUNTING OUTSOURCING & TRANSACTION ADVISORY",
     "shortDescription": "Comprehensive accounting outsourcing and transaction advisory services with AI-powered tools for accurate financial record keeping and regulatory compliance.",
     "details": "At TAC, we assist our clients with Accounting Outsourcing and Transaction Advisory Services, which include adequate financial record keeping, reconciliation, and addressing complex financial structures, regulatory reporting etc. We provide these services either onsite or offsite, by deploying our skilful and dedicated resources.\n\nWe deploy Accounting Software, Automated System, and Strong AI Accounting tools, to deliver value-added accounting & financial transaction record keeping and reconciliation that comply with local and international financial reporting.\n\nWith experts who come from a wide range of disciplines, we assure our clients of unequalled benefits such as competitive rates, quick turnaround time, guaranteed data protection, and quality service delivery.",
-    "image": "/service/1.jpg"
+    "image": "/asset/1.png"
   },
   {
     "id": 2,
     "title": "AUDIT & ASSURANCE",
     "shortDescription": "Risk-based audit services compliant with IFRS, IAS, and GAP, utilizing AI-powered audit tools for comprehensive assurance and performance improvement.",
     "details": "We provide our auditing services in compliance with the Companies and Allied Matters Act of Nigeria, and in compliance with International Financial Reporting Standards (IFRS), General Audit Practice (GAP) and International Accounting Standards (IAS). Our audit approach is all-encompassing of risk-based systems audit, assessment of systems and processes.\n\nApart from satisfying the primary objective of reporting on business and financial statements of corporate firms in line with IFRS, it also aims at performance improvement, internal control evaluation and financial management to ensure good corporate governance. We ensure that we have a thorough understanding of our client's business, corporate culture and operational environment.\n\nWith our Audit Software, Automated System, and Strong AI Audit tools, we deliver value-added audit & assurance services to the satisfaction and admiration of our clients in line with global best practice.",
-    "image": "/service/2.jpg"
+    "image": "/asset/2.png"
   },
   {
     "id": 3,
@@ -20,16 +20,37 @@
     "details": "TAC Tax Advisory Services provide comprehensive taxation planning, management & advisory services to corporate and individual clients with the aim of minimizing their tax burden through careful tax planning. Using our expertise and skill, we study and take advantage of loopholes in the tax laws to reduce clients' tax liabilities.\n\nIn meeting with the global demand of delivering the best professional services to our numerous clients, the company ensures that all its staff are adequately empowered and updated with the current laws & statues and practical approach on tax planning & management services through sound training, seminars & courses obtained both locally & internationally.\n\nOur customised Tax automated system and AI Tax support tools, gives us a good standing in delivering efficient and effective Tax compliance & Advisory services to our numerous clients.",
     "services": [
       {
-        "title": "The Nigeria Tax Reform Act – Our Advisory Service",
-        "description": "The Nigeria Tax Reform Acts represent a fundamental shift in how taxation is administered, enforced, and interpreted in Nigeria. Our advisory service is designed to help businesses, investors, NGOs, and individuals understand the real impact of the reforms on their operations and decisions, identify areas of exposure early, and implement practical solutions that are compliant, defensible, and commercially sound."
+        "title": "THE NIGERIA TAX REFORM ACT – Our Advisory Service ",
+        "description": "The Nigeria Tax Reform Acts represent a fundamental shift in how taxation is administered, enforced, and interpreted in Nigeria. Beyond compliance, the reforms introduce new expectations around transparency, documentation, economic substance, and proactive engagement with tax authorities. Our advisory service is designed to help businesses, investors, NGOs, and individuals understand the real impact of the reforms on their operations and decisions, identify areas of exposure early, and implement practical solutions that are compliant, defensible, and commercially sound. We work closely with clients to translate the reforms into clear actions, ensuring they are well-positioned to manage risk, preserve value, and operate with confidence under the new tax regime."
       },
       {
-        "title": "Corporate Tax Management (CIT, PPT EDT)",
-        "description": "Comprehensive corporate tax planning, management & advisory services ensuring compliance obligations and tax efficiency. Includes detailed review of business models, preparation and filing of annual CIT returns, reconciliation with Audited Financial Statements, processing of Tax Clearance Certificates, and representation during tax audits."
+        "title": "Corporate Tax Management (CIT, PPT, ETD)",
+        "description": "At TAC, we provide comprehensive corporate tax planning, management & advisory services to clients in all areas of the economy, ensuring compliance obligations and tax efficiency. Our customised Tax automated system and AI Tax support tools assist in ensuring accurate tax computations that align with the company's Audited Financial Statements and facilitate speedy response and collection of the company's tax clearance certificate.\n\nOur major corporate tax management includes:\n\n• Detailed review of the company's business model, revenue streams, and operational structure to identify tax risks, inefficiencies, and planning opportunities.\n\n• Preparation and filing of annual Company Income Tax (CIT) returns in line with applicable tax laws and the Nigeria Tax Reform Acts 2025.\n\n• Reconciliation of tax computations with Audited Financial Statements to ensure consistency and reduce audit exposure.\n\n• Processing and follow-up on Company Income Tax Clearance Certificates, including resolution of issues that may delay issuance.\n\n• Review and response to tax queries, desk reviews, and correspondence arising from filed returns.\n\n• Representation and liaison with the Nigeria Revenue Service (NRS) during tax audits, investigations, reconciliations, and post-filing reviews.\n\n• Continuous monitoring of tax law changes and regulatory updates, with practical guidance on how these affect the company's operations.",
+        "header": "Our major corporate tax management includes:",
+        "header_details": [
+          "Detailed review of the company’s business model, revenue streams, and operational structure to identify tax risks, inefficiencies, and planning opportunities.",
+          "Preparation and filing of annual Company Income Tax (CIT) returns in line with applicable tax laws and the Nigeria Tax Reform Acts 2025.",
+          "Reconciliation of tax computations with Audited Financial Statements to ensure consistency and reduce audit exposure.",
+          "Processing and follow-up on Company Income Tax Clearance Certificates, including resolution of issues that may delay issuance.",
+          "Review and response to tax queries, desk reviews, and correspondence arising from filed returns.",
+          "Representation and liaison with the Nigeria Revenue Service (NRS) during tax audits, investigations, reconciliations, and post-filing reviews.",
+          "Continuous monitoring of tax law changes and regulatory updates, with practical guidance on how these affect the company’s operations."
+        ]
       },
       {
         "title": "Business Transactions Tax (E-invoicing, VAT, WHT)",
-        "description": "Support in managing transaction-based taxes with focus on accuracy, documentation, and audit readiness. Includes E-invoicing support services, VAT services for domestic and cross-border transactions, and comprehensive WHT services including credit recovery support."
+        "description": "We support clients in managing transaction-based taxes arising from daily business activities, with a strong focus on accuracy, documentation, and audit readiness under the new tax regime.",
+        "header": "Aspects of our E-Invoice support services include:",
+        "header_details": [
+          "Comprehensive assessment of invoicing processes, ERP systems, and accounting platforms to determine readiness for e-invoicing.",
+          "Mapping of invoicing workflows to NRS e-invoicing and TaxPro Max requirements.",
+          "Advisory on ERP and accounting system configuration or integration via approved APIs or upload mechanisms.",
+          "Review and restructuring of invoice formats to comply with prescribed XML/JSON schemas.",
+          "Validation of mandatory invoice information, including TINs, VAT details, invoice reference numbers, QR codes, currency codes, and tax classifications.",
+          "Guidance on internal controls, invoice approval workflows, and document retention policies.",
+          "Periodic post-submission reviews to identify errors, omissions, or inconsistencies.",
+          "Support during reviews or audits arising from e-invoicing submissions."
+        ]
       },
       {
         "title": "Transfer Pricing",
@@ -44,7 +65,7 @@
         "description": "Processing of Economic Development Incentive Certificate, Common Reporting Standard (CRS) Management, Country-by-Country Reporting (CbCR), Strategic Tax Planning & Tax Health Checks, Tax Audit Management, Payroll Restructuring, Stamp Duties Support, and Immigration Support Service."
       }
     ],
-    "image": "/service/3.jpg"
+    "image": "/asset/3.png"
   },
   {
     "id": 4,
@@ -61,7 +82,7 @@
       "Litigation Support",
       "Insurance Claims"
     ],
-    "image": "/service/4.jpg"
+    "image": "/asset/4.png"
   },
   {
     "id": 5,
@@ -77,7 +98,7 @@
       "Accounting, Systems & Human Capital Outsourcing",
       "Software & Systems Development Support"
     ],
-    "image": "/service/5.jpg"
+    "image": "/asset/5.png"
   },
   {
     "id": 6,
@@ -93,6 +114,6 @@
       "Carry out specialized and specific investigation or audit as mandated by the Board",
       "Act as watch dog and report to the Board of Directors"
     ],
-    "image": "/service/6.jpg"
+    "image": "/asset/6.png"
   }
 ]
