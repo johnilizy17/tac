@@ -180,7 +180,7 @@ export default function AboutSection() {
                                     </div>
                                     <span className="text-tac-purple font-bold tracking-widest uppercase text-sm">Our Mission</span>
                                 </div>
-                                <p className="text-muted-foreground leading-relaxed">
+                                <p className="text-2xl font-bold text-foreground  leading-relaxed">
                                     To deliver superior-quality professional service solutions through a team of competent and dedicated professionals, leveraging cutting-edge technology to achieve total client satisfaction and sustainable value while upholding the highest standards of professionalism, credibility, honesty, and integrity in all our engagements.
                                 </p>
                             </div>
