@@ -114,7 +114,7 @@ export default function AboutSection() {
                                 >
                                     TAC
                                 </motion.div>
-                                <div className="text-white/80 font-medium tracking-widest uppercase text-sm">Professional Services</div>
+                                {/* <div className="text-white/80 font-medium tracking-widest uppercase text-sm">Professional Services</div> */}
                             </div>
                         </div>
                         {/* Decorative elements */}
