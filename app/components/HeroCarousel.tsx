@@ -96,7 +96,7 @@ export default function HeroCarousel() {
                     exit="exit"
                     className="absolute inset-0"
                 >
-                    {/* Background Image */}
+                    {/* Background Image - No Overlay */}
                     <div className="absolute inset-0">
                         <Image
                             src={slides[current].image}
@@ -115,18 +115,18 @@ export default function HeroCarousel() {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.5, duration: 0.8 }}
                             >
-                                <span className="inline-block px-4 py-1.5 rounded-full border border-tac-brand/30 bg-tac-brand/10 text-tac-brand text-xs font-bold tracking-widest uppercase mb-8">
+                                <span className="inline-block px-4 py-1.5 rounded-full border border-tac-brand/30 bg-tac-brand/90 text-white text-xs font-bold tracking-widest uppercase mb-8 shadow-lg">
                                     {slides[current].tag}
                                 </span>
 
-                                <h1 className="text-5xl md:text-8xl font-bold tracking-tight mb-8 leading-none drop-shadow-sm">
-                                    <span className="block text-foreground opacity-90">{slides[current].title}</span>
-                                    <span className={`text-transparent bg-clip-text bg-gradient-to-r ${slides[current].gradient}`}>
+                                <h1 className="text-5xl md:text-8xl font-bold tracking-tight mb-8 leading-none" style={{ textShadow: '3px 3px 10px rgba(0,0,0,0.9), 0 0 30px rgba(0,0,0,0.8), 0 0 50px rgba(0,0,0,0.6)' }}>
+                                    <span className="block text-white">{slides[current].title}</span>
+                                    <span className={`text-transparent bg-clip-text bg-gradient-to-r ${slides[current].gradient}`} style={{ filter: 'drop-shadow(3px 3px 10px rgba(0,0,0,0.9)) drop-shadow(0 0 30px rgba(0,0,0,0.8))' }}>
                                         {slides[current].subtitle}
                                     </span>
                                 </h1>
 
-                                <p className="text-lg md:text-xl text-muted-foreground mb-12 leading-relaxed max-w-2xl">
+                                <p className="text-lg md:text-xl text-white mb-12 leading-relaxed max-w-2xl font-semibold" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.95), 0 0 20px rgba(0,0,0,0.8)' }}>
                                     {slides[current].description}
                                 </p>
 
