@@ -11,7 +11,6 @@ const galleryImages = [
     "thumbs_DSC_5161-1-scaled.jpg",
     "thumbs_DSC_5166-1-scaled.jpg",
     "thumbs_DSC_5169-1-scaled.jpg",
-    "thumbs_IMG_0056__1627367760_129.205.99.98 (1).jpg",
     "thumbs_IMG_0056__1627367760_129.205.99.98.jpg",
     "thumbs_IMG_0069__1627367803_129.205.99.98.jpg",
     "thumbs_IMG_0082__1627367831_129.205.99.98.jpg",
