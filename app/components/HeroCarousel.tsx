@@ -17,6 +17,15 @@ const slides = [
     },
     {
         id: 2,
+        title: "Strategic",
+        subtitle: "Partnerships",
+        description: "We are more than consultants — we are strategic partners committed to driving your sustainable success.",
+        image: "/asset/5.png",
+        gradient: "from-tac-purple via-tac-brand to-tac-gold",
+        tag: "Driving Growth"
+    },
+    {
+        id: 3,
         title: "Integral",
         subtitle: "International",
         description: "Member of Integra International, connecting you to a network of professionals across 90 countries worldwide.",
@@ -24,15 +33,7 @@ const slides = [
         gradient: "from-blue-500 via-tac-brand to-emerald-500",
         tag: "Global Connectivity"
     },
-    {
-        id: 3,
-        title: "Strategic",
-        subtitle: "Partnerships",
-        description: "We are more than consultants — we are strategic partners committed to driving your sustainable success.",
-        image: "/asset/5.png",
-        gradient: "from-tac-purple via-tac-brand to-tac-gold",
-        tag: "Driving Growth"
-    }
+    
 ];
 
 export default function HeroCarousel() {
