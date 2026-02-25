@@ -11,7 +11,7 @@ const slides = [
         title: "Pioneering",
         subtitle: "Business",
         description: "TAC Group delivers world-class professional services, audit, and customized business solutions since 2001.",
-        image: "/asset/3.png",
+        image: "/banner/3.jpg",
         gradient: "from-tac-brand via-tac-purple to-tac-gold",
         tag: "Excellence & Heritage"
     },
@@ -20,7 +20,7 @@ const slides = [
         title: "Strategic",
         subtitle: "Partnerships",
         description: "We are more than consultants — we are strategic partners committed to driving your sustainable success.",
-        image: "/asset/5.png",
+        image: "/banner/2.jpg",
         gradient: "from-tac-purple via-tac-brand to-tac-gold",
         tag: "Driving Growth"
     },
@@ -29,7 +29,7 @@ const slides = [
         title: "Integral",
         subtitle: "International",
         description: "Member of Integra International, connecting you to a network of professionals across 90 countries worldwide.",
-        image: "/asset/4.png", // Using a placeholder for global reach
+        image: "/banner/1.jpg", // Using a placeholder for global reach
         gradient: "from-blue-500 via-tac-brand to-emerald-500",
         tag: "Global Connectivity"
     },
@@ -96,7 +96,7 @@ export default function HeroCarousel() {
                     exit="exit"
                     className="absolute inset-0"
                 >
-                    {/* Background Image with Overlay */}
+                    {/* Background Image */}
                     <div className="absolute inset-0">
                         <Image
                             src={slides[current].image}
@@ -105,8 +105,6 @@ export default function HeroCarousel() {
                             className="object-cover"
                             priority
                         />
-                        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60" />
                     </div>
 
                     {/* Content */}
