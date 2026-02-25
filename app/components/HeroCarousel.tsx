@@ -17,12 +17,12 @@ const slides = [
     },
     {
         id: 2,
-        title: "Global",
-        subtitle: "Connectivity",
+        title: "Integral",
+        subtitle: "International",
         description: "Member of Integra International, connecting you to a network of professionals across 90 countries worldwide.",
         image: "/asset/4.png", // Using a placeholder for global reach
         gradient: "from-blue-500 via-tac-brand to-emerald-500",
-        tag: "Integra International"
+        tag: "Global Connectivity"
     },
     {
         id: 3,
