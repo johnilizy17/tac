@@ -119,9 +119,9 @@ export default function HeroCarousel() {
                                     {slides[current].tag}
                                 </span>
 
-                                <h1 className="text-5xl md:text-8xl font-bold tracking-tight mb-8 leading-none" style={{ textShadow: '3px 3px 10px rgba(0,0,0,0.9), 0 0 30px rgba(0,0,0,0.8), 0 0 50px rgba(0,0,0,0.6)' }}>
-                                    <span className="block text-white">{slides[current].title}</span>
-                                    <span className={`text-transparent bg-clip-text bg-gradient-to-r ${slides[current].gradient}`} style={{ filter: 'drop-shadow(3px 3px 10px rgba(0,0,0,0.9)) drop-shadow(0 0 30px rgba(0,0,0,0.8))' }}>
+                                <h1 className="text-5xl md:text-8xl font-bold tracking-tight mb-8 leading-none">
+                                    <span className="block text-white" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>{slides[current].title}</span>
+                                    <span className={`text-transparent bg-clip-text bg-gradient-to-r ${slides[current].gradient}`}>
                                         {slides[current].subtitle}
                                     </span>
                                 </h1>
