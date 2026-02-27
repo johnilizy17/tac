@@ -47,24 +47,8 @@
       "Dr. Bamigboje currently serves as Associate Partner, Assurance & Transaction Advisory Services at TAC Professional Services, where he continues to contribute his wealth of experience and leadership to advancing the firm's standards of excellence."
     ]
   },
-   {
+{
     "id": 4,
-    "name": "Amaebi Fiderikumo",
-    "credentials": "FCA, CFA, MBA, BSC",
-    "position": "Director, Business Advisory & Consulting",
-    "image": "/9s.png",
-    "email": "amaebi.fiderikumo@tacgroupng.com",
-    "shortBio": "Fellow of ICAN and Harvard Business School alumnus with over 20 years of experience in auditing, banking, and telecommunications.",
-    "fullBio": [
-      "Amaebi is a Fellow of the Institute of Chartered Accountants of Nigeria (FCA) and an alumnus of Harvard Business School. He also successfully completed the prestigious Chartered Financial Analyst (CFA) Institute qualifying examinations (USA) over a decade ago.",
-      "With over 20 years of diverse experience spanning auditing, banking, and the telecommunications industries in Nigeria and abroad, Amaebi has built a reputation for excellence in finance, strategy, and business leadership.",
-      "He has held several senior executive roles, including Group Executive Director, Finance at Alphamead Group, and Finance Director at IHS Nigeria, the country's largest telecommunications infrastructure and tower-sharing company. At IHS, he successfully managed relationships with leading global investors such as the International Finance Corporation (IFC), Goldman Sachs, Wendel of France, and other top-tier international private equity firms.",
-      "A results-driven professional with a proven track record of high performance, Amaebi is recognized for his ability to provide strategic financial leadership, attract and optimize resources, and drive organizational growth. His areas of expertise include financial planning, reporting and control; investment management; business modelling and valuation; and costing and pricing strategy.",
-      "He currently serves as Director, Business Advisory & Consulting at TAC Professional Services, where he continues to deliver innovative, value-driven solutions to clients across diverse sectors."
-    ]
-  },
-  {
-    "id": 5,
     "name": "Mrs. Omolola Samuel",
     "credentials": "FCA, MBA",
     "position": "Associate Partner, Audit & Assurance",
@@ -79,39 +63,8 @@
       "She currently serves as Associate Partner, Audit & Assurance, where she leads the firm's high-level audit, advisory and compliance engagements across both the private and public sectors. She has led key ICFR advisory reviews for listed entities and regulatory bodies, including the Securities & Exchange Commission, delivering insights that strengthen governance, enhance operational efficiency, and reinforce stakeholder confidence."
     ]
   },
-   {
-    "id": 6,
-    "name": "Oluwole Adaramaja",
-    "credentials": "LL.B, LL.M",
-    "position": "Associate Director, Corporate Transactions, Compliance, Recovery & Liquidation",
-    "image": "/10s.png",
-    "email": "oluwole.adaramaja@tacgroupng.com",
-    "shortBio": "Accomplished legal practitioner with extensive experience in corporate transactions, insolvency, and asset recovery.",
-    "fullBio": [
-      "Oluwole Adaramaja is an accomplished legal practitioner with extensive experience in Corporate and Commercial Transactions, Secured Credit for Corporate and Individual Finance, Insolvency and Asset Recovery, Commercial Property and Conveyance, as well as General Civil and Commercial Litigation.",
-      "Over the years, he has successfully managed and advised on complex, multi-party disputes across State and Federal High Courts, demonstrating exceptional skill in both prosecution and defense. His work reflects a strong command of legal strategy, compliance, and business-oriented dispute resolution.",
-      "Wole obtained his LL.B from the prestigious Obafemi Awolowo University, Ile-Ife in 2002 and was called to the Nigerian Bar in 2004. He earned his Master of Laws (LL.M) from the same institution in 2016.",
-      "He began his legal career with Oluwakemi Balogun & Co (SAN), a leading Insolvency and Asset Recovery law firm in Lagos, where he served as an Associate between 2005 and 2006. He later joined Olalekan Yusuf & Co (SAN), also in Lagos, in 2006, where he gained in-depth exposure to litigation, commercial property, land disputes, conveyancing, and title perfection. His exceptional performance earned him promotion to Senior Associate, a role he held until 2008 before establishing his private practice.",
-      "Wole is the Managing Partner at Hoist Solicitors and currently serves as Associate Director, Corporate Transactions, Compliance, Recovery & Liquidation at TAC Professional Services, where he brings a wealth of legal and strategic insight to client engagements across multiple sectors."
-    ]
-  },
  {
-    "id": 7,
-    "name": "Tunde Latinwo",
-    "credentials": "MBA, B.Eng.",
-    "position": "Director, Business Development & Corporate Services",
-    "image": "/8s.jpg",
-    "email": "tunde.latinwo@tacgroupng.com",
-    "shortBio": "Results-oriented Business Development Executive with close to two decades of experience in financial services and consulting.",
-    "fullBio": [
-      "Tunde Latinwo is a resourceful and results-oriented Business Development Executive with close to two decades of progressive experience spanning financial services, professional practice, and business consulting. He currently oversees Business Development and Corporate Services at TAC Professional Services, where he plays a pivotal role in driving strategic growth, client engagement, and operational excellence.",
-      "Tunde is highly skilled in business strategy design, market development, relationship management, and negotiation. His expertise lies in crafting and executing innovative business development models that enhance client value and organizational performance.",
-      "He began his professional career with United Bank for Africa Plc in 2006 as a Relationship Manager in the Commercial Banking Group and subsequently held several managerial positions across the Retail, Commercial, and Corporate Banking segments, successfully managing high-net-worth client portfolios and driving revenue growth.",
-      "Tunde holds a Master's Degree in Business Administration (MBA) from the prestigious Obafemi Awolowo University and a Bachelor's Degree in Mechanical Engineering from the University of Ilorin, Nigeria. He also holds a Certificate in Design Thinking & Creativity for Innovation from the University of Queensland, Australia."
-    ]
-  },
-  {
-    "id": 10,
+    "id": 5,
     "name": "James Oni",
     "credentials": "FCA, FCIT, B.Sc.",
     "position": "Director, TAC Tax Advisory Services",
@@ -127,7 +80,57 @@
     ]
   },
   {
-    "id": 11,
+    "id": 6,
+    "name": "Tunde Latinwo",
+    "credentials": "MBA, B.Eng.",
+    "position": "Director, Business Development & Corporate Services",
+    "image": "/8s.jpg",
+    "email": "tunde.latinwo@tacgroupng.com",
+    "shortBio": "Results-oriented Business Development Executive with close to two decades of experience in financial services and consulting.",
+    "fullBio": [
+      "Tunde Latinwo is a resourceful and results-oriented Business Development Executive with close to two decades of progressive experience spanning financial services, professional practice, and business consulting. He currently oversees Business Development and Corporate Services at TAC Professional Services, where he plays a pivotal role in driving strategic growth, client engagement, and operational excellence.",
+      "Tunde is highly skilled in business strategy design, market development, relationship management, and negotiation. His expertise lies in crafting and executing innovative business development models that enhance client value and organizational performance.",
+      "He began his professional career with United Bank for Africa Plc in 2006 as a Relationship Manager in the Commercial Banking Group and subsequently held several managerial positions across the Retail, Commercial, and Corporate Banking segments, successfully managing high-net-worth client portfolios and driving revenue growth.",
+      "Tunde holds a Master's Degree in Business Administration (MBA) from the prestigious Obafemi Awolowo University and a Bachelor's Degree in Mechanical Engineering from the University of Ilorin, Nigeria. He also holds a Certificate in Design Thinking & Creativity for Innovation from the University of Queensland, Australia."
+    ]
+  },
+   {
+    "id": 7,
+    "name": "Amaebi Fiderikumo",
+    "credentials": "FCA, CFA, MBA, BSC",
+    "position": "Director, Business Advisory & Consulting",
+    "image": "/9s.png",
+    "email": "amaebi.fiderikumo@tacgroupng.com",
+    "shortBio": "Fellow of ICAN and Harvard Business School alumnus with over 20 years of experience in auditing, banking, and telecommunications.",
+    "fullBio": [
+      "Amaebi is a Fellow of the Institute of Chartered Accountants of Nigeria (FCA) and an alumnus of Harvard Business School. He also successfully completed the prestigious Chartered Financial Analyst (CFA) Institute qualifying examinations (USA) over a decade ago.",
+      "With over 20 years of diverse experience spanning auditing, banking, and the telecommunications industries in Nigeria and abroad, Amaebi has built a reputation for excellence in finance, strategy, and business leadership.",
+      "He has held several senior executive roles, including Group Executive Director, Finance at Alphamead Group, and Finance Director at IHS Nigeria, the country's largest telecommunications infrastructure and tower-sharing company. At IHS, he successfully managed relationships with leading global investors such as the International Finance Corporation (IFC), Goldman Sachs, Wendel of France, and other top-tier international private equity firms.",
+      "A results-driven professional with a proven track record of high performance, Amaebi is recognized for his ability to provide strategic financial leadership, attract and optimize resources, and drive organizational growth. His areas of expertise include financial planning, reporting and control; investment management; business modelling and valuation; and costing and pricing strategy.",
+      "He currently serves as Director, Business Advisory & Consulting at TAC Professional Services, where he continues to deliver innovative, value-driven solutions to clients across diverse sectors."
+    ]
+  },
+  
+   {
+    "id": 8,
+    "name": "Oluwole Adaramaja",
+    "credentials": "LL.B, LL.M",
+    "position": "Associate Director, Corporate Transactions, Compliance, Recovery & Liquidation",
+    "image": "/10s.png",
+    "email": "oluwole.adaramaja@tacgroupng.com",
+    "shortBio": "Accomplished legal practitioner with extensive experience in corporate transactions, insolvency, and asset recovery.",
+    "fullBio": [
+      "Oluwole Adaramaja is an accomplished legal practitioner with extensive experience in Corporate and Commercial Transactions, Secured Credit for Corporate and Individual Finance, Insolvency and Asset Recovery, Commercial Property and Conveyance, as well as General Civil and Commercial Litigation.",
+      "Over the years, he has successfully managed and advised on complex, multi-party disputes across State and Federal High Courts, demonstrating exceptional skill in both prosecution and defense. His work reflects a strong command of legal strategy, compliance, and business-oriented dispute resolution.",
+      "Wole obtained his LL.B from the prestigious Obafemi Awolowo University, Ile-Ife in 2002 and was called to the Nigerian Bar in 2004. He earned his Master of Laws (LL.M) from the same institution in 2016.",
+      "He began his legal career with Oluwakemi Balogun & Co (SAN), a leading Insolvency and Asset Recovery law firm in Lagos, where he served as an Associate between 2005 and 2006. He later joined Olalekan Yusuf & Co (SAN), also in Lagos, in 2006, where he gained in-depth exposure to litigation, commercial property, land disputes, conveyancing, and title perfection. His exceptional performance earned him promotion to Senior Associate, a role he held until 2008 before establishing his private practice.",
+      "Wole is the Managing Partner at Hoist Solicitors and currently serves as Associate Director, Corporate Transactions, Compliance, Recovery & Liquidation at TAC Professional Services, where he brings a wealth of legal and strategic insight to client engagements across multiple sectors."
+    ]
+  },
+ 
+ 
+  {
+    "id": 9,
     "name": "Muheez Popoola",
     "credentials": "FCA, FCIT",
     "position": "Senior Manager, TAC Tax Advisory Services",
@@ -142,7 +145,7 @@
     ]
   },
   {
-    "id": 12,
+    "id": 10,
     "name": "Anjola Dapo Fagbure",
     "credentials": "ACA, MSc",
     "position": "Manager, Audit & Assurance",
