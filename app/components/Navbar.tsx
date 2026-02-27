@@ -99,7 +99,7 @@ export default function Navbar() {
                 </Link>
 
                 {/* Desktop Menu */}
-                <div className="hidden lg:flex items-center gap-6 text-[13px] font-bold uppercase tracking-widest text-foreground/70">
+                <div className="hidden xl:flex items-center gap-4 text-[11px] font-bold uppercase tracking-wider text-foreground/70">
                     {navLinks.slice(0, 9).map((link) => (
                         <Link
                             key={link.name}
@@ -149,7 +149,7 @@ export default function Navbar() {
                     {/* Mobile Menu Toggle */}
                     <button
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                        className="lg:hidden p-2 md:p-3 rounded-full hover:bg-foreground/10 transition-colors text-foreground"
+                        className="xl:hidden p-2 md:p-3 rounded-full hover:bg-foreground/10 transition-colors text-foreground"
                         title="Toggle Menu"
                     >
                         {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -172,7 +172,7 @@ export default function Navbar() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.2 }}
-                        className="lg:hidden absolute top-full left-4 right-4 mt-2 glass-card rounded-3xl p-6 shadow-2xl border-foreground/10"
+                        className="xl:hidden absolute top-full left-4 right-4 mt-2 glass-card rounded-3xl p-6 shadow-2xl border-foreground/10"
                     >
                         <div className="flex flex-col gap-4">
                             {navLinks.map((link) => (
