@@ -75,13 +75,13 @@ export default function Footer() {
                         <h4 className="text-white font-bold mb-6 text-lg">Services</h4>
                         <ul className="space-y-4 text-sm">
                             {[
-                                { name: "Accounting Outsourcing", id: 1 },
-                                { name: "Audit & Assurance", id: 2 },
-                                { name: "Tax Compliance & Advisory", id: 3 },
-                                { name: "Forensic Investigation", id: 4 },
-                                { name: "Business Consulting", id: 5 },
-                              { name: "Business Support Services", id: 6 }, 
-                                { name: "Receivership & Liquidation", id: 7 }
+                                { name: "Audit & Assurance Service", id: 1 },
+                                { name: "Accounting Outsourcing & Transaction Advisory", id: 2 },
+                                { name: "Tax Compliance & Advisory Service", id: 3 },
+                                { name: "Forensic Investigation & Accounting", id: 4 },
+                                { name: "Business Consulting & Advisory", id: 5 },
+                                { name: "Business Support Services", id: 6 },
+                                { name: "Other Services", id: 7 }
                             ].map((service) => (
                                 <li key={service.id}>
                                     <Link href={`/services/${service.id}`} className="text-white/90 hover:text-white hover:translate-x-1 inline-block transition-all">

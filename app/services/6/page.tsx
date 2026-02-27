@@ -37,11 +37,14 @@ export default function InternalControlPage() {
                             Back to Services
                         </Link>
                         <span className="text-tac-brand font-bold tracking-widest uppercase text-sm mb-6 block">
-                            Business Support Services
+                            Service #6
                         </span>
                         <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-8 leading-tight">
-                            Internal Control & Risk Management
+                            Business Support Services
                         </h1>
+                        <h2 className="text-2xl md:text-3xl font-bold text-muted-foreground mb-8">
+                            Internal Control & Risk Management
+                        </h2>
                         
                         {/* Service Image */}
                         <motion.div

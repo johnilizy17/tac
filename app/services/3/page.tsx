@@ -132,7 +132,7 @@ export default function TaxCompliancePage() {
                                 At TAC, we provide comprehensive corporate tax planning, management & advisory services to clients in all areas of the economy, ensuring compliance obligations and tax efficiency. Our customized Tax automated system and AI Tax support tools assist in ensuring accurate tax computations that align with the company's Audited Financial Statements and facilitate speedy response and collection of the company's tax clearance certificate.
                             </p>
                             <p className="text-foreground font-semibold mb-4">Our major corporate tax management includes:</p>
-                            <ul className="space-y-3 mb-8">
+                            <ul className="list-disc list-inside space-y-3 mb-8 ml-4">
                                 <li className="text-muted-foreground leading-relaxed">Detailed review of the company's business model, revenue streams, and operational structure to identify tax risks, inefficiencies, and planning opportunities.</li>
                                 <li className="text-muted-foreground leading-relaxed">Preparation and filing of annual Company Income Tax (CIT) returns in line with applicable tax laws and the Nigeria Tax Reform Acts 2025.</li>
                                 <li className="text-muted-foreground leading-relaxed">Reconciliation of tax computations with Audited Financial Statements to ensure consistency and reduce audit exposure.</li>
@@ -147,7 +147,7 @@ export default function TaxCompliancePage() {
                                 Our e-invoicing services help clients align invoicing and accounting processes with NRS requirements under the technology-driven tax administration framework introduced by the Nigeria Tax Reform Acts.
                             </p>
                             <p className="text-foreground font-semibold mb-4">Aspects of our E-Invoice support services include:</p>
-                            <ul className="space-y-3 mb-8">
+                            <ul className="list-disc list-inside space-y-3 mb-8 ml-4">
                                 <li className="text-muted-foreground leading-relaxed">Comprehensive assessment of invoicing processes, ERP systems, and accounting platforms to determine readiness for e-invoicing.</li>
                                 <li className="text-muted-foreground leading-relaxed">Mapping of invoicing workflows to NRS e-invoicing and TaxPro Max requirements.</li>
                                 <li className="text-muted-foreground leading-relaxed">Advisory on ERP and accounting system configuration or integration via approved APIs or upload mechanisms.</li>
@@ -162,7 +162,7 @@ export default function TaxCompliancePage() {
                             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
                                 We assist clients in managing VAT obligations across domestic, offshore, and cross-border transactions. This includes:
                             </p>
-                            <ul className="space-y-3 mb-8">
+                            <ul className="list-disc list-inside space-y-3 mb-8 ml-4">
                                 <li className="text-muted-foreground leading-relaxed">Review of VATable income streams to confirm proper classification, charging, and collection of VAT.</li>
                                 <li className="text-muted-foreground leading-relaxed">Assessment of VAT treatment on offshore contracts, imported services, and cross-border transactions.</li>
                                 <li className="text-muted-foreground leading-relaxed">Review and preparation of monthly VAT returns, including reconciliation with accounting records.</li>
@@ -175,7 +175,7 @@ export default function TaxCompliancePage() {
                             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
                                 Our withholding tax services ensure proper deduction, remittance, documentation, and recovery of credits. Our services on this cover the following, among others:
                             </p>
-                            <ul className="space-y-3 mb-8">
+                            <ul className="list-disc list-inside space-y-3 mb-8 ml-4">
                                 <li className="text-muted-foreground leading-relaxed">Monthly review of withholding tax records to ensure deductions are applied at the correct rates and on appropriate transactions.</li>
                                 <li className="text-muted-foreground leading-relaxed">Identification of under-deductions, over-deductions, and misclassifications, with advisory on corrective actions.</li>
                                 <li className="text-muted-foreground leading-relaxed">Monitoring of WHT remittances and tracking of official revenue receipts.</li>
@@ -189,7 +189,7 @@ export default function TaxCompliancePage() {
                             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
                                 We provide practical transfer pricing advisory and compliance services aligned with the strengthened enforcement framework under the Nigeria Tax Reform Acts 2025. Scope of work includes:
                             </p>
-                            <ul className="space-y-3 mb-8">
+                            <ul className="list-disc list-inside space-y-3 mb-8 ml-4">
                                 <li className="text-muted-foreground leading-relaxed">Review of related-party transactions to assess transfer pricing risk and exposure.</li>
                                 <li className="text-muted-foreground leading-relaxed">Development and review of transfer pricing policies aligned with Nigerian regulations and OECD guidelines.</li>
                                 <li className="text-muted-foreground leading-relaxed">Preparation of transfer pricing documentation, including local files and disclosures.</li>
@@ -204,7 +204,7 @@ export default function TaxCompliancePage() {
                             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
                                 We assist organizations in managing employee tax obligations efficiently and compliantly. Our personal income tax administration services is to ensure that employees are subjected to the minimum tax possible in line with the personal income tax law. We assist our client in the following areas:
                             </p>
-                            <ul className="space-y-3 mb-8">
+                            <ul className="list-disc list-inside space-y-3 mb-8 ml-4">
                                 <li className="text-muted-foreground leading-relaxed">Assist the company on PAYE administration to ensure that maximum allowances are obtained and employees pay the minimum tax possible under the law.</li>
                                 <li className="text-muted-foreground leading-relaxed">Structuring the employees' pay in the most tax-efficient manner in line with the provision of the tax laws.</li>
                                 <li className="text-muted-foreground leading-relaxed">Obtain and process annual tax forms and deduction cards for staff.</li>
@@ -219,7 +219,7 @@ export default function TaxCompliancePage() {
                             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
                                 We advise clients on accessing and sustaining government-backed tax incentives and investment reliefs, with a focus on ongoing compliance under the reformed tax regime. Scope of work includes:
                             </p>
-                            <ul className="space-y-3 mb-8">
+                            <ul className="list-disc list-inside space-y-3 mb-8 ml-4">
                                 <li className="text-muted-foreground leading-relaxed">Assessment of business activities and investment plans to determine eligibility for applicable incentives.</li>
                                 <li className="text-muted-foreground leading-relaxed">Advisory on structuring operations to meet incentive conditions.</li>
                                 <li className="text-muted-foreground leading-relaxed">Review of sector-specific incentives applicable to manufacturing, infrastructure, agriculture, energy, and technology.</li>
@@ -232,7 +232,7 @@ export default function TaxCompliancePage() {
                             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
                                 We support financial institutions and relevant entities in meeting their obligations under the Common Reporting Standard framework, as reinforced by the Nigeria Tax Reform Acts 2025. Scope of work includes:
                             </p>
-                            <ul className="space-y-3 mb-8">
+                            <ul className="list-disc list-inside space-y-3 mb-8 ml-4">
                                 <li className="text-muted-foreground leading-relaxed">Assessment of CRS applicability and reporting obligations.</li>
                                 <li className="text-muted-foreground leading-relaxed">Review and design of CRS compliance frameworks and internal procedures.</li>
                                 <li className="text-muted-foreground leading-relaxed">Assistance with customer due diligence and classification of reportable accounts.</li>
@@ -245,7 +245,7 @@ export default function TaxCompliancePage() {
                             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
                                 We assist multinational groups in meeting Country-by-Country Reporting obligations in line with Nigerian regulations and global standards. Scope of work includes:
                             </p>
-                            <ul className="space-y-3 mb-8">
+                            <ul className="list-disc list-inside space-y-3 mb-8 ml-4">
                                 <li className="text-muted-foreground leading-relaxed">Assessment of CbCR filing obligations and thresholds.</li>
                                 <li className="text-muted-foreground leading-relaxed">Advisory on group structure and reporting responsibilities.</li>
                                 <li className="text-muted-foreground leading-relaxed">Preparation and review of Country-by-Country reports.</li>
@@ -258,7 +258,7 @@ export default function TaxCompliancePage() {
                             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
                                 Our tax planning and tax health check services help clients proactively identify risks and improve tax efficiency within the law. Scope of work includes:
                             </p>
-                            <ul className="space-y-3 mb-8">
+                            <ul className="list-disc list-inside space-y-3 mb-8 ml-4">
                                 <li className="text-muted-foreground leading-relaxed">Comprehensive review of all applicable taxes to identify compliance gaps and exposure areas.</li>
                                 <li className="text-muted-foreground leading-relaxed">Independent assessment of filed tax returns, accounting treatments, and supporting documentation.</li>
                                 <li className="text-muted-foreground leading-relaxed">Evaluation of the impact of the Nigeria Tax Reform Acts 2025 on existing structures, contracts, and transactions.</li>
@@ -273,7 +273,7 @@ export default function TaxCompliancePage() {
                             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
                                 We also render tax advisory services to clients as the need arises. Our tax advisory services include but not limited to the following:
                             </p>
-                            <ul className="space-y-3 mb-8">
+                            <ul className="list-disc list-inside space-y-3 mb-8 ml-4">
                                 <li className="text-muted-foreground leading-relaxed">Tax Audit Management Service by NRS and State Tax Authorities</li>
                                 <li className="text-muted-foreground leading-relaxed">Payroll Restructuring & Management Services</li>
                                 <li className="text-muted-foreground leading-relaxed">Tax Planning and Advisory Services</li>
