@@ -9,7 +9,7 @@ const slides = [
     {
         id: 1,
         title: "Pioneering",
-        subtitle: "Business",
+        subtitle: "Businesses",
         description: "TAC Group delivers world-class professional services, audit, and customized business solutions since 2001.",
         image: "/banner/3.jpg",
         gradient: "from-tac-brand via-tac-purple to-tac-gold",

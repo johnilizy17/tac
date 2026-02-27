@@ -1,50 +1,61 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Target, Compass, Award, Users, Lightbulb, TrendingUp } from "lucide-react";
+import { Target, Compass, Award, Shield, Zap, Heart } from "lucide-react";
 import Link from "next/link";
 
 const coreValues = [
-    {
-        letter: "P",
-        title: "Professionalism",
-        description: "We uphold the highest standards of ethics, competence, and respect in all our engagements.",
-        icon: Award,
-        color: "text-blue-500",
-        bg: "bg-blue-500/10"
-    },
-    {
-        letter: "O",
-        title: "Organization & Team Building",
-        description: "We cultivate teamwork, collaboration, and a culture of shared success to achieve collective goals.",
-        icon: Users,
-        color: "text-tac-purple",
-        bg: "bg-tac-purple/10"
-    },
-    {
+   {
         letter: "I",
-        title: "Integrity & Innovation",
-        description: "We act with honesty and transparency while embracing innovation to deliver forward-thinking solutions.",
-        icon: Lightbulb,
+        title: "INTEGRITY",
+        description: "We uphold the highest ethical standards, ensuring transparency, honesty, and accountability in every engagement.",
+        icon: Shield,
+        color: "text-blue-600",
+        bg: "bg-blue-600/10"
+    },
+     {
+        letter: "P",
+        title: "PROFESSIONAL EXCELLENCE",
+        description: "We are committed to delivering superior quality services through technical expertise, continuous learning, and adherence to global best practices.",
+        icon: Award,
         color: "text-tac-brand",
         bg: "bg-tac-brand/10"
     },
     {
-        letter: "S",
-        title: "Solution Driven",
-        description: "We focus on understanding our clients' needs and delivering practical, results-oriented outcomes that create value.",
+        letter: "C",
+        title: "CLIENT-CENTRICITY",
+        description: "Our clients are at the heart of everything we do. We listen, understand their needs, and provide tailored solutions that create lasting value.",
         icon: Target,
         color: "text-emerald-500",
         bg: "bg-emerald-500/10"
     },
     {
-        letter: "E",
-        title: "Excellence",
-        description: "We are relentless in our pursuit of excellence—consistently exceeding expectations through quality, precision, and continuous improvement.",
-        icon: TrendingUp,
-        color: "text-tac-gold",
-        bg: "bg-tac-gold/10"
+        letter: "I",
+        title: "INNOVATION",
+        description: "We leverage cutting-edge technology and forward-thinking strategies to solve complex business challenges and drive sustainable growth.",
+        icon: Zap,
+        color: "text-amber-500",
+        bg: "bg-amber-500/10"
+    },
+    
+    
+    {
+        letter: "R",
+        title: "RELIABILITY",
+        description: "We honor our commitments and consistently deliver dependable, timely, and high-quality results our clients can trust.",
+        icon: Compass,
+        color: "text-tac-purple",
+        bg: "bg-tac-purple/10"
+    },
+    {
+        letter: "P",
+        title: "PEOPLE EMPOWERMENT",
+        description: "We foster a supportive environment where our people are valued, motivated, and empowered to thrive. We invest in their growth and recognize excellence.",
+        icon: Heart,
+        color: "text-rose-500",
+        bg: "bg-rose-500/10"
     }
+
 ];
 
 export default function AboutSection() {
@@ -158,8 +169,8 @@ export default function AboutSection() {
                                     </div>
                                     <span className="text-tac-brand font-bold tracking-widest uppercase text-sm">Our Vision</span>
                                 </div>
-                                <h3 className="text-2xl font-bold text-foreground leading-tight mb-4">
-                                    To be the preferred, solution-driven professional services and business consulting firm of choice.
+                                <h3 className=" font-bold text-foreground leading-tight mb-4">
+                          To be the preferred and trusted professional services and business consulting firm, renowned for delivering innovative, solution-driven excellence.
                                 </h3>
                             </div>
                         </motion.div>
@@ -180,9 +191,9 @@ export default function AboutSection() {
                                     </div>
                                     <span className="text-tac-purple font-bold tracking-widest uppercase text-sm">Our Mission</span>
                                 </div>
-                                <p className="text-2xl font-bold text-foreground  leading-relaxed">
-                                    To deliver superior-quality professional service solutions through a team of competent and dedicated professionals, leveraging cutting-edge technology to achieve total client satisfaction and sustainable value while upholding the highest standards of professionalism, credibility, honesty, and integrity in all our engagements.
-                                </p>
+                                <p className=" font-bold text-foreground  leading-relaxed">
+                    To deliver exceptional professional services through a team of competent and dedicated experts, leveraging cutting-edge technology to achieve outstanding client satisfaction, sustainable value, and reasonable returns—while upholding the highest standards of professionalism, credibility, honesty, and integrity.
+                               </p>
                             </div>
                         </motion.div>
                     </div>
@@ -195,7 +206,7 @@ export default function AboutSection() {
                         className="text-center mb-12"
                     >
                         <h3 className="text-3xl font-bold text-foreground mb-4">
-                            Our Core Values – <span className="text-gradient">P.O.I.S.E.</span>
+                            Our Core Values
                         </h3>
                         <p className="text-muted-foreground max-w-2xl mx-auto">
                             Five principles that guide everything we do
