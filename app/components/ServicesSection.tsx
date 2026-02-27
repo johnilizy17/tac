@@ -1,13 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ClipboardCheck, BookOpen, Scaling, Search, Briefcase, Recycle } from "lucide-react";
+import { ClipboardCheck, BookOpen, Globe, Search, Briefcase, ShieldCheck, Building2 } from "lucide-react";
 import Link from "next/link";
 
 const services = [
     {
         id: 1,
-        title: "Accounting Outsourcing",
+        title: "Accounting Outsourcing & Transaction Advisory",
         description: "Customized outsourced accounting solutions that deliver high-value financial management.",
         icon: BookOpen,
     },
@@ -15,25 +15,37 @@ const services = [
         id: 2,
         title: "Audit & Assurance",
         description: "Delivering international best practice auditing to provide confidence to key business decision-makers.",
-        icon: ClipboardCheck,
+        icon: ShieldCheck,
     },
     {
         id: 3,
-        title: "Forensic Investigation",
+        title: "Tax Compliance & Advisory",
+        description: "Expert tax planning, compliance, and advisory services to optimize your tax position.",
+        icon: Globe,
+    },
+    {
+        id: 4,
+        title: "Forensic Investigation & Accounting",
         description: "Expert reactive and proactive investigations into criminal matters and corporate disputes.",
         icon: Search,
     },
     {
-        id: 4,
-        title: "Business Consulting",
+        id: 5,
+        title: "Business Consulting & Advisory",
         description: "Quality solution-driven management consulting and advisory across various economic sectors.",
         icon: Briefcase,
     },
     {
-        id: 5,
+        id: 6,
+        title: "Internal Control & Risk Management",
+        description: "Comprehensive risk assessment and internal control framework implementation.",
+        icon: ClipboardCheck,
+    },
+    {
+        id: 7,
         title: "Receivership & Liquidation",
         description: "Specialized debt recovery, business restructuring, and turnaround management services.",
-        icon: Recycle,
+        icon: Building2,
     },
 ];
 
