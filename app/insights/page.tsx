@@ -15,7 +15,7 @@ const insights = [
         author: "TAC Advisory",
         readTime: "5 min read",
         featured: true,
-        image: "/asset/3.png"
+        image: "/insight/1.jpg"
     },
     {
         id: 2,
@@ -25,7 +25,7 @@ const insights = [
         category: "Tax Compliance",
         author: "TAC Advisory",
         readTime: "4 min read",
-        image: "/asset/1.png"
+        image: "/insight/2.jpg"
     },
     {
         id: 3,
@@ -35,7 +35,7 @@ const insights = [
         category: "Tax Reform",
         author: "TAC Advisory",
         readTime: "6 min read",
-        image: "/asset/2.png"
+        image: "/insight/3.jpg"
     },
     {
         id: 4,
@@ -45,67 +45,7 @@ const insights = [
         category: "Technology",
         author: "TAC Advisory",
         readTime: "4 min read",
-        image: "/asset/4.png"
-    },
-    {
-        id: 5,
-        title: "2025 Compliance: A Strategy-Centric Imperative",
-        content: "In 2025, compliance has evolved beyond box-checking to a strategy-centric imperative. Global advisory and assurance firms are recalibrating their operations in response to increasing stakeholder scrutiny and a surge in ESG-integrated reporting requirements.",
-        date: "2025",
-        category: "Compliance",
-        author: "TAC Advisory",
-        readTime: "5 min read",
-        image: "/asset/5.png"
-    },
-    {
-        id: 6,
-        title: "Mastering Payroll Management for Small Business Owners",
-        content: "Payroll management is one of the most crucial yet often overlooked aspects of running a successful small business. For many entrepreneurs, the complexities of payroll can lead to stress, costly mistakes, and inefficiencies that hinder growth. But it doesn't have to be this way.",
-        date: "2025",
-        category: "Business Management",
-        author: "TAC Advisory",
-        readTime: "7 min read",
-        image: "/asset/6.png"
-    },
-    {
-        id: 7,
-        title: "Forensic Accounting: Protecting Your Business Profits",
-        content: "Protecting profits is critical for every business, especially for small businesses and startups aiming for sustainable Business Growth. Often, small business owners focus on boosting sales and cutting operational costs, but there's one essential element that's often overlooked: forensic accounting. This field goes beyond traditional Accounting, acting as a proactive defense mechanism to protect businesses.",
-        date: "2025",
-        category: "Forensic Accounting",
-        author: "TAC Advisory",
-        readTime: "6 min read",
-        image: "/asset/1.png"
-    },
-    {
-        id: 8,
-        title: "Essential Tax Management Strategies for Small Businesses",
-        content: "For many small business owners and entrepreneurs, navigating taxation and accounting can feel overwhelming. Yet, the truth is that effective tax management is one of the most powerful tools in achieving business growth. The right strategies not only ensure compliance but also optimize.",
-        date: "2025",
-        category: "Tax Management",
-        author: "TAC Advisory",
-        readTime: "5 min read",
-        image: "/asset/2.png"
-    },
-    {
-        id: 9,
-        title: "Mastering Transfer Pricing for Business Growth",
-        content: "Mastering transfer pricing is crucial for small business owners who want to ensure their operations remain profitable and compliant, especially when expanding across borders. While transfer pricing might sound like a concept reserved for large corporations, it's actually a vital consideration for businesses of all sizes. Understanding this complex process can significantly contribute to Business Growth.",
-        date: "2025",
-        category: "Transfer Pricing",
-        author: "TAC Advisory",
-        readTime: "6 min read",
-        image: "/asset/3.png"
-    },
-    {
-        id: 10,
-        title: "Audit and Assurance Services: Driving Business Growth",
-        content: "Audit and Assurance Services play a crucial role in driving Business Growth, offering small businesses a pathway to enhanced financial health and strategic decision-making. Many small business owners view audits as a regulatory burden, but the truth is that these services can unlock significant value when leveraged properly. Think of them as a comprehensive check-up.",
-        date: "2025",
-        category: "Audit & Assurance",
-        author: "TAC Advisory",
-        readTime: "5 min read",
-        image: "/asset/4.png"
+        image: "/insight/4.jpg"
     }
 ];
 
@@ -237,89 +177,7 @@ export default function InsightsPage() {
                 </div>
             </section>
 
-            {/* More Articles - 2 Column Layout */}
-            <section className="py-12">
-                <div className="max-w-7xl mx-auto px-4">
-                    <h3 className="text-3xl font-serif font-bold text-foreground mb-8 pb-4 border-b-2 border-tac-brand" style={{ fontFamily: 'Georgia, serif' }}>
-                        Latest Updates
-                    </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
-                        {regularArticles.map((article, index) => (
-                            <motion.article
-                                key={article.id}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.1 }}
-                                className="pb-8 border-b border-foreground/10"
-                            >
-                                <div className="grid grid-cols-3 gap-4">
-                                    <div className="relative aspect-square rounded-lg overflow-hidden shadow-md">
-                                        <img
-                                            src={article.image}
-                                            alt={article.title}
-                                            className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                                        />
-                                    </div>
-                                    <div className="col-span-2">
-                                        <div className="flex items-center gap-2 mb-2">
-                                            <span className="px-2 py-1 bg-tac-brand/10 text-tac-brand text-xs font-bold uppercase">
-                                                {article.category}
-                                            </span>
-                                        </div>
-                                        <h4 className="text-lg font-serif font-bold text-foreground mb-2 leading-tight hover:text-tac-brand transition-colors" style={{ fontFamily: 'Georgia, serif' }}>
-                                            {article.title}
-                                        </h4>
-                                        <p className="text-sm text-muted-foreground leading-relaxed mb-2 line-clamp-2">
-                                            {article.content}
-                                        </p>
-                                        <div className="flex items-center gap-3 text-xs text-muted-foreground">
-                                            <div className="flex items-center gap-1">
-                                                <Calendar className="w-3 h-3" />
-                                                <span>{article.date}</span>
-                                            </div>
-                                            <span>•</span>
-                                            <div className="flex items-center gap-1">
-                                                <Clock className="w-3 h-3" />
-                                                <span>{article.readTime}</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </motion.article>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Newsletter Subscription */}
-            <section className="py-16 bg-gradient-to-br from-tac-brand via-tac-brand/90 to-tac-purple text-white">
-                <div className="max-w-4xl mx-auto px-4 text-center">
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                    >
-                        <h3 className="text-3xl md:text-4xl font-serif font-bold mb-4" style={{ fontFamily: 'Georgia, serif' }}>
-                            Stay Informed
-                        </h3>
-                        <p className="text-white/90 text-lg mb-8">
-                            Subscribe to receive the latest insights, updates, and expert analysis directly to your inbox.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                            <input
-                                type="email"
-                                placeholder="Enter your email"
-                                className="flex-1 px-6 py-3 rounded-full text-foreground focus:outline-none focus:ring-2 focus:ring-white"
-                            />
-                            <button className="px-8 py-3 bg-white text-tac-brand font-bold rounded-full hover:scale-105 active:scale-95 transition-all shadow-xl">
-                                Subscribe
-                            </button>
-                        </div>
-                    </motion.div>
-                </div>
-            </section>
-
+          
             <Footer />
         </main>
     );
