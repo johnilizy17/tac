@@ -1,25 +1,25 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ClipboardCheck, BookOpen, Globe, Search, Briefcase, ShieldCheck, Building2 } from "lucide-react";
+import { ClipboardCheck, BookOpen, Globe, Search, Briefcase, ShieldCheck, Headphones, MoreHorizontal } from "lucide-react";
 import Link from "next/link";
 
 const services = [
     {
         id: 1,
+        title: "Audit & Assurance Service",
+        description: "Delivering international best practice auditing to provide confidence to key business decision-makers.",
+        icon: ShieldCheck,
+    },
+    {
+        id: 2,
         title: "Accounting Outsourcing & Transaction Advisory",
         description: "Customized outsourced accounting solutions that deliver high-value financial management.",
         icon: BookOpen,
     },
     {
-        id: 2,
-        title: "Audit & Assurance",
-        description: "Delivering international best practice auditing to provide confidence to key business decision-makers.",
-        icon: ShieldCheck,
-    },
-    {
         id: 3,
-        title: "Tax Compliance & Advisory",
+        title: "Tax Compliance & Advisory Service",
         description: "Expert tax planning, compliance, and advisory services to optimize your tax position.",
         icon: Globe,
     },
@@ -37,15 +37,15 @@ const services = [
     },
     {
         id: 6,
-        title: "Internal Control & Risk Management",
-        description: "Comprehensive risk assessment and internal control framework implementation.",
-        icon: ClipboardCheck,
+        title: "Business Support Services",
+        description: "Comprehensive business support and operational services to enhance organizational efficiency.",
+        icon: Headphones,
     },
     {
         id: 7,
-        title: "Receivership & Liquidation",
-        description: "Specialized debt recovery, business restructuring, and turnaround management services.",
-        icon: Building2,
+        title: "Other Services",
+        description: "Additional specialized professional services tailored to meet your unique business needs.",
+        icon: MoreHorizontal,
     },
 ];
 

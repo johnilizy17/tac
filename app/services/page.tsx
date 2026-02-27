@@ -8,9 +8,12 @@ import {
     ShieldCheck,
     Globe,
     BookOpen,
-    Cpu,
+    Headphones,
+    Briefcase,
+    Search,
+    MoreHorizontal,
     Users,
-    Building2
+    Cpu
 } from "lucide-react";
 
 export default function ServicesPage() {
@@ -56,13 +59,13 @@ export default function ServicesPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {[
-                            { id: 1, title: "Accounting Outsourcing & Transaction Advisory", icon: Users, image: "/service/1.jpg" },
-                            { id: 2, title: "Audit & Assurance", icon: ShieldCheck, image: "/service/2.jpg" },
-                            { id: 3, title: "Tax Compliance & Advisory", icon: Globe, image: "/service/3.jpg" },
-                            { id: 4, title: "Forensic Investigation & Accounting", icon: Building2, image: "/service/4.jpg" },
-                            { id: 5, title: "Business Consulting & Advisory", icon: Users, image: "/service/5.jpg" },
-                            { id: 6, title: "Internal Control & Risk Management", icon: ShieldCheck, image: "/service/6.jpg" },
-                            { id: 7, title: "Receivership & Liquidation", icon: Building2, image: "/service/1.jpg" }
+                            { id: 1, title: "Audit & Assurance Service", icon: ShieldCheck, image: "/service/2.jpg" },
+                            { id: 2, title: "Accounting Outsourcing & Transaction Advisory", icon: BookOpen, image: "/service/1.jpg" },
+                            { id: 3, title: "Tax Compliance & Advisory Service", icon: Globe, image: "/service/3.jpg" },
+                            { id: 4, title: "Forensic Investigation & Accounting", icon: Search, image: "/service/4.jpg" },
+                            { id: 5, title: "Business Consulting & Advisory", icon: Briefcase, image: "/service/5.jpg" },
+                            { id: 6, title: "Business Support Services", icon: Headphones, image: "/service/6.jpg" },
+                            { id: 7, title: "Other Services", icon: MoreHorizontal, image: "/service/1.jpg" }
                         ].map((service, index) => (
                             <motion.div
                                 key={service.id}

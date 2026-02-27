@@ -5,9 +5,8 @@ import Footer from "../../components/Footer";
 import { motion } from "framer-motion";
 import { ArrowLeft, CheckCircle } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 
-export default function AccountingOutsourcingPage() {
+export default function AuditAssurancePage() {
     return (
         <main className="min-h-screen bg-background text-foreground selection:bg-tac-purple selection:text-white">
             <Navbar />
@@ -28,10 +27,10 @@ export default function AccountingOutsourcingPage() {
                             Back to Services
                         </Link>
                         <span className="text-tac-brand font-bold tracking-widest uppercase text-sm mb-6 block">
-                            Service #1
+                            Service #2
                         </span>
                         <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-8 leading-tight">
-                            Accounting Outsourcing & Transaction Advisory
+                            Audit & Assurance
                         </h1>
                         
                         {/* Service Image */}
@@ -42,8 +41,8 @@ export default function AccountingOutsourcingPage() {
                             className="mt-12 rounded-3xl overflow-hidden shadow-2xl"
                         >
                             <img
-                                src="/service/1.jpg"
-                                alt="Accounting Outsourcing & Transaction Advisory"
+                                src="/service/2.jpg"
+                                alt="Audit & Assurance"
                                 className="w-full h-[400px] object-cover"
                             />
                         </motion.div>
@@ -62,13 +61,13 @@ export default function AccountingOutsourcingPage() {
                     >
                         <div className="prose prose-lg max-w-none">
                             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                                At TAC, we assist our clients with Accounting Outsourcing and Transaction Advisory Services, which include adequate financial record keeping, reconciliation, and addressing complex financial structures, regulatory reporting etc. We provide these services either onsite or offsite, by deploying our skilful and dedicated resources.
+                                We provide our auditing services in compliance with the Companies and Allied Matters Act of Nigeria, and in compliance with International Financial Reporting Standards (IFRS), General Audit Practice (GAP) and International Accounting Standards (IAS). Our audit approach is all-encompassing of risk-based systems audit, assessment of systems and processes.
                             </p>
                             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                                We deploy Accounting Software, Automated System, and Strong AI Accounting tools, to deliver value-added accounting & financial transaction record keeping and reconciliation that comply with local and international financial reporting.
+                                Apart from satisfying the primary objective of reporting on business and financial statements of corporate firms in line with IFRS, it also aims at performance improvement, internal control evaluation and financial management to ensure good corporate governance. We ensure that we have a thorough understanding of our client's business, corporate culture and operational environment.
                             </p>
                             <p className="text-muted-foreground text-lg leading-relaxed">
-                                With experts who come from a wide range of disciplines, we assure our clients of unequalled benefits such as competitive rates, quick turnaround time, guaranteed data protection, and quality service delivery.
+                                With our Audit Software, Automated System, and Strong AI Audit tools, we deliver value-added audit & assurance services to the satisfaction and admiration of our clients in line with global best practice.
                             </p>
                         </div>
                     </motion.div>
@@ -85,10 +84,10 @@ export default function AccountingOutsourcingPage() {
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {[
-                                "Expert team with decades of experience",
-                                "Compliance with local and international standards",
-                                "Cutting-edge technology and AI tools",
-                                "Competitive rates and quick turnaround"
+                                "Compliance with IFRS, IAS, and GAP standards",
+                                "Risk-based systems audit approach",
+                                "AI-powered audit tools and automation",
+                                "Performance improvement focus"
                             ].map((benefit, i) => (
                                 <motion.div
                                     key={i}
