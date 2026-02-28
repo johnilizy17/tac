@@ -174,7 +174,7 @@ export default function IndustriesPage() {
             <Navbar />
 
             {/* Hero Section */}
-            <section className="pt-40 pb-20 relative overflow-hidden bg-gradient-to-b from-foreground/5 via-background to-background dark:from-tac-dark dark:via-tac-dark dark:to-tac-dark/50">
+            <section className="pt-40 pb-20 relative overflow-hidden bg-gradient-to-b from-tac-brand/5 via-background to-background dark:from-tac-dark dark:via-tac-dark dark:to-tac-dark/50">
                 <div className="absolute top-0 right-0 w-1/3 h-full bg-tac-brand/10 blur-[120px] -z-10" />
                 <div className="max-w-7xl mx-auto px-4 relative">
                     <motion.div
