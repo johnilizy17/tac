@@ -91,10 +91,10 @@ export default function CareersPage() {
                                     <ArrowRight className="w-5 h-5" />
                                 </a>
                                 <Link
-                                    href="/contact"
+                                    href="/careers/apply"
                                     className="px-10 py-4 bg-foreground/5 border-2 border-foreground/10 text-foreground font-bold rounded-2xl hover:bg-foreground/10 transition-all inline-flex items-center gap-2"
                                 >
-                                    Contact HR
+                                    Apply Now
                                 </Link>
                             </div>
                         </motion.div>
@@ -255,7 +255,7 @@ export default function CareersPage() {
                                     ))}
                                 </ul>
                                 <a
-                                    href="mailto:careers@tacgroupng.com?subject=Graduate Trainee Application"
+                                    href="/careers/apply"
                                     className="inline-flex items-center gap-2 px-8 py-3 bg-tac-brand text-tac-dark font-bold rounded-xl hover:scale-105 active:scale-95 transition-all shadow-lg"
                                 >
                                     Apply Now
@@ -284,7 +284,7 @@ export default function CareersPage() {
                                     We value expertise, innovation, and leadership, and we invite you to explore opportunities that align with your experience and career aspirations.
                                 </p>
                                 <a
-                                    href="mailto:careers@tacgroupng.com?subject=Experienced Hire Application"
+                                    href="/careers/apply"
                                     className="inline-flex items-center gap-2 px-8 py-3 bg-tac-purple text-white font-bold rounded-xl hover:scale-105 active:scale-95 transition-all shadow-lg"
                                 >
                                     Apply Now
@@ -352,7 +352,7 @@ export default function CareersPage() {
                                 At TAC, we don't just offer jobs — we offer career paths that inspire growth, innovation, and excellence.
                             </p>
                             <a
-                                href="mailto:careers@tacgroupng.com"
+                                href="/careers/apply"
                                 className="inline-flex items-center gap-2 px-12 py-5 bg-tac-brand text-tac-dark font-bold rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-xl text-lg"
                             >
                                 Apply Today

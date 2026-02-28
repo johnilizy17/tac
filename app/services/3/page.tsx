@@ -58,7 +58,7 @@ export default function TaxCompliancePage() {
             <Navbar />
 
             {/* Hero Section */}
-            <section className="pt-40 pb-20 relative overflow-hidden bg-gradient-to-b from-foreground/5 via-background to-background dark:from-tac-dark dark:via-tac-dark dark:to-background">
+            <section className="pt-40 pb-20 relative overflow-hidden bg-gradient-to-b from-tac-brand/5 via-background to-background">
                 <div className="absolute top-0 right-0 w-1/2 h-full bg-tac-brand/10 blur-[120px] -z-10" />
                 <div className="max-w-7xl mx-auto px-4 relative">
                     <motion.div
@@ -103,7 +103,7 @@ export default function TaxCompliancePage() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
-                        className="glass-card p-12 rounded-[3rem] bg-white/80 dark:bg-foreground/5 shadow-lg"
+                        className="glass-card p-12 rounded-[3rem] bg-white dark:bg-foreground/5 shadow-md"
                     >
                         <div className="prose prose-lg max-w-none">
                             <p className="text-muted-foreground text-lg leading-relaxed mb-6">

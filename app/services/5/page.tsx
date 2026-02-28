@@ -22,7 +22,7 @@ export default function BusinessConsultingPage() {
             <Navbar />
 
             {/* Hero Section */}
-            <section className="pt-40 pb-20 relative overflow-hidden bg-gradient-to-b from-foreground/5 via-background to-background dark:from-tac-dark dark:via-tac-dark dark:to-background">
+            <section className="pt-40 pb-20 relative overflow-hidden bg-gradient-to-b from-tac-brand/5 via-background to-background">
                 <div className="absolute top-0 right-0 w-1/2 h-full bg-tac-brand/10 blur-[120px] -z-10" />
                 <div className="max-w-7xl mx-auto px-4 relative">
                     <motion.div
@@ -67,7 +67,7 @@ export default function BusinessConsultingPage() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
-                        className="glass-card p-12 rounded-[3rem] bg-white/80 dark:bg-foreground/5 shadow-lg"
+                        className="glass-card p-12 rounded-[3rem] bg-white dark:bg-foreground/5 shadow-md"
                     >
                         <div className="prose prose-lg max-w-none">
                             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
@@ -96,7 +96,7 @@ export default function BusinessConsultingPage() {
                                     initial={{ opacity: 0, x: -20 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ delay: 0.4 + i * 0.1 }}
-                                    className="flex items-start gap-4 glass-card p-6 rounded-2xl bg-white/80 dark:bg-foreground/5 shadow-md"
+                                    className="flex items-start gap-4 glass-card p-6 rounded-2xl bg-white dark:bg-foreground/5 shadow-md border border-gray-200 dark:border-transparent"
                                 >
                                     <CheckCircle className="w-6 h-6 text-tac-brand shrink-0 mt-1" />
                                     <span className="text-muted-foreground text-lg">{service}</span>
@@ -110,7 +110,7 @@ export default function BusinessConsultingPage() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.35 }}
-                        className="mt-16 glass-card p-12 rounded-[3rem] bg-white/80 dark:bg-foreground/5 shadow-lg"
+                        className="mt-16 glass-card p-12 rounded-[3rem] bg-white dark:bg-foreground/5 shadow-md"
                     >
                         <div className="prose prose-lg max-w-none">
                             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
@@ -144,7 +144,7 @@ export default function BusinessConsultingPage() {
                                     initial={{ opacity: 0, x: -20 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ delay: 0.5 + i * 0.1 }}
-                                    className="flex items-start gap-4 glass-card p-6 rounded-2xl bg-white/80 dark:bg-foreground/5 shadow-md"
+                                    className="flex items-start gap-4 glass-card p-6 rounded-2xl bg-white dark:bg-foreground/5 shadow-md border border-gray-200 dark:border-transparent"
                                 >
                                     <CheckCircle className="w-6 h-6 text-tac-brand shrink-0 mt-1" />
                                     <span className="text-muted-foreground">{benefit}</span>
